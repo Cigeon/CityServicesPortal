@@ -83,6 +83,14 @@ namespace IdentityApp
 
             app.UseStaticFiles();
 
+            // my addition
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+            });
+
             app.UseIdentityServer();
 
             app.UseMvc(routes =>
