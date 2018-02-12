@@ -44,6 +44,7 @@ namespace IdentityApp
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddAspNetIdentity<ApplicationUser>()
+                .AddProfileService<Configs.IdentityProfileService>()
                 .AddConfigurationStore(options =>
                 {
                     options.ConfigureDbContext = builder =>

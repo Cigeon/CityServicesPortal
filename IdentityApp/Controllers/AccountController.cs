@@ -235,7 +235,7 @@ namespace IdentityApp.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, UserRights = 100 };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, UserRights = "100" };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
