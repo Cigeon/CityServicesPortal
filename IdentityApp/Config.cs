@@ -50,56 +50,6 @@ namespace IdentityApp
                     AllowedScopes = { "apiApp" }
                 },
 
-                // OpenID Connect implicit flow client (MVC)
-                //new Client
-                //{
-                //    ClientId = "mvc",
-                //    ClientName = "MVC Client",
-                //    AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
-
-                //    RequireConsent = true,
-
-                //    ClientSecrets =
-                //    {
-                //        new Secret("secret".Sha256())
-                //    },
-
-                //    RedirectUris = { $"{configuration["ClientAddress"]}/signin-oidc" },
-                //    PostLogoutRedirectUris = { $"{configuration["ClientAddress"]}/signout-callback-oidc" },
-
-                //    AllowedScopes =
-                //    {
-                //        IdentityServerConstants.StandardScopes.OpenId,
-                //        IdentityServerConstants.StandardScopes.Profile,
-                //        "apiApp"
-                //    },
-                //    AllowOfflineAccess = true
-                //},
-
-                //new Client
-                //{
-                //    ClientId = "mvc2",
-                //    ClientName = "MVC Client2",
-                //    AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
-
-                //    RequireConsent = true,
-
-                //    ClientSecrets =
-                //    {
-                //        new Secret("secret".Sha256())
-                //    },
-
-                //    RedirectUris = { $"{configuration["ClientAddress2"]}/signin-oidc" },
-                //    PostLogoutRedirectUris = { $"{configuration["ClientAddress2"]}/signout-callback-oidc" },
-
-                //    AllowedScopes =
-                //    {
-                //        IdentityServerConstants.StandardScopes.OpenId,
-                //        IdentityServerConstants.StandardScopes.Profile,
-                //        "apiApp"
-                //    },
-                //    AllowOfflineAccess = true
-                //},
 
                 // OpenID Connect implicit flow client (Angular)
                 new Client
@@ -134,6 +84,27 @@ namespace IdentityApp
                     RedirectUris = { $"{configuration["ClientAddress2"]}/callback" },
                     PostLogoutRedirectUris = { $"{configuration["ClientAddress2"]}/home" },
                     AllowedCorsOrigins = { configuration["ClientAddress2"] },
+
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "apiApp"
+                    },
+
+                },
+
+                new Client
+                {
+                    ClientId = "ng-petitions",
+                    ClientName = "Petitions Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowAccessTokensViaBrowser = true,
+                    RequireConsent = true,
+
+                    RedirectUris = { $"{configuration["PetitionsClientAddress"]}/callback" },
+                    PostLogoutRedirectUris = { $"{configuration["PetitionsClientAddress"]}/home" },
+                    AllowedCorsOrigins = { configuration["PetitionsClientAddress"] },
 
                     AllowedScopes =
                     {

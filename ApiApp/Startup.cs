@@ -35,6 +35,7 @@ namespace ApiApp
                 {
                     policy.WithOrigins(Configuration["ClientAddress"])
                         .WithOrigins(Configuration["ClientAddress2"])
+                        .WithOrigins(Configuration["PetitionsClientAddress"])
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
@@ -47,7 +48,6 @@ namespace ApiApp
         {
 
             app.UseCors("default");
-            //app.UseCors("default2");
 
             app.UseAuthentication();
 
