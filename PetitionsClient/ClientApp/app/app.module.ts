@@ -13,6 +13,7 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 
 import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
 import { AuthService } from './components/services/auth.service';
+import { TestcomponentComponent } from './components/testcomponent/testcomponent.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { AuthService } from './components/services/auth.service';
         CounterComponent,
         FetchDataComponent,
         HomeComponent,
-        UnauthorizedComponent
+        UnauthorizedComponent,
+        TestcomponentComponent
     ],
     imports: [
         AuthModule.forRoot(),
