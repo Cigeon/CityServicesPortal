@@ -34,7 +34,6 @@ namespace ApiApp
                 options.AddPolicy("default", policy =>
                 {
                     policy.WithOrigins(Configuration["ClientAddress"])
-                        .WithOrigins(Configuration["ClientAddress2"])
                         .WithOrigins(Configuration["PetitionsClientAddress"])
                         .AllowAnyHeader()
                         .AllowAnyMethod();

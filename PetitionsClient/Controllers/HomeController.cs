@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PetitionsClient.Controllers
+namespace WebApplication3.Controllers
 {
     public class HomeController : Controller
     {

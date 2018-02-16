@@ -75,28 +75,7 @@ namespace IdentityApp
 
                 new Client
                 {
-                    ClientId = "ng2",
-                    ClientName = "Angular Client2",
-                    AllowedGrantTypes = GrantTypes.Implicit,
-                    AllowAccessTokensViaBrowser = true,
-                    RequireConsent = true,
-
-                    RedirectUris = { $"{configuration["ClientAddress2"]}/callback" },
-                    PostLogoutRedirectUris = { $"{configuration["ClientAddress2"]}/home" },
-                    AllowedCorsOrigins = { configuration["ClientAddress2"] },
-
-                    AllowedScopes =
-                    {
-                        IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
-                        "apiApp"
-                    },
-
-                },
-
-                new Client
-                {
-                    ClientId = "ng-petitions",
+                    ClientId = "ng_petitions",
                     ClientName = "Petitions Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
