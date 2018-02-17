@@ -14,6 +14,7 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
 import { AuthService } from './components/services/auth.service';
 import { TestcomponentComponent } from './components/testcomponent/testcomponent.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { TestcomponentComponent } from './components/testcomponent/testcomponent
         FetchDataComponent,
         HomeComponent,
         UnauthorizedComponent,
-        TestcomponentComponent
+        TestcomponentComponent,
+        MenuComponent
     ],
     imports: [
         AuthModule.forRoot(),

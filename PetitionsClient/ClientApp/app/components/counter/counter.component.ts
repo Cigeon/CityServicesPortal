@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 export class CounterComponent {
     public currentCount = 0;
 
+    model = {
+        left: true,
+        middle: false,
+        right: false
+    };
+
     public incrementCounter() {
         this.currentCount++;
     }
