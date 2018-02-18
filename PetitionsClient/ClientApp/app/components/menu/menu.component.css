@@ -1,5 +1,18 @@
+.header {
+    height: 80px;
+    box-shadow: 0 3px 3px -3px #333;
+}
+
 .centered {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+.mrg-top {
+    margin-top: 8px;
 }

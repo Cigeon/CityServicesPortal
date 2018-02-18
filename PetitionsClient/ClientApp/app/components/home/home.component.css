@@ -3,6 +3,59 @@
 }
 
 .background-image {
-    background: url('https://vipuber.com.ua/img/vinnitsa_uber_vipuber.jpg') no-repeat;
+    background-image: url('../../../assets/city.jpg');
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 30.0em;
+}
+
+.background-shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    width: 700px;
+    height: 300px;
+}
+
+.title-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: white;
+}
+
+.regular-text {
+    margin-bottom: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
+    color: white;
+}
+
+.bold-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container {
+    text-align: center;
+}
+
+.container>h3 {
+    margin: 40px;
+}
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    border-color: lightgray;
+    margin-bottom: 40px;
 }

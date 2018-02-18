@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d6d03d43dfd62576776e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "eb4dc2fdfaa16624e635"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -704,7 +704,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(106)(__webpack_require__.s = 106);
+/******/ 	return hotCreateRequire(114)(__webpack_require__.s = 114);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1030,7 +1030,7 @@ module.exports = (__webpack_require__(0))(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_observable_timer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_add_observable_timer__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_BehaviorSubject__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_BehaviorSubject__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_rxjs_BehaviorSubject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_router__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_jsrsasign__ = __webpack_require__(50);
@@ -3317,7 +3317,7 @@ module.exports = Html5Entities;
 
 "use strict";
 
-var isArray_1 = __webpack_require__(92);
+var isArray_1 = __webpack_require__(100);
 function isNumeric(val) {
     // parseFloat NaNs numeric-cast false positives (null|true|false|"")
     // ...but misinterprets leading-number strings, particularly hex literals ("0x...")
@@ -3361,12 +3361,12 @@ module.exports = (__webpack_require__(0))(5);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reflect_metadata__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_zone_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_module_browser__ = __webpack_require__(21);
 
 
@@ -3533,7 +3533,7 @@ function createReporter() {
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(88);
+    overlay = __webpack_require__(96);
   }
 
   var styles = {
@@ -3586,7 +3586,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(89);
+var processUpdate = __webpack_require__(97);
 
 var customHandler;
 var subscribeAllHandler;
@@ -3651,7 +3651,7 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(90)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(98)(module)))
 
 /***/ }),
 /* 18 */
@@ -3863,7 +3863,7 @@ module.exports = function () {
 /* unused harmony export apiUrlFactory */
 /* unused harmony export identityUrlFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(9);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3916,7 +3916,7 @@ function identityUrlFactory() {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModuleShared; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_app_app_component__ = __webpack_require__(9);
@@ -6211,7 +6211,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    .body-content {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    .body-content {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n\r\n#footer {\r\n    padding: 20px;\r\n    text-align: center;\r\n    box-shadow: 0 -2px 2px -2px #333;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6225,7 +6225,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "body {\r\n\r\n}\r\n\r\n.background-image {\r\n    background: url('https://vipuber.com.ua/img/vinnitsa_uber_vipuber.jpg') no-repeat;\r\n    background-size: cover;\r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n\r\n}\r\n\r\n.background-image {\r\n    background-image: url(" + __webpack_require__(88) + ");\r\n    background-size: cover;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: auto;\r\n    height: 30.0em;\r\n}\r\n\r\n.background-shadow {\r\n    background-color: rgba(0, 0, 0, 0.5);\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-radius: 8px;\r\n    width: 700px;\r\n    height: 300px;\r\n}\r\n\r\n.title-text {\r\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\r\n    font-weight: bold;\r\n    font-size: 36px;\r\n    color: white;\r\n}\r\n\r\n.regular-text {\r\n    margin-bottom: 30px;\r\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\r\n    font-size: 28px;\r\n    color: white;\r\n}\r\n\r\n.bold-text {\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n}\r\n\r\n.container {\r\n    text-align: center;\r\n}\r\n\r\n.container>h3 {\r\n    margin: 40px;\r\n}\r\n.categories {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: space-around;\r\n}\r\n\r\n.card {\r\n    border-color: lightgray;\r\n    margin-bottom: 40px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6239,7 +6239,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".centered {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n", ""]);
+exports.push([module.i, ".header {\r\n    height: 80px;\r\n    box-shadow: 0 3px 3px -3px #333;\r\n}\r\n\r\n.centered {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\n.logo {\r\n    height: 60px;\r\n}\r\n\r\n.mrg-top {\r\n    margin-top: 8px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -6602,7 +6602,7 @@ module.exports = XmlEntities;
 /* 40 */
 /***/ (function(module, exports) {
 
-module.exports = "<div class='container-fluid'>\r\n    <div>\r\n        <app-menu></app-menu>\r\n    </div>\r\n    <div>\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div>\r\n    <app-menu></app-menu>\r\n    <router-outlet></router-outlet>\r\n    <div id=\"footer\">&copy; Громадські петиції - Вінниця 2018</div>\r\n</div>\r\n";
 
 /***/ }),
 /* 41 */
@@ -6618,15 +6618,15 @@ module.exports = "<h1>Weather forecast</h1>\r\n\r\n<p>This component demonstrate
 
 /***/ }),
 /* 43 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<!--<h1>Hello, world!</h1>\r\n<p>Welcome to your new single-page application, built with:</p>\r\n<ul>\r\n    <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>\r\n    <li><a href='https://angular.io/'>Angular</a> and <a href='http://www.typescriptlang.org/'>TypeScript</a> for client-side code</li>\r\n    <li><a href='https://webpack.github.io/'>Webpack</a> for building and bundling client-side resources</li>\r\n    <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>\r\n</ul>\r\n<p>To help you get started, we've also set up:</p>\r\n<ul>\r\n    <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>\r\n    <li><strong>Server-side prerendering</strong>. For faster initial loading and improved SEO, your Angular app is prerendered on the server. The resulting HTML is then transferred to the browser where a client-side copy of the app takes over.</li>\r\n    <li><strong>Webpack dev middleware</strong>. In development mode, there's no need to run the <code>webpack</code> build tool. Your client-side resources are dynamically built on demand. Updates are available as soon as you modify any file.</li>\r\n    <li><strong>Hot module replacement</strong>. In development mode, you don't even need to reload the page after making most changes. Within seconds of saving changes to files, your Angular app will be rebuilt and a new instance injected is into the page.</li>\r\n    <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and the <code>webpack</code> build tool produces minified static CSS and JavaScript files.</li>\r\n</ul>-->\r\n\r\n<div class=\"jumbotron background-image\">\r\n    <h1 class=\"display-4\">Hello, world!</h1>\r\n    <p class=\"lead\">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\r\n    <hr class=\"my-4\">\r\n    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\r\n    <p class=\"lead\">\r\n        <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a>\r\n    </p>\r\n</div>";
+module.exports = "<div class=\"background-image\">\r\n    <div class=\"background-shadow\">\r\n        <P class=\"title-text\">Сервіс громадських петицій</P>\r\n        <p class=\"regular-text\">Прийми участь у покращенні життя міста</p>\r\n        <button type=\"button\" class=\"btn btn-primary\"><span class=\"bold-text\">+ Створити петицію</span></button>\r\n    </div>\r\n</div>\r\n<div class=\"container\">\r\n    <h3>По категоріям</h3>\r\n    <div class=\"categories\">\r\n        <div class=\"card\" style=\"width: 18rem;\">\r\n            <img class=\"card-img-top\" src=\"" + __webpack_require__(95) + "\" alt=\"Transport\" />\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-text\">Транспорт та дороги</h4>\r\n                <button type=\"button\" class=\"btn btn-light\">\r\n                    петицій <span class=\"badge badge-primary\">9</span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n        <div class=\"card\" style=\"width: 18rem;\">\r\n            <img class=\"card-img-top\" src=\"" + __webpack_require__(90) + "\" alt=\"Medicine\" />\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-text\">Охорона здоров'я</h4>\r\n                <button type=\"button\" class=\"btn btn-light\">\r\n                    петицій <span class=\"badge badge-primary\">11</span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n        <div class=\"card\" style=\"width: 18rem;\">\r\n            <img class=\"card-img-top\" src=\"" + __webpack_require__(91) + "\" alt=\"Industry\" />\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-text\">Промисловість</h4>\r\n                <button type=\"button\" class=\"btn btn-light\">\r\n                    петицій <span class=\"badge badge-primary\">2</span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n        <div class=\"card\" style=\"width: 18rem;\">\r\n            <img class=\"card-img-top\" src=\"" + __webpack_require__(94) + "\" alt=\"Study\" />\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-text\">Освіта</h4>\r\n                <button type=\"button\" class=\"btn btn-light\">\r\n                    петицій <span class=\"badge badge-primary\">5</span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n        <div class=\"card\" style=\"width: 18rem;\">\r\n            <img class=\"card-img-top\" src=\"" + __webpack_require__(93) + "\" alt=\"Study\" />\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-text\">Правопорядок</h4>\r\n                <button type=\"button\" class=\"btn btn-light\">\r\n                    петицій <span class=\"badge badge-primary\">3</span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n        <div class=\"card\" style=\"width: 18rem;\">\r\n            <img class=\"card-img-top\" src=\"" + __webpack_require__(89) + "\" alt=\"Study\" />\r\n            <div class=\"card-body\">\r\n                <h4 class=\"card-text\">Економіка та фінанси</h4>\r\n                <button type=\"button\" class=\"btn btn-light\">\r\n                    петицій <span class=\"badge badge-primary\">3</span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 44 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-8\">\r\n        <h3>\r\n            <a class=\"nav-link\" [routerLink]=\"['/home']\">Громадські петиції</a>\r\n        </h3>\r\n    </div>\r\n    <div class=\"col-4 centered\">\r\n        <ul class=\"nav justify-content-end\">\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link active\" [routerLink]=\"['/home']\">Головна</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/counter']\">Петиції</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link\" *ngIf=\"!isAuthorized\" (click)=\"login()\" [routerLink]=\"['/login']\">Вхід</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link\" *ngIf=\"isAuthorized\" (click)=\"logout()\" [routerLink]=\"['#']\">Вийти</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</div>";
+module.exports = "<div class=\"row header\">\r\n    <div class=\"col-8 centered\">\r\n        <h3>\r\n            <a class=\"nav-link mrg-top\" [routerLink]=\"['/home']\">\r\n                <img class=\"logo\" src=\"" + __webpack_require__(92) + "\" />\r\n                Громадські петиції\r\n            </a>\r\n        </h3>\r\n    </div>\r\n    <div class=\"col-4 centered\">\r\n        <ul class=\"nav justify-content-end\">\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link active\" [routerLink]=\"['/home']\">Головна</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link\" [routerLink]=\"['/counter']\">Петиції</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link\" *ngIf=\"!isAuthorized\" (click)=\"login()\" [routerLink]=\"['/login']\">Вхід</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link\" *ngIf=\"isAuthorized\" (click)=\"logout()\" [routerLink]=\"['#']\">Вийти</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 45 */
@@ -8397,7 +8397,7 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(93), __webpack_require__(15)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(101), __webpack_require__(15)))
 
 /***/ }),
 /* 55 */
@@ -8505,7 +8505,7 @@ Observable_1.Observable.timer = timer_1.timer;
 "use strict";
 
 var Observable_1 = __webpack_require__(1);
-var catch_1 = __webpack_require__(101);
+var catch_1 = __webpack_require__(109);
 Observable_1.Observable.prototype.catch = catch_1._catch;
 Observable_1.Observable.prototype._catch = catch_1._catch;
 //# sourceMappingURL=catch.js.map
@@ -8517,7 +8517,7 @@ Observable_1.Observable.prototype._catch = catch_1._catch;
 "use strict";
 
 var Observable_1 = __webpack_require__(1);
-var map_1 = __webpack_require__(91);
+var map_1 = __webpack_require__(99);
 Observable_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
@@ -8751,7 +8751,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var isNumeric_1 = __webpack_require__(11);
 var Observable_1 = __webpack_require__(1);
 var async_1 = __webpack_require__(5);
-var isScheduler_1 = __webpack_require__(95);
+var isScheduler_1 = __webpack_require__(103);
 var isDate_1 = __webpack_require__(81);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -9007,7 +9007,7 @@ exports.timeInterval = timeInterval;
 
 "use strict";
 
-var map_1 = __webpack_require__(103);
+var map_1 = __webpack_require__(111);
 /**
  * Maps each source value (an object) to its specified nested property.
  *
@@ -9076,7 +9076,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(12);
-var ArgumentOutOfRangeError_1 = __webpack_require__(105);
+var ArgumentOutOfRangeError_1 = __webpack_require__(113);
 var EmptyObservable_1 = __webpack_require__(13);
 /**
  * Emits only the first `count` values emitted by the source Observable.
@@ -9231,7 +9231,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(104);
+var Subscription_1 = __webpack_require__(112);
 /**
  * A unit of work to be executed in a {@link Scheduler}. An action is typically
  * created from within a Scheduler and an RxJS user does not need to concern
@@ -9281,7 +9281,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var root_1 = __webpack_require__(94);
+var root_1 = __webpack_require__(102);
 var Action_1 = __webpack_require__(78);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -9574,6 +9574,54 @@ module.exports = function (str) {
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "819a6b1b4ba14bc2b913943e35522f75.jpg";
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "a06ff5625de90c22494f34eb29cb286a.jpg";
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "9e5d3fcde8bf0b9a5902d9a2d10a8d29.jpg";
+
+/***/ }),
+/* 91 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "8b156f722593b8a4e35a59ca6a499dc8.jpg";
+
+/***/ }),
+/* 92 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,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"
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "c161b0cb5e7ff734023232377c08195b.jpg";
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "3d91fd296c691088ae116ff04813f4d5.jpg";
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "c2252b7dce2475c96b072754eaec6ce0.jpg";
+
+/***/ }),
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /*eslint-env browser*/
 
 var clientOverlay = document.createElement('div');
@@ -9656,7 +9704,7 @@ function problemType (type) {
 
 
 /***/ }),
-/* 89 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -9794,7 +9842,7 @@ module.exports = function(hash, moduleMap, options) {
 
 
 /***/ }),
-/* 90 */
+/* 98 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -9822,97 +9870,97 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 91 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(13);
 
 /***/ }),
-/* 92 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(20);
 
 /***/ }),
-/* 93 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(25);
 
 /***/ }),
-/* 94 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(4);
 
 /***/ }),
-/* 95 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(41);
 
 /***/ }),
-/* 96 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(45);
 
 /***/ }),
-/* 97 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(47);
 
 /***/ }),
-/* 98 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(49);
 
 /***/ }),
-/* 99 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(54);
 
 /***/ }),
-/* 100 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(56);
 
 /***/ }),
-/* 101 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(68);
 
 /***/ }),
-/* 102 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(7);
 
 /***/ }),
-/* 103 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(86);
 
 /***/ }),
-/* 104 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(9);
 
 /***/ }),
-/* 105 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(0))(93);
 
 /***/ }),
-/* 106 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(18);
