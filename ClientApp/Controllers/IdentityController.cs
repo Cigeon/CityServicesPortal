@@ -28,19 +28,40 @@ namespace ClientApp.Controllers
             var client = new HttpClient();
             client.SetBearerToken(accessToken);
 
-            return await client.GetAsync("http://localhost:5001/api/identity");
+            return await client.GetAsync("http://localhost:5011/api/identity");
         }
 
         private async Task<HttpResponseMessage> ApiCallUsingClientCredentials()
         {
             var tokenClient = new TokenClient("http://localhost:5000/connect/token", "mvc", "secret");
-            var tokenResponse = await tokenClient.RequestClientCredentialsAsync("apiApp");
+            var tokenResponse = await tokenClient.RequestClientCredentialsAsync("petitionsApi");
 
             var client = new HttpClient();
             client.SetBearerToken(tokenResponse.AccessToken);
 
-            return await client.GetAsync("http://localhost:5001/api/identity");
+            return await client.GetAsync("http://localhost:5011/api/identity");
         }
+
+        //private async Task<HttpResponseMessage> ApiCallUsingUserAccessToken()
+        //{
+        //    var accessToken = await HttpContext.GetTokenAsync("access_token");
+
+        //    var client = new HttpClient();
+        //    client.SetBearerToken(accessToken);
+
+        //    return await client.GetAsync("http://localhost:5001/api/identity");
+        //}
+
+        //private async Task<HttpResponseMessage> ApiCallUsingClientCredentials()
+        //{
+        //    var tokenClient = new TokenClient("http://localhost:5000/connect/token", "mvc", "secret");
+        //    var tokenResponse = await tokenClient.RequestClientCredentialsAsync("apiApp");
+
+        //    var client = new HttpClient();
+        //    client.SetBearerToken(tokenResponse.AccessToken);
+
+        //    return await client.GetAsync("http://localhost:5001/api/identity");
+        //}
 
         public async Task Logout()
         {
