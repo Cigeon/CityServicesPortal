@@ -39,7 +39,8 @@ namespace ClientApp
                     options.ClientSecret = "secret";
 
                     options.ResponseType = "code id_token";
-                    options.Scope.Add("apiApp");
+                    //options.Scope.Add("apiApp");
+                    options.Scope.Add("petitionsApi");
                     options.Scope.Add("offline_access");
 
                     options.GetClaimsFromUserInfoEndpoint = true;

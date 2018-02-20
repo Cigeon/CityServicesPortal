@@ -23,7 +23,8 @@ namespace IdentityApp
         {
             return new List<ApiResource>
             {
-                new ApiResource("apiApp", "My API")
+                new ApiResource("apiApp", "My API"),
+                new ApiResource("petitionsApi", "Petitions API")
             };
         }
 
@@ -47,7 +48,7 @@ namespace IdentityApp
                     },
 
                     // scopes that client has access to
-                    AllowedScopes = { "apiApp" }
+                    AllowedScopes = { "apiApp", "petitionsApi" }
                 },
 
 
@@ -68,7 +69,7 @@ namespace IdentityApp
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "apiApp"
+                        "petitionsApi"
                     },
 
                 },

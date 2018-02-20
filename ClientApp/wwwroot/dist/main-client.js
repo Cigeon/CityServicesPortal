@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e87dee15b0a945c06e9d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a19be2d7974c2ef9322f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -812,7 +812,8 @@ var AuthService = (function () {
         openIdImplicitFlowConfiguration.redirect_url = originUrl + 'callback';
         openIdImplicitFlowConfiguration.client_id = 'ng';
         openIdImplicitFlowConfiguration.response_type = 'id_token token';
-        openIdImplicitFlowConfiguration.scope = 'openid profile apiApp';
+        //openIdImplicitFlowConfiguration.scope = 'openid profile apiApp';
+        openIdImplicitFlowConfiguration.scope = 'openid profile petitionsApi';
         openIdImplicitFlowConfiguration.post_logout_redirect_uri = originUrl + 'home';
         openIdImplicitFlowConfiguration.forbidden_route = '/forbidden';
         openIdImplicitFlowConfiguration.unauthorized_route = '/unauthorized';
