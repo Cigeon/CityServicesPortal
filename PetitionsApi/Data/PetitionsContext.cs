@@ -1,5 +1,6 @@
 ﻿using CityServicesPortal.Domain.Core;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PetitionsApi.Data
 {
@@ -22,11 +23,14 @@ namespace PetitionsApi.Data
             modelBuilder.Entity<PetitionVoter>()
                 .HasOne(pv => pv.Petition)
                 .WithMany(p => p.PetitionVoters)
+                .OnDelete(DeleteBehavior.Restrict)
                 .HasForeignKey(pv => pv.PetitionId);
+
 
             modelBuilder.Entity<PetitionVoter>()
                 .HasOne(pv => pv.PetitionUser)
                 .WithMany(pu => pu.PetitionVoters)
+                .OnDelete(DeleteBehavior.Restrict)
                 .HasForeignKey(pv => pv.PetitionUserId);
         }
     }
