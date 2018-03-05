@@ -1,25 +1,27 @@
-﻿using System;
+﻿using CQRSlite.Domain;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Petitions.Domain.WriteModel
 {
-    public class PetitionArea
+    public class PetitionArea : AggregateRoot
     {
-        public PetitionArea(int id, 
-                            string name, 
-                            string description, 
-                            DateTime created, 
-                            List<Petition> petitions)
+        public PetitionArea() {  }
+
+        public PetitionArea(Guid id, int petitionAreaId, string name, 
+            string description, DateTime created, List<int> petitions)
         {
             Id = id;
+            PetitionAreaId = petitionAreaId;
             Name = name;
             Description = description;
             Created = created;
             Petitions = petitions;
+
+            //ApplyChange
         }
 
-        public int Id { get; private set; }
+        public int PetitionAreaId { get; private set; }
 
         public string Name { get; private set; }
 
@@ -27,6 +29,6 @@ namespace Petitions.Domain.WriteModel
 
         public DateTime Created { get; private set; }
 
-        public List<Petition> Petitions { get; private set; }
+        public List<int> Petitions { get; private set; }
     }
 }
