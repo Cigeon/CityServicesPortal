@@ -1,14 +1,15 @@
-﻿using Petitions.Domain.WriteModel;
+﻿using CityServicesPortal.Petitions.Core.WriteModel.Domain;
+using CQRSlite.Events;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Petitions.Domain.Events.Petition
+namespace CityServicesPortal.Petitions.Core.ReadModel.Events
 {
-    public class PetitionCreatedEvent : BaseEvent
+    public class PetitionCreated : IEvent
     {
-        public PetitionCreatedEvent(Guid id, int petitionId, string name, string description, 
-            DateTime created, PetitionsStatus petitionsStatus, int petitionAreaId, 
+        public PetitionCreated(Guid id, int petitionId, string name, string description,
+            DateTime created, PetitionsStatus petitionsStatus, int petitionAreaId,
             int petitionUserId, List<int> petitionVoters)
         {
             Id = id;
@@ -21,6 +22,12 @@ namespace Petitions.Domain.Events.Petition
             PetitionUserId = petitionUserId;
             PetitionVoters = petitionVoters;
         }
+
+        public Guid Id { get; set; }
+
+        public int Version { get; set; }
+
+        public DateTimeOffset TimeStamp { get; set; }
 
         public int PetitionId { get; private set; }
 

@@ -1,4 +1,4 @@
-﻿namespace Petitions.Domain.WriteModel
+﻿namespace CityServicesPortal.Petitions.Core.WriteModel.Domain
 {
     public enum PetitionsStatus
     {

@@ -1,4 +1,5 @@
 ﻿using CQRSlite.Commands;
+using CQRSlite.Domain;
 using CQRSlite.Messages;
 using Petitions.Domain.Commands;
 using Petitions.Domain.Interfaces;
@@ -10,22 +11,20 @@ namespace Petitions.Domain.CommandHandlers
 {
     public class PetitionCommandHandler : ICommandHandler<CreatePetitionCommand>
     {
-        private readonly IRepository<Petition> _repo;
+        private readonly ISession _session;
 
-        public PetitionCommandHandler(IRepository<Petition> repo)
+        public PetitionCommandHandler(ISession session)
         {
-            _repo = repo;
+            _session = session;
         }
 
         public async Task Handle(CreatePetitionCommand command)
         {
             var petition = new Petition(command.Id, command.PetitionId, command.Name,
                 command.Description, command.Created, command.PetitionsStatus, command.PetitionAreaId,
-                command.PetitionUserId, command.PetitionVoters);
-
-            await _repo.AddAsync(petition);
-            await _repo.SaveChangesAsync();
+                command.PetitionUserId, command.PetitionVoters);            
+            await _session.Add(petition);
+            await _session.Commit();
         }
-        
     }
 }

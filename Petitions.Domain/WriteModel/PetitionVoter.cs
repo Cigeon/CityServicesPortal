@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Petitions.Domain.WriteModel
+﻿namespace Petitions.Domain.WriteModel
 {
     public class PetitionVoter
     {
