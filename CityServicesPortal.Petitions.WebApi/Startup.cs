@@ -15,6 +15,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 using CQRSlite.Messages;
+using CityServicesPortal.Petitions.Core.WriteModel.Infrastructure.Context;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace CityServicesPortal.Petitions.WebApi
 {
@@ -29,6 +32,10 @@ namespace CityServicesPortal.Petitions.WebApi
 
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            //services.AddDbContext<EventStoreContext>(options =>
+            //                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
             services.AddMemoryCache();
 
             //Add Cqrs services
@@ -36,7 +43,8 @@ namespace CityServicesPortal.Petitions.WebApi
             services.AddSingleton<ICommandSender>(y => y.GetService<Router>());
             services.AddSingleton<IEventPublisher>(y => y.GetService<Router>());
             services.AddSingleton<IHandlerRegistrar>(y => y.GetService<Router>());
-            services.AddSingleton<IEventStore, InMemoryEventStore>();
+            //services.AddSingleton<IEventStore, InMemoryEventStore>();
+            services.AddSingleton<IEventStore, SqlEventStore>();
             services.AddSingleton<ICache, MemoryCache>();
             services.AddScoped<IRepository>(y => new CacheRepository(new Repository(y.GetService<IEventStore>()), y.GetService<IEventStore>(), y.GetService<ICache>()));
             services.AddScoped<CQRSlite.Domain.ISession, Session>();

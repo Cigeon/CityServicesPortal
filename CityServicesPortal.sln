@@ -29,9 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Petitions.Application", "Pe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Petitions.WebApi", "Petitions.WebApi\Petitions.WebApi.csproj", "{E345EE72-A862-4AE5-8E33-F02A12BDF1CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityServicesPortal.Petitions.Core", "CityServicesPortal.Petitions.Core\CityServicesPortal.Petitions.Core.csproj", "{A3E1DEEF-3AC0-40B0-8DD7-AC196C58B35C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityServicesPortal.Petitions.Core", "CityServicesPortal.Petitions.Core\CityServicesPortal.Petitions.Core.csproj", "{A3E1DEEF-3AC0-40B0-8DD7-AC196C58B35C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CityServicesPortal.Petitions.WebApi", "CityServicesPortal.Petitions.WebApi\CityServicesPortal.Petitions.WebApi.csproj", "{A854EE81-9CB1-4C23-B3F6-ECAACE00CEFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CityServicesPortal.Petitions.WebApi", "CityServicesPortal.Petitions.WebApi\CityServicesPortal.Petitions.WebApi.csproj", "{A854EE81-9CB1-4C23-B3F6-ECAACE00CEFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
