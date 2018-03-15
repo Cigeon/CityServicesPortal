@@ -32,13 +32,15 @@ namespace Petitions.WebApi.Controllers
         }
 
         [HttpPost]
-        public void Post([FromBody]PetitionDto petition)
+        [Route("create")]
+        public void CreatePetition([FromBody]PetitionDto petition)
         {
             _petitionService.Create(petition);
         }
 
-        [HttpPut]
-        public void Put([FromBody]PetitionDto petition)
+        [HttpPost]
+        [Route("update")]
+        public void UpdatePetition([FromBody]PetitionDto petition)
         {
             _petitionService.Update(petition);
         }

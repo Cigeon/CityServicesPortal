@@ -14,8 +14,7 @@ namespace CityServicesPortal.Petitions.Core.WriteModel.Infrastructure
     public class SqlEventStore : IEventStore
     {
         private readonly IEventPublisher _publisher;
-        private readonly Dictionary<Guid, List<IEvent>> _inMemoryDb = new Dictionary<Guid, List<IEvent>>();
-
+        
         public SqlEventStore(IEventPublisher publisher)
         {
             _publisher = publisher;
@@ -25,13 +24,15 @@ namespace CityServicesPortal.Petitions.Core.WriteModel.Infrastructure
         {
             foreach (var @event in events)
             {
-                var e = @event;
+                var e = (Event)@event;
                 var storedEvent = new StoredEvent
                 {
-                    Id = @event.Id,
-                    TimeStamp = @event.TimeStamp,
-                    Version = @event.Version,
-                    Data = JsonConvert.SerializeObject(@event)
+                    Id = e.Id,
+                    PetitionId = e.PetitionId, 
+                    TimeStamp = e.TimeStamp,
+                    Version = e.Version,
+                    Data = JsonConvert.SerializeObject(e),
+                    EventType = e.EventType
                 };
 
                 using (var context = new EventStoreContext())

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CityServicesPortal.Petitions.Core.ReadModel.Events
 {
-    public class PetitionCreated : IEvent
+    public class PetitionCreated : Event
     {
         public PetitionCreated(Guid id, int petitionId, string name, string description,
             DateTime created, PetitionsStatus petitionsStatus, int petitionAreaId,
@@ -22,14 +22,14 @@ namespace CityServicesPortal.Petitions.Core.ReadModel.Events
             PetitionUserId = petitionUserId;
             PetitionVoters = petitionVoters;
         }
-
-        public Guid Id { get; set; }
-
-        public int Version { get; set; }
-
-        public DateTimeOffset TimeStamp { get; set; }
-
-        public int PetitionId { get; private set; }
+        /*
+         PetitionCreated
+         PetitionUpdated
+         PetitionRemoved
+         PetitionAreaChanged
+         PetitionStatusChanged
+         PetitionVoted
+         */
 
         public string Name { get; private set; }
 

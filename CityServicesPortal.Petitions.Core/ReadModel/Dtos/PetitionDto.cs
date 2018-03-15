@@ -8,6 +8,8 @@ namespace CityServicesPortal.Petitions.Core.ReadModel.Dtos
     {
         public Guid Id { get; set; }
 
+        public int Version { get; set; }
+
         public int PetitionId { get; set; }
 
         public string Name { get; set; }

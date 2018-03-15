@@ -2,7 +2,7 @@
 {
     public enum PetitionsStatus
     {
-        Verification = 1,
+        Registered = 1,
         Voting,
         Consideration,
         Reviewed

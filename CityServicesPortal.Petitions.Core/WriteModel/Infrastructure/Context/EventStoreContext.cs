@@ -1,4 +1,4 @@
-﻿using CityServicesPortal.Petitions.Core.WriteModel.Domain;
+﻿using CityServicesPortal.Petitions.Core.ReadModel.Events;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.IO;

@@ -5,11 +5,13 @@ using CQRSlite.Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CityServicesPortal.Petitions.Core.WriteModel.CommandHandlers
 {
-    public class PetitionCommandHandlers : ICommandHandler<CreatePetitionCommand>
+    public class PetitionCommandHandlers : ICommandHandler<CreatePetitionCommand>, 
+        ICancellableCommandHandler<UpdatePetitionCommand>
     {
         private readonly ISession _session;
 
@@ -25,6 +27,13 @@ namespace CityServicesPortal.Petitions.Core.WriteModel.CommandHandlers
                 command.PetitionUserId, command.PetitionVoters);
             await _session.Add(item);
             await _session.Commit();
+        }
+
+        public async Task Handle(UpdatePetitionCommand command, CancellationToken token)
+        {
+            var item = await _session.Get<Petition>(command.Id, command.ExpectedVersion, token);
+            item.Update(command.Name, command.Description);
+            await _session.Commit(token);
         }
     }
 }

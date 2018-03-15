@@ -38,15 +38,19 @@ namespace CityServicesPortal.Petitions.WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task Post([FromBody]PetitionDto petition, CancellationToken cancellationToken)
+        [Route("create")]
+        public async Task CreatePetition([FromBody]PetitionDto petition, CancellationToken cancellationToken)
         {
             var command = _mapper.Map<CreatePetitionCommand>(petition);
             await _commandSender.Send(command, cancellationToken);
         }
 
-        [HttpPut]
-        public void Put([FromBody]PetitionDto petition)
-        {            
+        [HttpPost]
+        [Route("update")]
+        public async Task UpdatePetition([FromBody]PetitionDto petition, CancellationToken cancellationToken)
+        {
+            var command = _mapper.Map<UpdatePetitionCommand>(petition);
+            await _commandSender.Send(command, cancellationToken);
         }
 
         // DELETE api/<controller>/5

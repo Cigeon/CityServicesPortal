@@ -27,6 +27,11 @@ namespace CityServicesPortal.Petitions.Core.WriteModel.Domain
                     petitionsStatus, petitionAreaId, petitionUserId, petitionVoters));
         }
 
+        public void Update(string name, string description)
+        {
+            ApplyChange(new PetitionUpdated(Id, name, description));
+        }
+
         public int PetitionId { get; private set; }
 
         public string Name { get; private set; }

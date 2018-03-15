@@ -12,6 +12,8 @@ namespace CityServicesPortal.Petitions.WebApi.AutoMapper
                 .ConstructUsing(p => new CreatePetitionCommand(p.Id, p.PetitionId, p.Name,
                         p.Description, p.Created, p.PetitionsStatus, p.PetitionAreaId,
                         p.PetitionUserId, p.PetitionVoters));
+            CreateMap<PetitionDto, UpdatePetitionCommand>()
+                .ConstructUsing(p => new UpdatePetitionCommand(p.Id, p.Version, p.Name, p.Description));
         }
     }
 }
