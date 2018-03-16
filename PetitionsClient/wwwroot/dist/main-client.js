@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "23ce1483be0412575bba"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9cb7de8efe31597e03d8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -6592,7 +6592,7 @@ module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-invers
 /* 44 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  new-petition works!\n</p>\n";
+module.exports = "<p>\r\n  new-petition works!\r\n</p>\r\n";
 
 /***/ }),
 /* 45 */

@@ -25,8 +25,9 @@ namespace CityServicesPortal.Petitions.Core.WriteModel.CommandHandlers
             var item = new Petition(command.Id, command.PetitionId, command.Name,
                 command.Description, command.Created, command.PetitionsStatus, command.PetitionAreaId,
                 command.PetitionUserId, command.PetitionVoters);
-            await _session.Add(item);
-            await _session.Commit();
+            //await _session.Add(item);
+            //await _session.Commit();
+            await Task.CompletedTask;
         }
 
         public async Task Handle(UpdatePetitionCommand command, CancellationToken token)
