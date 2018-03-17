@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace CityServicesPortal.Petitions.Api
 {
@@ -49,6 +50,12 @@ namespace CityServicesPortal.Petitions.Api
                 });
             });
 
+            // Register the Swagger generator, defining one or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Petitions API", Version = "v1" });
+            });
+
             // Adding MediatR for Domain Events and Notifications
             services.AddMediatR(typeof(Startup));
 
@@ -68,14 +75,20 @@ namespace CityServicesPortal.Petitions.Api
 
             app.UseCors("default");
 
-            app.UseAuthentication();
+            app.UseAuthentication();            
 
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Petitions API V1");
+            });
         }
 
         private static void RegisterServices(IServiceCollection services)
         {
-            // Adding dependencies from another layers (isolated from Presentation)
+            // Adding dependencies from another layers
             NativeInjectorBootStrapper.RegisterServices(services);
         }
     }
