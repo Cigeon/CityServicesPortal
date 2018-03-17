@@ -1,8 +1,9 @@
-﻿using CityServicesPortal.Petitions.Domain.Context;
+﻿using AutoMapper;
+using CityServicesPortal.Petitions.Infra.IoC;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,9 +21,11 @@ namespace CityServicesPortal.Petitions.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connection = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<PetitionsContext>(options =>
-                options.UseSqlServer(connection));
+            //string connection = Configuration.GetConnectionString("DefaultConnection");
+            //services.AddDbContext<PetitionsContext>(options =>
+            //    options.UseSqlServer(connection));
+
+            services.AddAutoMapper();
 
             services.AddAuthentication(options =>
             {
@@ -46,6 +49,12 @@ namespace CityServicesPortal.Petitions.Api
                 });
             });
 
+            // Adding MediatR for Domain Events and Notifications
+            services.AddMediatR(typeof(Startup));
+
+            // .NET Native DI Abstraction
+            RegisterServices(services);
+
             services.AddMvc();
         }
 
@@ -62,6 +71,12 @@ namespace CityServicesPortal.Petitions.Api
             app.UseAuthentication();
 
             app.UseMvc();
+        }
+
+        private static void RegisterServices(IServiceCollection services)
+        {
+            // Adding dependencies from another layers (isolated from Presentation)
+            NativeInjectorBootStrapper.RegisterServices(services);
         }
     }
 }

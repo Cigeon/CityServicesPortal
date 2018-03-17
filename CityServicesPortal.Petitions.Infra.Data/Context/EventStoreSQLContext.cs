@@ -1,4 +1,5 @@
 ﻿using CityServicesPortal.Petitions.Domain.Core.Events;
+using CityServicesPortal.Petitions.Infra.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -12,12 +13,12 @@ namespace CityServicesPortal.Petitions.Infra.Data.Context
     {
         public DbSet<StoredEvent> StoredEvent { get; set; }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.ApplyConfiguration(new StoredEventMap());
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new StoredEventMap());
 
-        //    base.OnModelCreating(modelBuilder);
-        //}
+            base.OnModelCreating(modelBuilder);
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

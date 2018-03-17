@@ -1,4 +1,5 @@
 ﻿using CityServicesPortal.Petitions.Domain.Models;
+using CityServicesPortal.Petitions.Infra.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -10,14 +11,14 @@ namespace CityServicesPortal.Petitions.Infra.Data.Context
 {
     public class PetitionContext : DbContext
     {
-        public DbSet<Petition> Customers { get; set; }
+        public DbSet<Petition> Petitions { get; set; }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.ApplyConfiguration(new PetitionMap());
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new PetitionMap());
 
-        //    base.OnModelCreating(modelBuilder);
-        //}
+            base.OnModelCreating(modelBuilder);
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

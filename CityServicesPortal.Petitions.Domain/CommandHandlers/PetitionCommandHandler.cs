@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace CityServicesPortal.Petitions.Domain.CommandHandlers
 {
-    public class CustomerCommandHandler : CommandHandler,
+    public class PetitionCommandHandler : CommandHandler,
         INotificationHandler<RegisterPetitionCommand>
     {
         private readonly IPetitionRepository _customerRepository;
         private readonly IMediatorHandler Bus;
 
-        public CustomerCommandHandler(IPetitionRepository customerRepository,
+        public PetitionCommandHandler(IPetitionRepository customerRepository,
                                       IUnitOfWork uow,
                                       IMediatorHandler bus,
                                       INotificationHandler<DomainNotification> notifications) : base(uow, bus, notifications)
