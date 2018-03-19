@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using CityServicesPortal.Petitions.Application.DTOs;
 using CityServicesPortal.Petitions.Application.Interfaces;
-using CityServicesPortal.Petitions.Application.ViewModels;
 using CityServicesPortal.Petitions.Domain.Commands;
 using CityServicesPortal.Petitions.Domain.Core.Bus;
 using CityServicesPortal.Petitions.Domain.Interfaces;
 using CityServicesPortal.Petitions.Infra.Data.Repository.EventSourcing;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace CityServicesPortal.Petitions.Application.Services
 {
@@ -30,34 +30,54 @@ namespace CityServicesPortal.Petitions.Application.Services
             _eventStoreRepository = eventStoreRepository;
         }
 
-        public IEnumerable<PetitionViewModel> GetAll()
+        public IEnumerable<PetitionDto> GetAll()
         {
-            return _petitionRepository.GetAll().ProjectTo<PetitionViewModel>();
+            return _petitionRepository.GetAll().ProjectTo<PetitionDto>();
         }
 
-        public PetitionViewModel GetById(Guid id)
+        public PetitionDto GetById(Guid id)
         {
-            return _mapper.Map<PetitionViewModel>(_petitionRepository.GetById(id));
+            var petition = _petitionRepository.GetById(id);
+            return new PetitionDto
+            {
+                Id = petition.Id,
+                Name = petition.Name,
+                Description = petition.Description,
+                Created = petition.Created,
+                Modified = petition.Modified,
+                CategoryId = petition.CategoryId,
+                Status = petition.Status
+            };
+            //return await _mapper.Map<PetitionDto>(_petitionRepository.GetById(id));
         }
 
-        public void Register(PetitionViewModel petitionViewModel)
+        public async Task Register(PetitionRegisterDto p)
         {
-            var p = petitionViewModel;
-            var registerCommand = new RegisterPetitionCommand(p.Name, p.Description, p.Created);
-            //var registerCommand = _mapper.Map<RegisterPetitionCommand>(petitionViewModel);
-            Bus.SendCommand(registerCommand);
+            var registerCommand = new RegisterPetitionCommand(p.Name, p.Description, DateTime.Now, p.CategoryId);
+            await Bus.SendCommand(registerCommand);
         }
 
-        public void Update(PetitionViewModel petitionViewModel)
+        public async Task Update(PetitionUpdateDto p)
         {
-            //var updateCommand = _mapper.Map<UpdateCustomerCommand>(customerViewModel);
-            //Bus.SendCommand(updateCommand);
+            var updateCommand = new UpdatePetitionCommand(p.Id, p.Name, p.Description, p.CategoryId);
+            await Bus.SendCommand(updateCommand);
         }
 
-        public void Remove(Guid id)
+        public async Task Remove(Guid id)
         {
-            //var removeCommand = new RemoveCustomerCommand(id);
-            //Bus.SendCommand(removeCommand);
+            var removeCommand = new RemovePetitionCommand(id);
+            await Bus.SendCommand(removeCommand);
+        }
+
+        public async Task ChangeStatus(PetitionChangeStatusDto p)
+        {
+            var changeStatusCommand = new PetitionChangeStatusCommand(p.Id, p.Status);
+            await Bus.SendCommand(changeStatusCommand);
+        }
+
+        public void Vote(Guid petitionId, Guid userId)
+        {
+            throw new NotImplementedException();
         }
 
         //public IList<CustomerHistoryData> GetAllHistory(Guid id)

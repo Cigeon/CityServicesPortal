@@ -12,9 +12,10 @@ using System;
 namespace CityServicesPortal.Petitions.Infra.Data.Migrations
 {
     [DbContext(typeof(PetitionContext))]
-    partial class PetitionContextModelSnapshot : ModelSnapshot
+    [Migration("20180318122230_PetitionsServiceUpgraded")]
+    partial class PetitionsServiceUpgraded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,14 +38,12 @@ namespace CityServicesPortal.Petitions.Infra.Data.Migrations
                         .HasColumnType("varchar(100)")
                         .HasMaxLength(11);
 
-                    b.Property<DateTime>("Modified");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("varchar(100)")
                         .HasMaxLength(100);
 
-                    b.Property<int>("Status");
+                    b.Property<int>("PetitionsStatus");
 
                     b.HasKey("Id");
 

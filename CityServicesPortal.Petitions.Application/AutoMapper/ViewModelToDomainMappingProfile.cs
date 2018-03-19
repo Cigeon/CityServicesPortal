@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CityServicesPortal.Petitions.Application.ViewModels;
+using CityServicesPortal.Petitions.Application.DTOs;
 using CityServicesPortal.Petitions.Domain.Commands;
 
 namespace CityServicesPortal.Petitions.Application.AutoMapper
@@ -8,11 +8,9 @@ namespace CityServicesPortal.Petitions.Application.AutoMapper
     {
         public ViewModelToDomainMappingProfile()
         {
-            //CreateMap<PetitionViewModel, RegisterPetitionCommand>()
-            //    .ConstructUsing(p => new RegisterPetitionCommand(p.Name, p.Description, p.Created))
-            //    .ForMember(x => x.Timestamp, opt => opt.Ignore());
-
-
+            CreateMap<PetitionDto, RegisterPetitionCommand>()
+                .ConstructUsing(p => new RegisterPetitionCommand(p.Name, p.Description, p.Created, p.CategoryId))
+                .ForMember(x => x.Timestamp, opt => opt.Ignore());
         }
     }
 }

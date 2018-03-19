@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CityServicesPortal.Petitions.Application.ViewModels;
+using CityServicesPortal.Petitions.Application.DTOs;
 using CityServicesPortal.Petitions.Domain.Models;
 
 namespace CityServicesPortal.Petitions.Application.AutoMapper
@@ -8,7 +8,7 @@ namespace CityServicesPortal.Petitions.Application.AutoMapper
     {
         public DomainToViewModelMappingProfile()
         {
-            CreateMap<Petition, PetitionViewModel>();
+            CreateMap<Petition, PetitionDto>();
         }
     }
 }

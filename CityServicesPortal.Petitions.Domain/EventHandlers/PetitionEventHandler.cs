@@ -6,9 +6,30 @@ using System.Threading.Tasks;
 namespace CityServicesPortal.Petitions.Domain.EventHandlers
 {
     public class PetitionEventHandler :
-    INotificationHandler<PetitionRegisteredEvent>
+    INotificationHandler<PetitionRegisteredEvent>,
+    INotificationHandler<PetitionUpdatedEvent>,
+    INotificationHandler<PetitionRemovedEvent>,
+    INotificationHandler<PetitionStatusChangedEvent>
     {
         public async Task Handle(PetitionRegisteredEvent message, CancellationToken cancellationToken)
+        {
+            // Send some notification e-mail
+            await Task.CompletedTask;
+        }
+
+        public async Task Handle(PetitionUpdatedEvent message, CancellationToken cancellationToken)
+        {
+            // Send some notification e-mail
+            await Task.CompletedTask;
+        }
+
+        public async Task Handle(PetitionRemovedEvent message, CancellationToken cancellationToken)
+        {
+            // Send some notification e-mail
+            await Task.CompletedTask;
+        }
+
+        public async Task Handle(PetitionStatusChangedEvent message, CancellationToken cancellationToken)
         {
             // Send some notification e-mail
             await Task.CompletedTask;

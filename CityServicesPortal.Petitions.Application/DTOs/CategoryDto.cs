@@ -1,14 +1,14 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
-namespace CityServicesPortal.Petitions.Application.ViewModels
+namespace CityServicesPortal.Petitions.Application.DTOs
 {
-    public class PetitionViewModel
+    public class CategoryDto
     {
-        [Key]
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime Created { get; set; }
+        public List<PetitionDto> Petitions { get; set; }
     }
 }

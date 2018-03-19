@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CityServicesPortal.Petitions.Domain.Models
 {
-    public enum PetitionsStatus
+    public enum PetitionStatus
     {
         Verification = 1,
         Voting,

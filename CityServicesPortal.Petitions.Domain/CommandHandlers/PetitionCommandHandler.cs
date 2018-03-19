@@ -12,47 +12,92 @@ using System.Threading.Tasks;
 namespace CityServicesPortal.Petitions.Domain.CommandHandlers
 {
     public class PetitionCommandHandler : CommandHandler,
-        INotificationHandler<RegisterPetitionCommand>
+        INotificationHandler<RegisterPetitionCommand>,
+        INotificationHandler<UpdatePetitionCommand>,
+        INotificationHandler<RemovePetitionCommand>,
+        INotificationHandler<PetitionChangeStatusCommand>
+
     {
-        private readonly IPetitionRepository _customerRepository;
+        private readonly IPetitionRepository _petitionRepository;
         private readonly IMediatorHandler Bus;
 
-        public PetitionCommandHandler(IPetitionRepository customerRepository,
+        public PetitionCommandHandler(IPetitionRepository petitionRepository,
                                       IUnitOfWork uow,
                                       IMediatorHandler bus,
                                       INotificationHandler<DomainNotification> notifications) : base(uow, bus, notifications)
         {
-            _customerRepository = customerRepository;
+            _petitionRepository = petitionRepository;
             Bus = bus;
         }
 
         public async Task Handle(RegisterPetitionCommand message, CancellationToken cancellationToken)
         {
-            //if (!message.IsValid())
-            //{
-            //    NotifyValidationErrors(message);
-            //    return;
-            //}
+            var petition = new Petition
+            {
+                Name = message.Name,
+                Description = message.Description,
+                Created = DateTime.Now,
+                Modified = DateTime.Now,
+                CategoryId = message.CategoryId
+            };
 
-            var petition = new Petition(Guid.NewGuid(), message.Name, message.Description, message.Created);
-
-            //if (_customerRepository.GetByEmail(customer.Email) != null)
-            //{
-            //    Bus.RaiseEvent(new DomainNotification(message.MessageType, "The customer e-mail has already been taken."));
-            //    return;
-            //}
-
-            _customerRepository.Add(petition);
+            _petitionRepository.Add(petition);
 
             if (Commit())
             {
                 await Bus.RaiseEvent(new PetitionRegisteredEvent(petition.Id, petition.Name, petition.Description, petition.Created));
             }
+        }
+
+        public async Task Handle(UpdatePetitionCommand message, CancellationToken cancellationToken)
+        {
+            var petition = _petitionRepository.GetById(message.Id);
+
+            if (petition == null)
+            {
+                await Bus.RaiseEvent(new DomainNotification(message.MessageType, "Can't update petition, because it doesn't exit"));
+                return;
+            }
+            petition.Name = message.Name;
+            petition.Description = message.Description;
+            petition.Created = message.Created;
+            petition.CategoryId = message.CategoryId;
+
+            _petitionRepository.Update(petition);
+
+            if (Commit())
+            {
+                await Bus.RaiseEvent(new PetitionUpdatedEvent(petition.Id, petition.Name, petition.Description, 
+                    petition.Created, petition.CategoryId));
+            }
         }        
+
+        public async Task Handle(PetitionChangeStatusCommand message, CancellationToken cancellationToken)
+        {
+            var petition = _petitionRepository.GetById(message.Id);
+            petition.Status = message.Status;
+            _petitionRepository.Update(petition);
+
+            if (Commit())
+            {
+                await Bus.RaiseEvent(new PetitionStatusChangedEvent(petition.Id, petition.Name, petition.Description,
+                    petition.Created, petition.CategoryId, petition.Status));
+            }
+        }
+
+        public async Task Handle(RemovePetitionCommand message, CancellationToken cancellationToken)
+        {
+            _petitionRepository.Remove(message.Id);
+
+            if (Commit())
+            {
+                await Bus.RaiseEvent(new PetitionRemovedEvent(message.Id));
+            }
+        }
 
         public void Dispose()
         {
-            _customerRepository.Dispose();
+            _petitionRepository.Dispose();
         }
     }
 }

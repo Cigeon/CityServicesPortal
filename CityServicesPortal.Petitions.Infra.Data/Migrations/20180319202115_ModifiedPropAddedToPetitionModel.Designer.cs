@@ -12,9 +12,10 @@ using System;
 namespace CityServicesPortal.Petitions.Infra.Data.Migrations
 {
     [DbContext(typeof(PetitionContext))]
-    partial class PetitionContextModelSnapshot : ModelSnapshot
+    [Migration("20180319202115_ModifiedPropAddedToPetitionModel")]
+    partial class ModifiedPropAddedToPetitionModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

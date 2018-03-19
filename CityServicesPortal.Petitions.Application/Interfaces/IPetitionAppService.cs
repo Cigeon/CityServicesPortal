@@ -1,16 +1,19 @@
-﻿using CityServicesPortal.Petitions.Application.ViewModels;
+﻿using CityServicesPortal.Petitions.Application.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CityServicesPortal.Petitions.Application.Interfaces
 {
     public interface IPetitionAppService : IDisposable
     {
-        void Register(PetitionViewModel petitionViewModel);
-        IEnumerable<PetitionViewModel> GetAll();
-        PetitionViewModel GetById(Guid id);
-        void Update(PetitionViewModel petitionViewModel);
-        void Remove(Guid id);
+        Task Register(PetitionRegisterDto dto);
+        IEnumerable<PetitionDto> GetAll();
+        PetitionDto GetById(Guid id);
+        Task Update(PetitionUpdateDto dto);
+        Task Remove(Guid id);
+        Task ChangeStatus(PetitionChangeStatusDto dto);
+        void Vote(Guid petitionId, Guid userId);
         //IList<CustomerHistoryData> GetAllHistory(Guid id);
     }
 }

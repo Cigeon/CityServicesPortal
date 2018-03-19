@@ -19,13 +19,8 @@ namespace CityServicesPortal.Petitions.Api
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //string connection = Configuration.GetConnectionString("DefaultConnection");
-            //services.AddDbContext<PetitionsContext>(options =>
-            //    options.UseSqlServer(connection));
-
             services.AddAutoMapper();
 
             services.AddAuthentication(options =>
@@ -65,7 +60,6 @@ namespace CityServicesPortal.Petitions.Api
             services.AddMvc();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())

@@ -13,12 +13,12 @@ namespace CityServicesPortal.Petitions.Domain.Models
         public string LastName { get; set; }
         public List<Petition> Petitions { get; set; }
 
-        public List<PetitionVoter> PetitionVoters { get; set; }
+        public List<Voter> PetitionVoters { get; set; }
 
         public PetitionUser()
         {
             Petitions = new List<Petition>();
-            PetitionVoters = new List<PetitionVoter>();
+            PetitionVoters = new List<Voter>();
         }
     }
 }

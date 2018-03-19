@@ -34,6 +34,7 @@ namespace CityServicesPortal.Petitions.Infra.Data.Repository
 
         public virtual void Update(TEntity obj)
         {
+            //Db.Entry(obj).State = EntityState.Modified;
             DbSet.Update(obj);
         }
 

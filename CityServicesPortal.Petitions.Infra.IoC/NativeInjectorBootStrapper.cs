@@ -42,13 +42,15 @@ namespace CityServicesPortal.Petitions.Infra.IoC
             // Domain - Events
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
             services.AddScoped<INotificationHandler<PetitionRegisteredEvent>, PetitionEventHandler>();
-            //services.AddScoped<INotificationHandler<CustomerUpdatedEvent>, CustomerEventHandler>();
-            //services.AddScoped<INotificationHandler<CustomerRemovedEvent>, CustomerEventHandler>();
+            services.AddScoped<INotificationHandler<PetitionUpdatedEvent>, PetitionEventHandler>();
+            services.AddScoped<INotificationHandler<PetitionRemovedEvent>, PetitionEventHandler>();
+            services.AddScoped<INotificationHandler<PetitionStatusChangedEvent>, PetitionEventHandler>();
 
             // Domain - Commands
             services.AddScoped<INotificationHandler<RegisterPetitionCommand>, PetitionCommandHandler>();
-            //services.AddScoped<INotificationHandler<UpdateCustomerCommand>, CustomerCommandHandler>();
-            //services.AddScoped<INotificationHandler<RemoveCustomerCommand>, CustomerCommandHandler>();
+            services.AddScoped<INotificationHandler<UpdatePetitionCommand>, PetitionCommandHandler>();
+            services.AddScoped<INotificationHandler<RemovePetitionCommand>, PetitionCommandHandler>();
+            services.AddScoped<INotificationHandler<PetitionChangeStatusCommand>, PetitionCommandHandler>();
 
             // Infra - Data
             services.AddScoped<IPetitionRepository, PetitionRepository>();
