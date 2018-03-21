@@ -15,6 +15,8 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
         INotificationHandler<RegisterPetitionCommand>,
         INotificationHandler<UpdatePetitionCommand>,
         INotificationHandler<RemovePetitionCommand>,
+        INotificationHandler<PetitionChangeNameCommand>,
+        INotificationHandler<PetitionChangeDescriptionCommand>,
         INotificationHandler<PetitionChangeStatusCommand>
 
     {
@@ -61,6 +63,7 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
             petition.Name = message.Name;
             petition.Description = message.Description;
             petition.Created = message.Created;
+            petition.Modified = DateTime.Now;
             petition.CategoryId = message.CategoryId;
 
             _petitionRepository.Update(petition);
@@ -70,18 +73,44 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
                 await Bus.RaiseEvent(new PetitionUpdatedEvent(petition.Id, petition.Name, petition.Description, 
                     petition.Created, petition.CategoryId));
             }
-        }        
+        }
+
+        public async Task Handle(PetitionChangeNameCommand message, CancellationToken cancellationToken)
+        {
+            var petition = _petitionRepository.GetById(message.Id);
+            petition.Name = message.Name;
+            petition.Modified = DateTime.Now;
+            _petitionRepository.Update(petition);
+
+            if (Commit())
+            {
+                await Bus.RaiseEvent(new PetitionNameChangedEvent(petition));
+            }
+        }
+
+        public async Task Handle(PetitionChangeDescriptionCommand message, CancellationToken cancellationToken)
+        {
+            var petition = _petitionRepository.GetById(message.Id);
+            petition.Description = message.Description;
+            petition.Modified = DateTime.Now;
+            _petitionRepository.Update(petition);
+
+            if (Commit())
+            {
+                await Bus.RaiseEvent(new PetitionDescriptionChangedEvent(petition));
+            }
+        }
 
         public async Task Handle(PetitionChangeStatusCommand message, CancellationToken cancellationToken)
         {
             var petition = _petitionRepository.GetById(message.Id);
             petition.Status = message.Status;
+            petition.Modified = DateTime.Now;
             _petitionRepository.Update(petition);
 
             if (Commit())
             {
-                await Bus.RaiseEvent(new PetitionStatusChangedEvent(petition.Id, petition.Name, petition.Description,
-                    petition.Created, petition.CategoryId, petition.Status));
+                await Bus.RaiseEvent(new PetitionStatusChangedEvent(petition));
             }
         }
 

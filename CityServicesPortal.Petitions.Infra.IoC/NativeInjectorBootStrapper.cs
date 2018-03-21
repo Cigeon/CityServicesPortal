@@ -44,12 +44,16 @@ namespace CityServicesPortal.Petitions.Infra.IoC
             services.AddScoped<INotificationHandler<PetitionRegisteredEvent>, PetitionEventHandler>();
             services.AddScoped<INotificationHandler<PetitionUpdatedEvent>, PetitionEventHandler>();
             services.AddScoped<INotificationHandler<PetitionRemovedEvent>, PetitionEventHandler>();
+            services.AddScoped<INotificationHandler<PetitionNameChangedEvent>, PetitionEventHandler>();
+            services.AddScoped<INotificationHandler<PetitionDescriptionChangedEvent>, PetitionEventHandler>();
             services.AddScoped<INotificationHandler<PetitionStatusChangedEvent>, PetitionEventHandler>();
 
             // Domain - Commands
             services.AddScoped<INotificationHandler<RegisterPetitionCommand>, PetitionCommandHandler>();
             services.AddScoped<INotificationHandler<UpdatePetitionCommand>, PetitionCommandHandler>();
             services.AddScoped<INotificationHandler<RemovePetitionCommand>, PetitionCommandHandler>();
+            services.AddScoped<INotificationHandler<PetitionChangeNameCommand>, PetitionCommandHandler>();
+            services.AddScoped<INotificationHandler<PetitionChangeDescriptionCommand>, PetitionCommandHandler>();
             services.AddScoped<INotificationHandler<PetitionChangeStatusCommand>, PetitionCommandHandler>();
 
             // Infra - Data

@@ -4,30 +4,33 @@ using System;
 
 namespace CityServicesPortal.Petitions.Domain.Events
 {
-    public class PetitionStatusChangedEvent : Event
+    public class PetitionStatusChangedEvent : PetitionEvent
     {
-        public PetitionStatusChangedEvent(Guid id, string name, string description, DateTime created, 
-            Guid categoryId, PetitionStatus status)
-        {
-            Id = id;
-            AggregateId = id;
-            Name = name;
-            Description = description;
-            Created = created;
-            CategoryId = categoryId;
-            PetitionStatus = status;
-        }
-
-        public Guid Id { get; set; }
-
-        public string Name { get; private set; }
-
-        public string Description { get; private set; }
-
-        public DateTime Created { get; private set; }
-
-        public Guid CategoryId { get; set; }
-
-        public PetitionStatus PetitionStatus { get; set; }
+        public PetitionStatusChangedEvent(Petition petition) : base(petition) { }
     }
+    //public class PetitionStatusChangedEvent : Event
+    //{
+    //    public PetitionStatusChangedEvent(Petition petition)
+    //    {
+    //        Id = petition.Id;
+    //        AggregateId = petition.Id;
+    //        Name = petition.Name;
+    //        Description = petition.Description;
+    //        Created = petition.Created;
+    //        CategoryId = petition.CategoryId;
+    //        PetitionStatus = petition.Status;
+    //    }
+
+    //    public Guid Id { get; set; }
+
+    //    public string Name { get; private set; }
+
+    //    public string Description { get; private set; }
+
+    //    public DateTime Created { get; private set; }
+
+    //    public Guid CategoryId { get; set; }
+
+    //    public PetitionStatus PetitionStatus { get; set; }
+    //}
 }

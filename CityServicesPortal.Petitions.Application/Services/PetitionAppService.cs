@@ -5,6 +5,7 @@ using CityServicesPortal.Petitions.Application.Interfaces;
 using CityServicesPortal.Petitions.Domain.Commands;
 using CityServicesPortal.Petitions.Domain.Core.Bus;
 using CityServicesPortal.Petitions.Domain.Interfaces;
+using CityServicesPortal.Petitions.Domain.Models;
 using CityServicesPortal.Petitions.Infra.Data.Repository.EventSourcing;
 using System;
 using System.Collections.Generic;
@@ -48,7 +49,6 @@ namespace CityServicesPortal.Petitions.Application.Services
                 CategoryId = petition.CategoryId,
                 Status = petition.Status
             };
-            //return await _mapper.Map<PetitionDto>(_petitionRepository.GetById(id));
         }
 
         public async Task Register(PetitionRegisterDto p)
@@ -69,9 +69,21 @@ namespace CityServicesPortal.Petitions.Application.Services
             await Bus.SendCommand(removeCommand);
         }
 
-        public async Task ChangeStatus(PetitionChangeStatusDto p)
+        public async Task ChangeName(Guid id, string name)
         {
-            var changeStatusCommand = new PetitionChangeStatusCommand(p.Id, p.Status);
+            var changeNameCommand = new PetitionChangeNameCommand(id, name);
+            await Bus.SendCommand(changeNameCommand);
+        }
+
+        public async Task ChangeDescription(Guid id, string description)
+        {
+            var changeDescriptionCommand = new PetitionChangeDescriptionCommand(id, description);
+            await Bus.SendCommand(changeDescriptionCommand);
+        }
+
+        public async Task ChangeStatus(Guid id, int status)
+        {
+            var changeStatusCommand = new PetitionChangeStatusCommand(id, (PetitionStatus)status);
             await Bus.SendCommand(changeStatusCommand);
         }
 
@@ -88,6 +100,6 @@ namespace CityServicesPortal.Petitions.Application.Services
         public void Dispose()
         {
             GC.SuppressFinalize(this);
-        }
+        }        
     }
 }

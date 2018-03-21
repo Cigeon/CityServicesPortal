@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CityServicesPortal.Petitions.Api.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Petition")]
+    [Route("petition")]
     public class PetitionController : Controller
     {
         private readonly IPetitionAppService _petitionAppService;
@@ -39,19 +39,33 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         public async Task Put([FromBody]PetitionUpdateDto p)
         {
             await _petitionAppService.Update(p);
-        }
-
-        [HttpPut]
-        [Route("Status")]
-        public async Task ChangeStatus([FromBody]PetitionChangeStatusDto p)
-        {
-            await _petitionAppService.ChangeStatus(p);
-        }
+        }        
 
         [HttpDelete("{id}")]
         public async Task Delete(Guid id)
         {
             await _petitionAppService.Remove(id);
+        }
+
+        [HttpPut]
+        [Route("name")]
+        public async Task ChangeName(Guid id, [FromBody]string name)
+        {
+            await _petitionAppService.ChangeName(id, name);
+        }
+
+        [HttpPut]
+        [Route("description")]
+        public async Task ChangeDescription(Guid id, [FromBody]string description)
+        {
+            await _petitionAppService.ChangeDescription(id, description);
+        }
+
+        [HttpPut]
+        [Route("status")]
+        public async Task ChangeStatus(Guid id, [FromBody]int status)
+        {
+            await _petitionAppService.ChangeStatus(id, status); ;
         }
     }
 }
