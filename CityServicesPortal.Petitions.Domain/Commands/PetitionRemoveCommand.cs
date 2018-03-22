@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CityServicesPortal.Petitions.Domain.Commands
 {
-    public class RemovePetitionCommand : PetitionCommand
+    public class PetitionRemoveCommand : PetitionCommand
     {
-        public RemovePetitionCommand(Guid id)
+        public PetitionRemoveCommand(Guid id)
         {
             Id = id;
             AggregateId = id;

@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 namespace CityServicesPortal.Petitions.Domain.CommandHandlers
 {
     public class PetitionCommandHandler : CommandHandler,
-        INotificationHandler<RegisterPetitionCommand>,
-        INotificationHandler<UpdatePetitionCommand>,
-        INotificationHandler<RemovePetitionCommand>,
+        INotificationHandler<PetitionRegisterCommand>,
+        INotificationHandler<PetitionUpdateCommand>,
+        INotificationHandler<PetitionRemoveCommand>,
         INotificationHandler<PetitionChangeNameCommand>,
         INotificationHandler<PetitionChangeDescriptionCommand>,
         INotificationHandler<PetitionChangeStatusCommand>
@@ -32,7 +32,7 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
             Bus = bus;
         }
 
-        public async Task Handle(RegisterPetitionCommand message, CancellationToken cancellationToken)
+        public async Task Handle(PetitionRegisterCommand message, CancellationToken cancellationToken)
         {
             var petition = new Petition
             {
@@ -51,7 +51,7 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
             }
         }
 
-        public async Task Handle(UpdatePetitionCommand message, CancellationToken cancellationToken)
+        public async Task Handle(PetitionUpdateCommand message, CancellationToken cancellationToken)
         {
             var petition = _petitionRepository.GetById(message.Id);
 
@@ -72,6 +72,16 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
             {
                 await Bus.RaiseEvent(new PetitionUpdatedEvent(petition.Id, petition.Name, petition.Description, 
                     petition.Created, petition.CategoryId));
+            }
+        }
+
+        public async Task Handle(PetitionRemoveCommand message, CancellationToken cancellationToken)
+        {
+            _petitionRepository.Remove(message.Id);
+
+            if (Commit())
+            {
+                await Bus.RaiseEvent(new PetitionRemovedEvent(message.Id));
             }
         }
 
@@ -112,17 +122,7 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
             {
                 await Bus.RaiseEvent(new PetitionStatusChangedEvent(petition));
             }
-        }
-
-        public async Task Handle(RemovePetitionCommand message, CancellationToken cancellationToken)
-        {
-            _petitionRepository.Remove(message.Id);
-
-            if (Commit())
-            {
-                await Bus.RaiseEvent(new PetitionRemovedEvent(message.Id));
-            }
-        }
+        }        
 
         public void Dispose()
         {

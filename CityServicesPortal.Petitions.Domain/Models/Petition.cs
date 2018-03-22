@@ -12,7 +12,7 @@ namespace CityServicesPortal.Petitions.Domain.Models
         public DateTime Modified { get;  set; } 
         public PetitionStatus Status { get; set; }
         public Guid CategoryId { get; set; }
-        //public Category Category { get; set; }
+        public Category Category { get; set; }
         //public Guid PetitionUserId { get; set; }
         //public PetitionUser PetitionUser { get; set; } 
 

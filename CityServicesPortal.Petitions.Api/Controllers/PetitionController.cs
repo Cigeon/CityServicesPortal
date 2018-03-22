@@ -23,22 +23,22 @@ namespace CityServicesPortal.Petitions.Api.Controllers
             return _petitionAppService.GetAll();
         }
 
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public PetitionDto Get(Guid id)
         {
             return _petitionAppService.GetById(id);
         }
 
         [HttpPost]
-        public async Task Post([FromBody]PetitionRegisterDto p)
+        public async Task Post([FromBody]PetitionRegisterDto petition)
         {
-            await _petitionAppService.Register(p);
+            await _petitionAppService.Register(petition);
         }
 
         [HttpPut]
-        public async Task Put([FromBody]PetitionUpdateDto p)
+        public async Task Put([FromBody]PetitionUpdateDto petition)
         {
-            await _petitionAppService.Update(p);
+            await _petitionAppService.Update(petition);
         }        
 
         [HttpDelete("{id}")]

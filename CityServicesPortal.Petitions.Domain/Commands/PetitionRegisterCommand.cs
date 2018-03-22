@@ -2,9 +2,9 @@
 
 namespace CityServicesPortal.Petitions.Domain.Commands
 {
-    public class RegisterPetitionCommand : PetitionCommand
+    public class PetitionRegisterCommand : PetitionCommand
     {
-        public RegisterPetitionCommand(string name, string description, DateTime created, Guid categoryId)
+        public PetitionRegisterCommand(string name, string description, DateTime created, Guid categoryId)
         {
             Name = name;
             Description = description;

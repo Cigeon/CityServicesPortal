@@ -69,9 +69,13 @@ namespace CityServicesPortal.Petitions.Api
 
             app.UseCors("default");
 
-            app.UseAuthentication();            
+            app.UseAuthentication();
 
             app.UseMvc();
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            //});
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>

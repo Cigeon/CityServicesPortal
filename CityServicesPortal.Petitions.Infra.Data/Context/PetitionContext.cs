@@ -12,10 +12,11 @@ namespace CityServicesPortal.Petitions.Infra.Data.Context
     public class PetitionContext : DbContext
     {
         public DbSet<Petition> Petitions { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new PetitionMap());
+            //modelBuilder.ApplyConfiguration(new PetitionMap());
 
             base.OnModelCreating(modelBuilder);
         }

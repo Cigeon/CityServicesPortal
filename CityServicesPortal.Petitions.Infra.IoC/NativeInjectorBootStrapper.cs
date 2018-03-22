@@ -38,6 +38,7 @@ namespace CityServicesPortal.Petitions.Infra.IoC
             services.AddSingleton(Mapper.Configuration);
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<IConfigurationProvider>(), sp.GetService));
             services.AddScoped<IPetitionAppService, PetitionAppService>();
+            services.AddScoped<ICategoryAppService, CategoryAppService>();
 
             // Domain - Events
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
@@ -47,17 +48,28 @@ namespace CityServicesPortal.Petitions.Infra.IoC
             services.AddScoped<INotificationHandler<PetitionNameChangedEvent>, PetitionEventHandler>();
             services.AddScoped<INotificationHandler<PetitionDescriptionChangedEvent>, PetitionEventHandler>();
             services.AddScoped<INotificationHandler<PetitionStatusChangedEvent>, PetitionEventHandler>();
+            services.AddScoped<INotificationHandler<CategoryCreatedEvent>, CategoryEventHandler>();
+            services.AddScoped<INotificationHandler<CategoryUpdatedEvent>, CategoryEventHandler>();
+            services.AddScoped<INotificationHandler<CategoryRemovedEvent>, CategoryEventHandler>();
+            services.AddScoped<INotificationHandler<CategoryNameChangedEvent>, CategoryEventHandler>();
+            services.AddScoped<INotificationHandler<CategoryDescriptionChangedEvent>, CategoryEventHandler>();
 
             // Domain - Commands
-            services.AddScoped<INotificationHandler<RegisterPetitionCommand>, PetitionCommandHandler>();
-            services.AddScoped<INotificationHandler<UpdatePetitionCommand>, PetitionCommandHandler>();
-            services.AddScoped<INotificationHandler<RemovePetitionCommand>, PetitionCommandHandler>();
+            services.AddScoped<INotificationHandler<PetitionRegisterCommand>, PetitionCommandHandler>();
+            services.AddScoped<INotificationHandler<PetitionUpdateCommand>, PetitionCommandHandler>();
+            services.AddScoped<INotificationHandler<PetitionRemoveCommand>, PetitionCommandHandler>();
             services.AddScoped<INotificationHandler<PetitionChangeNameCommand>, PetitionCommandHandler>();
             services.AddScoped<INotificationHandler<PetitionChangeDescriptionCommand>, PetitionCommandHandler>();
             services.AddScoped<INotificationHandler<PetitionChangeStatusCommand>, PetitionCommandHandler>();
+            services.AddScoped<INotificationHandler<CategoryCreateCommand>, CategoryCommandHandler>();
+            services.AddScoped<INotificationHandler<CategoryUpdateCommand>, CategoryCommandHandler>();
+            services.AddScoped<INotificationHandler<CategoryRemoveCommand>, CategoryCommandHandler>();
+            services.AddScoped<INotificationHandler<CategoryChangeNameCommand>, CategoryCommandHandler>();
+            services.AddScoped<INotificationHandler<CategoryChangeDescriptionCommand>, CategoryCommandHandler>();
 
             // Infra - Data
             services.AddScoped<IPetitionRepository, PetitionRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<PetitionContext>();
 

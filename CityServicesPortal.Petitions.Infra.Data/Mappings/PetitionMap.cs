@@ -21,9 +21,9 @@ namespace CityServicesPortal.Petitions.Infra.Data.Mappings
                 .HasMaxLength(11)
                 .IsRequired();
 
-            builder.Property(p => p.Created)
-                .HasColumnType("datetime")
-                .IsRequired();
+            //builder.Property(p => p.Created)
+            //    .HasColumnType("datetime")
+            //    .IsRequired();
 
         }
     }

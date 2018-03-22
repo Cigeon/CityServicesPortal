@@ -2,9 +2,9 @@
 
 namespace CityServicesPortal.Petitions.Domain.Commands
 {
-    public class UpdatePetitionCommand : PetitionCommand
+    public class PetitionUpdateCommand : PetitionCommand
     {
-        public UpdatePetitionCommand(Guid id, string name, string description, Guid categoryId)
+        public PetitionUpdateCommand(Guid id, string name, string description, Guid categoryId)
         {
             Id = id;
             Name = name;

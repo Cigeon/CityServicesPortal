@@ -21,12 +21,12 @@ namespace CityServicesPortal.Petitions.Application.Services
         private readonly IMediatorHandler Bus;
 
         public PetitionAppService(IMapper mapper,
-                                  IPetitionRepository customerRepository,
+                                  IPetitionRepository petitionRepository,
                                   IMediatorHandler bus,
                                   IEventStoreRepository eventStoreRepository)
         {
             _mapper = mapper;
-            _petitionRepository = customerRepository;
+            _petitionRepository = petitionRepository;
             Bus = bus;
             _eventStoreRepository = eventStoreRepository;
         }
@@ -53,19 +53,19 @@ namespace CityServicesPortal.Petitions.Application.Services
 
         public async Task Register(PetitionRegisterDto p)
         {
-            var registerCommand = new RegisterPetitionCommand(p.Name, p.Description, DateTime.Now, p.CategoryId);
+            var registerCommand = new PetitionRegisterCommand(p.Name, p.Description, DateTime.Now, p.CategoryId);
             await Bus.SendCommand(registerCommand);
         }
 
         public async Task Update(PetitionUpdateDto p)
         {
-            var updateCommand = new UpdatePetitionCommand(p.Id, p.Name, p.Description, p.CategoryId);
+            var updateCommand = new PetitionUpdateCommand(p.Id, p.Name, p.Description, p.CategoryId);
             await Bus.SendCommand(updateCommand);
         }
 
         public async Task Remove(Guid id)
         {
-            var removeCommand = new RemovePetitionCommand(id);
+            var removeCommand = new PetitionRemoveCommand(id);
             await Bus.SendCommand(removeCommand);
         }
 

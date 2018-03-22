@@ -6,20 +6,10 @@ namespace CityServicesPortal.Petitions.Domain.Models
 {
     public class Category : Entity
     {
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-        public DateTime Created { get; private set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
         public List<Petition> Petitions { get; set; }        
-
-        public Category(string name, string description)
-        {
-            Name = name;
-            Description = description;
-            Created = DateTime.Now;
-            Petitions = new List<Petition>();
-        }
-
-        // Empty constructor for EF
-        public Category() { }
     }
 }

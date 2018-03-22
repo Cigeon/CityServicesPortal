@@ -1,15 +1,19 @@
-﻿using System;
+﻿using CityServicesPortal.Petitions.Application.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CityServicesPortal.Petitions.Application.Interfaces
 {
     public interface ICategoryAppService
     {
-        //void Create(PetitionViewModel petitionViewModel);
-        //IEnumerable<PetitionViewModel> GetAll();
-        //PetitionViewModel GetById(Guid id);
-        //void Update(PetitionViewModel petitionViewModel);
-        //void Remove(Guid id);
+        Task Create(CategoryCreateDto category);
+        IEnumerable<CategoryDto> GetAll();
+        CategoryDto GetById(Guid id);
+        Task Update(CategoryUpdateDto category);
+        Task Remove(Guid id);
+        Task ChangeName(Guid id, string name);
+        Task ChangeDescription(Guid id, string description);
     }
 }

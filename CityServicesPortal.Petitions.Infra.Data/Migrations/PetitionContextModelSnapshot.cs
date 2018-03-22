@@ -21,34 +21,54 @@ namespace CityServicesPortal.Petitions.Infra.Data.Migrations
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.Petition", b =>
+            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.Category", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("Id");
+                        .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("CategoryId");
+                    b.Property<DateTime>("Created");
 
-                    b.Property<DateTime>("Created")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(11);
+                    b.Property<string>("Description");
 
                     b.Property<DateTime>("Modified");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100);
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.Petition", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid>("CategoryId");
+
+                    b.Property<DateTime>("Created");
+
+                    b.Property<string>("Description");
+
+                    b.Property<DateTime>("Modified");
+
+                    b.Property<string>("Name");
 
                     b.Property<int>("Status");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Petitions");
+                });
+
+            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.Petition", b =>
+                {
+                    b.HasOne("CityServicesPortal.Petitions.Domain.Models.Category", "Category")
+                        .WithMany("Petitions")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
