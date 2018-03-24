@@ -12,9 +12,10 @@ using System;
 namespace CityServicesPortal.Petitions.Infra.Data.Migrations
 {
     [DbContext(typeof(PetitionContext))]
-    partial class PetitionContextModelSnapshot : ModelSnapshot
+    [Migration("20180324231737_UserAddedToPetitions")]
+    partial class UserAddedToPetitions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,19 +68,6 @@ namespace CityServicesPortal.Petitions.Infra.Data.Migrations
                     b.ToTable("Petitions");
                 });
 
-            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.PetitionVoter", b =>
-                {
-                    b.Property<Guid>("PetitionId");
-
-                    b.Property<Guid>("UserId");
-
-                    b.HasKey("PetitionId", "UserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("PetitionVoter");
-                });
-
             modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -111,19 +99,6 @@ namespace CityServicesPortal.Petitions.Infra.Data.Migrations
                         .WithMany("Petitions")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.PetitionVoter", b =>
-                {
-                    b.HasOne("CityServicesPortal.Petitions.Domain.Models.Petition", "Petition")
-                        .WithMany("PetitionVoters")
-                        .HasForeignKey("PetitionId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("CityServicesPortal.Petitions.Domain.Models.User", "User")
-                        .WithMany("PetitionVoters")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
         }

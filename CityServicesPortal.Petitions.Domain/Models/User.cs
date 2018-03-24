@@ -1,24 +1,25 @@
-﻿using System;
+﻿using CityServicesPortal.Petitions.Domain.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CityServicesPortal.Petitions.Domain.Models
 {
-    public class PetitionUser
+    public class User : Entity
     {
-        public Guid Id { get; set; }
         public int IdentityId { get; set; }
+        public string UserName { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
         public List<Petition> Petitions { get; set; }
 
-        public List<Voter> PetitionVoters { get; set; }
+        public List<PetitionVoter> PetitionVoters { get; set; }
 
-        public PetitionUser()
+        public User()
         {
             Petitions = new List<Petition>();
-            PetitionVoters = new List<Voter>();
+            PetitionVoters = new List<PetitionVoter>();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using CityServicesPortal.Petitions.Domain.Core.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CityServicesPortal.Petitions.Domain.Models
 {
@@ -13,13 +14,14 @@ namespace CityServicesPortal.Petitions.Domain.Models
         public PetitionStatus Status { get; set; }
         public Guid CategoryId { get; set; }
         public Category Category { get; set; }
-        //public Guid PetitionUserId { get; set; }
-        //public PetitionUser PetitionUser { get; set; } 
-
-        //public List<PetitionVoter> PetitionVoters { get; set; }        
+        public Guid UserId { get; set; }
+        public User User { get; set; } 
+        public List<PetitionVoter> PetitionVoters { get; set; }        
         //public int VotesCount { get => PetitionVoters.Count; }
 
-        // Empty constructor for EF
-        public Petition() { }
+        public Petition()
+        {
+            PetitionVoters = new List<PetitionVoter>();
+        }
     }
 }

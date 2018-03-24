@@ -10,6 +10,11 @@ namespace CityServicesPortal.Petitions.Domain.Models
         public string Description { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
-        public List<Petition> Petitions { get; set; }        
+        public List<Petition> Petitions { get; set; }
+
+        public Category()
+        {
+            Petitions = new List<Petition>();
+        }
     }
 }

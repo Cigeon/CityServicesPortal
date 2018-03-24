@@ -12,8 +12,8 @@ using System;
 namespace CityServicesPortal.Petitions.Infra.Data.Migrations
 {
     [DbContext(typeof(PetitionContext))]
-    [Migration("20180322145503_CategoryModelChanged")]
-    partial class CategoryModelChanged
+    [Migration("20180324234124_VotersAddedToPetitionsAndUsers")]
+    partial class VotersAddedToPetitionsAndUsers
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -57,11 +57,48 @@ namespace CityServicesPortal.Petitions.Infra.Data.Migrations
 
                     b.Property<int>("Status");
 
+                    b.Property<Guid>("UserId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("Petitions");
+                });
+
+            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.PetitionVoter", b =>
+                {
+                    b.Property<Guid>("PetitionId");
+
+                    b.Property<Guid>("UserId");
+
+                    b.HasKey("PetitionId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PetitionVoter");
+                });
+
+            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.User", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<int>("IdentityId");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<string>("MiddleName");
+
+                    b.Property<string>("UserName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.Petition", b =>
@@ -70,6 +107,24 @@ namespace CityServicesPortal.Petitions.Infra.Data.Migrations
                         .WithMany("Petitions")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CityServicesPortal.Petitions.Domain.Models.User", "User")
+                        .WithMany("Petitions")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.PetitionVoter", b =>
+                {
+                    b.HasOne("CityServicesPortal.Petitions.Domain.Models.Petition", "Petition")
+                        .WithMany("PetitionVoters")
+                        .HasForeignKey("PetitionId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("CityServicesPortal.Petitions.Domain.Models.User", "User")
+                        .WithMany("PetitionVoters")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
         }

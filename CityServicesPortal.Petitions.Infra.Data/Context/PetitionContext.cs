@@ -13,10 +13,27 @@ namespace CityServicesPortal.Petitions.Infra.Data.Context
     {
         public DbSet<Petition> Petitions { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.ApplyConfiguration(new PetitionMap());
+
+            modelBuilder.Entity<PetitionVoter>()
+                .HasKey(t => new { t.PetitionId, t.UserId });
+
+            modelBuilder.Entity<PetitionVoter>()
+                .HasOne(pv => pv.Petition)
+                .WithMany(p => p.PetitionVoters)
+                .OnDelete(DeleteBehavior.Restrict)
+                .HasForeignKey(pv => pv.PetitionId);
+
+
+            modelBuilder.Entity<PetitionVoter>()
+                .HasOne(pv => pv.User)
+                .WithMany(pu => pu.PetitionVoters)
+                .OnDelete(DeleteBehavior.Restrict)
+                .HasForeignKey(pv => pv.UserId);
 
             base.OnModelCreating(modelBuilder);
         }
