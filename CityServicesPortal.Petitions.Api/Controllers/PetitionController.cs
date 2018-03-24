@@ -67,5 +67,12 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         {
             await _petitionAppService.ChangeStatus(id, status); ;
         }
+
+        [HttpPut]
+        [Route("category")]
+        public async Task ChangeCategory(Guid id, [FromBody]Guid categoryId)
+        {
+            await _petitionAppService.ChangeCategory(id, categoryId); ;
+        }
     }
 }

@@ -17,30 +17,35 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
         INotificationHandler<PetitionRemoveCommand>,
         INotificationHandler<PetitionChangeNameCommand>,
         INotificationHandler<PetitionChangeDescriptionCommand>,
-        INotificationHandler<PetitionChangeStatusCommand>
+        INotificationHandler<PetitionChangeStatusCommand>,
+        INotificationHandler<PetitionChangeCategoryCommand>
 
     {
         private readonly IPetitionRepository _petitionRepository;
+        private readonly ICategoryRepository _categoryRepository;
         private readonly IMediatorHandler Bus;
 
         public PetitionCommandHandler(IPetitionRepository petitionRepository,
+                                      ICategoryRepository categoryRepository,
                                       IUnitOfWork uow,
                                       IMediatorHandler bus,
                                       INotificationHandler<DomainNotification> notifications) : base(uow, bus, notifications)
         {
             _petitionRepository = petitionRepository;
+            _categoryRepository = categoryRepository;
             Bus = bus;
         }
 
         public async Task Handle(PetitionRegisterCommand message, CancellationToken cancellationToken)
         {
+            var category = _categoryRepository.GetById(message.CategoryId);
             var petition = new Petition
             {
                 Name = message.Name,
                 Description = message.Description,
                 Created = DateTime.Now,
                 Modified = DateTime.Now,
-                CategoryId = message.CategoryId
+                Category = category
             };
 
             _petitionRepository.Add(petition);
@@ -122,7 +127,21 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
             {
                 await Bus.RaiseEvent(new PetitionStatusChangedEvent(petition));
             }
-        }        
+        }
+
+        public async Task Handle(PetitionChangeCategoryCommand message, CancellationToken cancellationToken)
+        {
+            var petition = _petitionRepository.GetById(message.Id);
+            var category = _categoryRepository.GetById(message.CategoryId);
+            petition.Category = category;
+            petition.Modified = DateTime.Now;
+            _petitionRepository.Update(petition);
+
+            if (Commit())
+            {
+                await Bus.RaiseEvent(new PetitionCategoryChangedEvent(petition));
+            }
+        }
 
         public void Dispose()
         {

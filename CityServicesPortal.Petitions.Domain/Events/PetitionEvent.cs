@@ -13,7 +13,7 @@ namespace CityServicesPortal.Petitions.Domain.Events
             Name = petition.Name;
             Description = petition.Description;
             Created = petition.Created;
-            CategoryId = petition.CategoryId;
+            Category = petition.Category;
             PetitionStatus = petition.Status;
         }
 
@@ -25,7 +25,7 @@ namespace CityServicesPortal.Petitions.Domain.Events
 
         public DateTime Created { get; private set; }
 
-        public Guid CategoryId { get; set; }
+        public Category Category { get; set; }
 
         public PetitionStatus PetitionStatus { get; set; }
     }

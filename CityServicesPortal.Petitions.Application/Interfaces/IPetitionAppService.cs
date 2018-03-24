@@ -15,6 +15,7 @@ namespace CityServicesPortal.Petitions.Application.Interfaces
         Task ChangeName(Guid id, string name);
         Task ChangeDescription(Guid id, string description);
         Task ChangeStatus(Guid id, int status);
+        Task ChangeCategory(Guid id, Guid categoryId);
         void Vote(Guid petitionId, Guid userId);
         //IList<CustomerHistoryData> GetAllHistory(Guid id);
     }

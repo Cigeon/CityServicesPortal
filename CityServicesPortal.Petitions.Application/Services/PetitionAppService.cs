@@ -87,6 +87,12 @@ namespace CityServicesPortal.Petitions.Application.Services
             await Bus.SendCommand(changeStatusCommand);
         }
 
+        public async Task ChangeCategory(Guid id, Guid categoryId)
+        {
+            var changeCategoryCommand = new PetitionChangeCategoryCommand(id, categoryId);
+            await Bus.SendCommand(changeCategoryCommand);
+        }
+
         public void Vote(Guid petitionId, Guid userId)
         {
             throw new NotImplementedException();

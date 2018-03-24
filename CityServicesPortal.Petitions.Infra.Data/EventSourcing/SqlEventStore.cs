@@ -22,7 +22,13 @@ namespace CityServicesPortal.Petitions.Infra.Data.EventSourcing
 
         public void Save<T>(T @event) where T : Event
         {
-            var serializedData = JsonConvert.SerializeObject(@event);
+            //var serializedData = JsonConvert.SerializeObject(@event);
+
+            var serializedData = JsonConvert.SerializeObject(@event, Formatting.None,
+                        new JsonSerializerSettings()
+                        {
+                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                        });
 
             var storedEvent = new StoredEvent(
                 @event,
