@@ -8,13 +8,17 @@ using Microsoft.AspNetCore.Mvc;
 namespace CityServicesPortal.Petitions.Api.Controllers
 {
     [Produces("application/json")]
-    [Route("petition")]
+    [Route("api/[controller]")]
     public class PetitionController : Controller
     {
         private readonly IPetitionAppService _petitionAppService;
-        public PetitionController(IPetitionAppService petitionAppService)
+        private readonly IUserAppService _userAppService;
+
+        public PetitionController(IPetitionAppService petitionAppService,
+                                  IUserAppService userAppService)
         {
             _petitionAppService = petitionAppService;
+            _userAppService = userAppService;
         }
 
         [HttpGet]
@@ -73,6 +77,28 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         public async Task ChangeCategory(Guid id, [FromBody]Guid categoryId)
         {
             await _petitionAppService.ChangeCategory(id, categoryId); ;
+        }
+
+        [HttpPut]
+        [Route("vote")]
+        public async Task Vote(Guid id)
+        {
+            var user = _userAppService.GetByUserName("user");
+            if (user == null)
+            {
+                var registerUser = new UserRegisterDto
+                {
+                    FirstName = "Alex"
+                };
+
+                _userAppService.Register(registerUser);
+
+                user = new UserDto
+                {
+                    FirstName = registerUser.FirstName
+                };
+            }
+            await _petitionAppService.Vote(id, user);
         }
     }
 }

@@ -18,7 +18,8 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
         INotificationHandler<PetitionChangeNameCommand>,
         INotificationHandler<PetitionChangeDescriptionCommand>,
         INotificationHandler<PetitionChangeStatusCommand>,
-        INotificationHandler<PetitionChangeCategoryCommand>
+        INotificationHandler<PetitionChangeCategoryCommand>,
+        INotificationHandler<PetitionVoteCommand>
 
     {
         private readonly IPetitionRepository _petitionRepository;
@@ -143,9 +144,27 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
             }
         }
 
+        public async Task Handle(PetitionVoteCommand message, CancellationToken cancellationToken)
+        {
+            var petition = _petitionRepository.GetById(message.Id);
+            petition.PetitionVoters.Add(new PetitionVoter
+            {
+                PetitionId = message.Id,
+                UserId = message.UserId
+            });
+            _petitionRepository.Update(petition);
+
+            if (Commit())
+            {
+                await Bus.RaiseEvent(new PetitionVotedEvent(message.Id, message.UserId, message.UserFirstName,
+                    message.UserMiddleName, message.UserLastName));
+            }
+        }
+
         public void Dispose()
         {
             _petitionRepository.Dispose();
         }
+
     }
 }

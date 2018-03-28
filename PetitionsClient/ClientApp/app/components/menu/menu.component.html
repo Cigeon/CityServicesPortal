@@ -10,16 +10,16 @@
     <div class="col-4 centered">
         <ul class="nav justify-content-end">
             <li class="nav-item" [routerLinkActive]="['link-active']">
-                <a class="nav-link active" [routerLink]="['/home']">Головна</a>
+                <a class="nav-link menu-btn" [routerLink]="['/home']">Головна</a>
             </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
-                <a class="nav-link" [routerLink]="['/counter']">Петиції</a>
+                <a class="nav-link menu-btn" [routerLink]="['/counter']">Всі петиції</a>
             </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
-                <a class="nav-link" *ngIf="!isAuthorized" (click)="login()" [routerLink]="['/login']">Вхід</a>
+                <a class="nav-link menu-btn" *ngIf="!isAuthorized" (click)="login()" [routerLink]="['/login']">Вхід</a>
             </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
-                <a class="nav-link" *ngIf="isAuthorized" (click)="logout()" [routerLink]="['#']">Вийти</a>
+                <a class="nav-link menu-btn" *ngIf="isAuthorized" (click)="logout()" [routerLink]="['#']">Вийти</a>
             </li>
         </ul>
     </div>

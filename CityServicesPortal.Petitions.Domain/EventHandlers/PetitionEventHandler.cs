@@ -12,7 +12,8 @@ namespace CityServicesPortal.Petitions.Domain.EventHandlers
     INotificationHandler<PetitionNameChangedEvent>,
     INotificationHandler<PetitionDescriptionChangedEvent>,
     INotificationHandler<PetitionStatusChangedEvent>,
-    INotificationHandler<PetitionCategoryChangedEvent>
+    INotificationHandler<PetitionCategoryChangedEvent>,
+    INotificationHandler<PetitionVotedEvent>
     {
         public async Task Handle(PetitionRegisteredEvent message, CancellationToken cancellationToken)
         {
@@ -51,6 +52,12 @@ namespace CityServicesPortal.Petitions.Domain.EventHandlers
         }
 
         public async Task Handle(PetitionCategoryChangedEvent message, CancellationToken cancellationToken)
+        {
+            // Send some notification e-mail
+            await Task.CompletedTask;
+        }
+
+        public async Task Handle(PetitionVotedEvent notification, CancellationToken cancellationToken)
         {
             // Send some notification e-mail
             await Task.CompletedTask;

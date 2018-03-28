@@ -18,9 +18,9 @@ export class AuthService implements OnInit, OnDestroy {
         const openIdImplicitFlowConfiguration = new OpenIDImplicitFlowConfiguration();
         openIdImplicitFlowConfiguration.stsServer = identityUrl;
         openIdImplicitFlowConfiguration.redirect_url = originUrl + 'callback';
-        openIdImplicitFlowConfiguration.client_id = 'ng_petitions';
+        openIdImplicitFlowConfiguration.client_id = 'ng';
         openIdImplicitFlowConfiguration.response_type = 'id_token token';
-        openIdImplicitFlowConfiguration.scope = 'openid profile apiApp';
+        openIdImplicitFlowConfiguration.scope = 'openid profile petitionsApi';
         openIdImplicitFlowConfiguration.post_logout_redirect_uri = originUrl + 'home';
         openIdImplicitFlowConfiguration.forbidden_route = '/forbidden';
         openIdImplicitFlowConfiguration.unauthorized_route = '/unauthorized';

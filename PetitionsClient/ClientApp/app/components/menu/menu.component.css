@@ -16,3 +16,9 @@
 .mrg-top {
     margin-top: 8px;
 }
+
+a.nav-link.menu-btn:hover {
+    /*background-color: #FEFEDB;*/
+    background-color: #F2F2F2;
+    border-radius: 5px;
+}

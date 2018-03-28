@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CityServicesPortal.Petitions.Api.Controllers
 {
     [Produces("application/json")]
-    [Route("category")]
+    [Route("api/[controller]")]
     public class CategoryController : Controller
     {
         private readonly ICategoryAppService _categoryAppService;

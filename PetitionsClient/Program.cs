@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace ClientApp
+namespace PetitionsClient
 {
     public class Program
     {

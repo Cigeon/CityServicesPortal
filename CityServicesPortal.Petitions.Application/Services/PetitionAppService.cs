@@ -93,9 +93,11 @@ namespace CityServicesPortal.Petitions.Application.Services
             await Bus.SendCommand(changeCategoryCommand);
         }
 
-        public void Vote(Guid petitionId, Guid userId)
+        public async Task Vote(Guid petitionId, UserDto user)
         {
-            throw new NotImplementedException();
+            var voteCommand = new PetitionVoteCommand(petitionId, user.Id, user.FirstName, 
+                user.MiddleName, user.LastName);
+            await Bus.SendCommand(voteCommand);
         }
 
         //public IList<CustomerHistoryData> GetAllHistory(Guid id)

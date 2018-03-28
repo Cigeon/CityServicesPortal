@@ -2,7 +2,10 @@
     <div class="background-shadow">
         <P class="title-text">Сервіс громадських петицій</P>
         <p class="regular-text">Прийми участь у покращенні життя міста</p>
-        <button type="button" class="btn btn-primary" [routerLink]="['/create-petition']">
+        <!--<button type="button" class="btn btn-primary" *ngIf="!isAuthorized" [routerLink]="['/create-petition']">
+            <span class="bold-text">+ Створити петицію</span>
+        </button>-->
+        <button type="button" class="btn btn-primary" (click)="addPetition()">
             <span class="bold-text">+ Створити петицію</span>
         </button>
     </div>

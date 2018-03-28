@@ -8,8 +8,6 @@ namespace CityServicesPortal.Petitions.Infra.Data.Repository
     {
         public PetitionRepository(PetitionContext context)
             : base(context)
-        {
-
-        }
+        {  }
     }
 }
