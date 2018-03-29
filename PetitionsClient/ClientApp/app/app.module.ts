@@ -14,6 +14,7 @@ import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
 import { AuthService } from './components/services/auth.service';
 import { MenuComponent } from './components/menu/menu.component';
 import { NewPetitionComponent } from './components/new-petition/new-petition.component';
+import { RegisterCategoryComponent } from './components/category/register-category/register-category.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { NewPetitionComponent } from './components/new-petition/new-petition.com
         HomeComponent,
         UnauthorizedComponent,
         MenuComponent,
-        NewPetitionComponent
+        NewPetitionComponent,
+        RegisterCategoryComponent
     ],
     imports: [
         AuthModule.forRoot(),
@@ -34,6 +36,7 @@ import { NewPetitionComponent } from './components/new-petition/new-petition.com
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'create-petition', component: NewPetitionComponent },
+            { path: 'register-category', component: RegisterCategoryComponent },
             { path: 'unauthorized', component: UnauthorizedComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }
