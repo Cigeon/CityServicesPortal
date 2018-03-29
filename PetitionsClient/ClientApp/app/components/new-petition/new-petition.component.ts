@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-petition.component.css']
 })
 export class NewPetitionComponent implements OnInit {
+  singleModel: string = '1';
 
   constructor() { }
 
