@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 import { AppComponent } from './components/app/app.component'
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
@@ -17,7 +18,6 @@ import { RegisterCategoryComponent } from './components/category/register-catego
 
 import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
 import { AuthService } from './components/services/auth.service';
-import { PetitionService } from './components/services/petition.service';
 
 
 
@@ -38,6 +38,7 @@ import { PetitionService } from './components/services/petition.service';
         HttpClientModule,
         FormsModule,
         ButtonsModule.forRoot(),
+        AlertModule.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
@@ -50,8 +51,7 @@ import { PetitionService } from './components/services/petition.service';
     ],
     providers: [
         AuthService,
-        OidcSecurityService,
-        PetitionService
+        OidcSecurityService
     ]
 })
 export class AppModuleShared {

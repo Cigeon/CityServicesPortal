@@ -5,3 +5,9 @@
 .hor-center {
     margin: 0 auto;
 }
+
+.alert-right-bottom {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
