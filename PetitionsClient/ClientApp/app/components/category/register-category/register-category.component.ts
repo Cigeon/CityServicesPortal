@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-category.component.css']
 })
 export class RegisterCategoryComponent implements OnInit {
+    name: string = "";
+    description: string = "";
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    public submit() {
+        console.log(this.name + " " + this.description);
+    }
 
 }

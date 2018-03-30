@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "88a3762c628f51c0a484"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0be46dd24e1fa88a829f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -4314,8 +4314,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var RegisterCategoryComponent = (function () {
     function RegisterCategoryComponent() {
+        this.name = "";
+        this.description = "";
     }
     RegisterCategoryComponent.prototype.ngOnInit = function () {
+    };
+    RegisterCategoryComponent.prototype.submit = function () {
+        console.log(this.name + " " + this.description);
     };
     RegisterCategoryComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -6543,7 +6548,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    .body-content {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n\r\n#footer {\r\n    padding: 20px;\r\n    text-align: center;\r\n    box-shadow: 0 -2px 2px -2px #333;\r\n}\r\n", ""]);
+exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */\r\n    .body-content {\r\n        padding-top: 50px;\r\n    }\r\n}\r\n\r\n#footer {\r\n    padding: 16px;\r\n    font-size: 14px;\r\n    color: #808080;\r\n    text-align: center;\r\n    box-shadow: 0 -1px 1px -1px #333;\r\n}\r\n\r\n.h-calc {\r\n    min-height: calc(100vh - 80px - 52.9px);\r\n}\r\n", ""]);
 
 // exports
 
@@ -6557,7 +6562,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".heading {\r\n    color: #808080;\r\n}\r\n\r\n.hor-center {\r\n    margin: 0 auto;\r\n}", ""]);
 
 // exports
 
@@ -6948,13 +6953,13 @@ module.exports = XmlEntities;
 /* 45 */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <app-menu></app-menu>\r\n    <router-outlet></router-outlet>\r\n    <div id=\"footer\"><p>&copy; Громадські петиції - Вінниця 2018</p></div>\r\n</div>\r\n";
+module.exports = "<div>\r\n    <app-menu></app-menu>\r\n    <div class=\"h-calc\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n    <div id=\"footer\">&copy; Громадські петиції - Вінниця 2018</div>\r\n</div>\r\n";
 
 /***/ }),
 /* 46 */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  register-category works!\n</p>\n";
+module.exports = "<div>\r\n    <div class=\"col w-50 p-3 hor-center\">\r\n        <br />\r\n        <h3 class=\"heading\">Нова категорія</h3>\r\n        <hr class=\"my-4\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <label for=\"name\">Назва</label>\r\n                <input type=\"text\"\r\n                       [(ngModel)]=\"name\"\r\n                       class=\"form-control\"\r\n                       id=\"name\"\r\n                       name=\"name\"\r\n                       placeholder='напр. \"Транспорт\"'>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"description\">Опис</label>\r\n                <textarea type=\"text\"\r\n                          [(ngModel)]=\"description\"\r\n                          class=\"form-control\"\r\n                          id=\"description\"\r\n                          name=\"description\"\r\n                          rows=\"3\"\r\n                          placeholder='напр. \"Звернення щодо змін, реконструкції, ввровадження транспортних мереж та шляхів сполучення, а також транспортних вузлів або терміналів, де здійснюється перевантаження вантажу чи пересадка пасажирів з одного виду транспорту на інший\"'>\r\n            </textarea>\r\n\r\n            </div>\r\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"submit()\">Зберегти</button>\r\n        </form>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 47 */

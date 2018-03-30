@@ -1,3 +1,31 @@
-<p>
-  register-category works!
-</p>
+﻿<div>
+    <div class="col w-50 p-3 hor-center">
+        <br />
+        <h3 class="heading">Нова категорія</h3>
+        <hr class="my-4">
+        <form>
+            <div class="form-group">
+                <label for="name">Назва</label>
+                <input type="text"
+                       [(ngModel)]="name"
+                       class="form-control"
+                       id="name"
+                       name="name"
+                       placeholder='напр. "Транспорт"'>
+            </div>
+            <div class="form-group">
+                <label for="description">Опис</label>
+                <textarea type="text"
+                          [(ngModel)]="description"
+                          class="form-control"
+                          id="description"
+                          name="description"
+                          rows="3"
+                          placeholder='напр. "Звернення щодо змін, реконструкції, ввровадження транспортних мереж та шляхів сполучення, а також транспортних вузлів або терміналів, де здійснюється перевантаження вантажу чи пересадка пасажирів з одного виду транспорту на інший"'>
+            </textarea>
+
+            </div>
+            <button type="button" class="btn btn-primary" (click)="submit()">Зберегти</button>
+        </form>
+    </div>
+</div>
