@@ -11,12 +11,15 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
-
-import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
-import { AuthService } from './components/services/auth.service';
 import { MenuComponent } from './components/menu/menu.component';
 import { NewPetitionComponent } from './components/new-petition/new-petition.component';
 import { RegisterCategoryComponent } from './components/category/register-category/register-category.component';
+
+import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
+import { AuthService } from './components/services/auth.service';
+import { PetitionService } from './components/services/petition.service';
+
+
 
 @NgModule({
     declarations: [
@@ -47,7 +50,8 @@ import { RegisterCategoryComponent } from './components/category/register-catego
     ],
     providers: [
         AuthService,
-        OidcSecurityService
+        OidcSecurityService,
+        PetitionService
     ]
 })
 export class AppModuleShared {

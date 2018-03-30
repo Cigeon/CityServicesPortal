@@ -1,21 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { CreateCategory } from '../../models/category/create-category';
 
 @Component({
   selector: 'app-register-category',
   templateUrl: './register-category.component.html',
   styleUrls: ['./register-category.component.css']
 })
-export class RegisterCategoryComponent implements OnInit {
-    name: string = "";
-    description: string = "";
+export class RegisterCategoryComponent implements OnInit {    
+    category: CreateCategory = { name: '', description: '' };
 
-    constructor() { }
+    constructor(private authService: AuthService, @Inject('API_URL') private apiUrl: string) {
+    }
 
     ngOnInit() {
     }
 
     public submit() {
-        console.log(this.name + " " + this.description);
+        this.createCategory();
+    }
+
+    private createCategory() {
+        console.log(this.category.name + " " + this.category.description);
+        this.authService.post(this.apiUrl + 'Category', this.category)
+            .subscribe(result => console.log(result), error => console.error(error));
     }
 
 }

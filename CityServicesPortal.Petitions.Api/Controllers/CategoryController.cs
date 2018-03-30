@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CityServicesPortal.Petitions.Application.DTOs;
 using CityServicesPortal.Petitions.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +12,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
+    [Authorize]
     public class CategoryController : Controller
     {
         private readonly ICategoryAppService _categoryAppService;
