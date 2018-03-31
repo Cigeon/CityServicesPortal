@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <Folder Include="ClientApp\app\components\models\category\" />
+    <Folder Include="ClientApp\app\components\petition\" />
     <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 

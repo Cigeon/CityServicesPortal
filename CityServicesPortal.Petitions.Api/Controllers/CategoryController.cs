@@ -35,9 +35,10 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         }
 
         [HttpPost]
-        public async Task Post([FromBody]CategoryCreateDto category)
+        public async Task<IActionResult> Post([FromBody]CategoryCreateDto category)
         {
             await _categoryAppService.Create(category);
+            return NoContent();
         }
 
         [HttpPut]

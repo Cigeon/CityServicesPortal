@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-import { AlertModule } from 'ngx-bootstrap/alert';
 
 import { AppComponent } from './components/app/app.component'
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
@@ -14,6 +13,7 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { NewPetitionComponent } from './components/new-petition/new-petition.component';
+import { RegisterPetitionComponent } from './components/petition/register-petition/register-petition.component';
 import { RegisterCategoryComponent } from './components/category/register-category/register-category.component';
 
 import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
@@ -30,7 +30,8 @@ import { AuthService } from './components/services/auth.service';
         UnauthorizedComponent,
         MenuComponent,
         NewPetitionComponent,
-        RegisterCategoryComponent
+        RegisterPetitionComponent,
+        RegisterCategoryComponent        
     ],
     imports: [
         AuthModule.forRoot(),
@@ -38,11 +39,11 @@ import { AuthService } from './components/services/auth.service';
         HttpClientModule,
         FormsModule,
         ButtonsModule.forRoot(),
-        AlertModule.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'create-petition', component: NewPetitionComponent },
+            { path: 'register-petition', component: RegisterPetitionComponent },
             { path: 'register-category', component: RegisterCategoryComponent },
             { path: 'unauthorized', component: UnauthorizedComponent },
             { path: 'fetch-data', component: FetchDataComponent },

@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     public addPetition() {
         if (this.isAuthorized) {
-            this.router.navigate(['/create-petition']);
+            this.router.navigate(['/register-petition']);
         } else {
             this.authService.login();
         }              
