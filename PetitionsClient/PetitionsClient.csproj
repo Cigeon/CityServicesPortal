@@ -22,13 +22,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\models\category\category-short.ts" />
+    <None Remove="ClientApp\app\components\models\petition\register-petition.ts" />
     <None Remove="Properties\PublishProfiles\PetitionsClient20180217115551 - Web Deploy.pubxml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\app\components\models\category\" />
+    <Folder Include="ClientApp\app\components\models\NewFolder\" />
     <Folder Include="ClientApp\app\components\petition\" />
     <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\models\category\category-short.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\models\petition\register-petition.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

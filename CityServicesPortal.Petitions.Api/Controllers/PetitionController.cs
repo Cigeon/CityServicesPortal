@@ -34,9 +34,10 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         }
 
         [HttpPost]
-        public async Task Post([FromBody]PetitionRegisterDto petition)
+        public async Task<IActionResult> Post([FromBody]PetitionRegisterDto petition)
         {
             await _petitionAppService.Register(petition);
+            return NoContent();
         }
 
         [HttpPut]

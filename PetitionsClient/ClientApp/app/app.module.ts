@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AppComponent } from './components/app/app.component'
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
@@ -12,7 +13,6 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { NewPetitionComponent } from './components/new-petition/new-petition.component';
 import { RegisterPetitionComponent } from './components/petition/register-petition/register-petition.component';
 import { RegisterCategoryComponent } from './components/category/register-category/register-category.component';
 
@@ -29,7 +29,6 @@ import { AuthService } from './components/services/auth.service';
         HomeComponent,
         UnauthorizedComponent,
         MenuComponent,
-        NewPetitionComponent,
         RegisterPetitionComponent,
         RegisterCategoryComponent        
     ],
@@ -39,10 +38,10 @@ import { AuthService } from './components/services/auth.service';
         HttpClientModule,
         FormsModule,
         ButtonsModule.forRoot(),
+        BsDropdownModule.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'create-petition', component: NewPetitionComponent },
             { path: 'register-petition', component: RegisterPetitionComponent },
             { path: 'register-category', component: RegisterCategoryComponent },
             { path: 'unauthorized', component: UnauthorizedComponent },

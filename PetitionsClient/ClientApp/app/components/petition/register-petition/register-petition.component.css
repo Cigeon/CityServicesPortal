@@ -1,0 +1,29 @@
+.heading {
+    color: #808080;
+}
+
+.hor-center {
+    margin: 0 auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu {
+    overflow-y: scroll;
+    height: 282px;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}
+
+.btn.btn-link:hover {
+    text-decoration: none;
+}
+
+textarea {
+    height: 150px;
+}

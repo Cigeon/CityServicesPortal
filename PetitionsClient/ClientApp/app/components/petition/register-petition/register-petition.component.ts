@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit, Inject } from '@angular/core';
+import { Location } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
+import { RegisterPetition } from '../../models/petition/register-petition';
+import { CategoryShort } from '../../models/category/category-short';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-register-petition',
@@ -6,10 +11,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register-petition.component.css']
 })
 export class RegisterPetitionComponent implements OnInit {
+    petition: RegisterPetition = { categoryId: '', name: '', description: '' };
+    currCategory: string = 'Оберіть категорію ...';
+    categories: any = [];
 
-  constructor() { }
+    constructor(private authService: AuthService,
+        @Inject('API_URL') private apiUrl: string,
+        private location: Location) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.authService.get(this.apiUrl + 'category')
+            .subscribe(
+                result => {
+                    this.categories = result;
+                    console.log(this.categories);
+                });
+    }
+
+    selectCatagory(category: any) {
+        this.currCategory = category.name;
+        //this.petition.categoryId = category.id;
+    }
+
+    submit() {
+        this.registerPetition();
+    }
+
+    private registerPetition() {
+        console.log(this.petition);
+        this.authService.post(this.apiUrl + 'petition', this.petition)
+            .subscribe(result => { console.log("result"); console.log(result); }, error => console.error(error));
+        this.location.back();
+    }
 
 }

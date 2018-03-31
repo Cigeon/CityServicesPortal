@@ -24,7 +24,7 @@ export class RegisterCategoryComponent implements OnInit {
     }
 
     private createCategory() {
-        console.log(this.category.name + " " + this.category.description);
+        console.log(this.category);
         this.authService.post(this.apiUrl + 'Category', this.category)
             .subscribe(result => { console.log("result"); console.log(result); }, error => console.error(error));
         this.location.back();

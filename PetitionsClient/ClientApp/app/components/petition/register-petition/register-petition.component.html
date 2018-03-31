@@ -1,3 +1,50 @@
-﻿<button type="button" class="btn btn-primary" *ngIf="!isAuthorized" [routerLink]="['/register-category']">
-    <span class="bold-text">Нова категорія</span>
-</button>
+﻿<div>
+    <div class="col w-50 p-3 hor-center">
+        <br />
+        <h3 class="heading">Реєстрація нової петиції</h3>
+        <hr class="my-4">
+        <form>
+            <div class="form-group">
+                <div class="column">
+                    <label for="category">Категорія</label>
+                    <div class="btn-group" dropdown>
+                        <button *ngIf="categories.length" dropdownToggle type="button" class="btn btn-default dropdown-toggle" name="category">
+                            {{currCategory}}
+                        </button>
+                        <ul *dropdownMenu class="dropdown-menu" role="menu">
+                            <li *ngFor="let category of categories" role="menuitem">
+                                <a class="dropdown-item" (click)="selectCatagory(category)">{{category.name}}</a>
+                            </li>
+                            <li class="divider dropdown-divider"></li>
+                            <li class="btn btn-link" *ngIf="!isAuthorized" [routerLink]="['/register-category']">
+                                Нова категорія
+                            </li>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+            <div class="form-group">
+                <label for="name">Коротка назва</label>
+                <input type="text"
+                       [(ngModel)]="petition.name"
+                       class="form-control"
+                       id="name"
+                       name="name"
+                       placeholder='напр. "Встановлення світловору на перетині вул. Порика та вул. Квятека"'>
+            </div>
+            <div class="form-group">
+                <label for="description">Зміст петиції</label>
+                <textarea type="text"
+                          [(ngModel)]="petition.description"
+                          class="form-control"
+                          id="description"
+                          name="description"
+                          rows="3"
+                          placeholder='напр. "Внаслідок інтенсивного руху вантажного транспорту по вул. Липовецькій на дорозі утворилось багато вибоїн та ям. Пропоную заасвальтувати данну ділянку дороги"'>
+            </textarea>
+
+            </div>
+            <button type="button" class="btn btn-primary" (click)="submit()">Зареєструвати</button>
+        </form>
+    </div>
+</div>
