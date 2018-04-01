@@ -25,12 +25,13 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         [HttpGet]
         public IEnumerable<CategoryDto> Get()
         {
+            var claims = new JsonResult(from c in User.Claims select new { c.Type, c.Value });
             return _categoryAppService.GetAll();
         }
 
         [HttpGet("{id}")]
         public CategoryDto Get(Guid id)
-        {
+        {            
             return _categoryAppService.GetById(id);
         }
 
