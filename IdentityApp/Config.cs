@@ -69,7 +69,8 @@ namespace IdentityApp
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "apiApp"
+                        "petitionsApi"
+                        //"apiApp"
                     },
 
                 },

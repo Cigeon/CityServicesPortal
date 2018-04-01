@@ -39,6 +39,7 @@ namespace CityServicesPortal.Petitions.Infra.IoC
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<IConfigurationProvider>(), sp.GetService));
             services.AddScoped<IPetitionAppService, PetitionAppService>();
             services.AddScoped<ICategoryAppService, CategoryAppService>();
+            services.AddScoped<IUserAppService, UserAppService>();
 
             // Domain - Events
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
