@@ -10,8 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CityServicesPortal.Petitions.Api.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
-    [Authorize]
+    [Route("api/[controller]")]    
     public class PetitionController : Controller
     {
         private readonly IPetitionAppService _petitionAppService;
@@ -37,6 +36,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Post([FromBody]PetitionRegisterDto petition)
         {
             var name = User.Claims.FirstOrDefault(c => c.Type.Equals("name")).Value;
@@ -66,12 +66,14 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 
 
         [HttpPut]
+        [Authorize]
         public async Task Put([FromBody]PetitionUpdateDto petition)
         {
             await _petitionAppService.Update(petition);
         }        
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task Delete(Guid id)
         {
             await _petitionAppService.Remove(id);
@@ -79,6 +81,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 
         [HttpPut]
         [Route("name")]
+        [Authorize]
         public async Task ChangeName(Guid id, [FromBody]string name)
         {
             await _petitionAppService.ChangeName(id, name);
@@ -86,6 +89,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 
         [HttpPut]
         [Route("description")]
+        [Authorize]
         public async Task ChangeDescription(Guid id, [FromBody]string description)
         {
             await _petitionAppService.ChangeDescription(id, description);
@@ -93,6 +97,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 
         [HttpPut]
         [Route("status")]
+        [Authorize]
         public async Task ChangeStatus(Guid id, [FromBody]int status)
         {
             await _petitionAppService.ChangeStatus(id, status); ;
@@ -100,6 +105,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 
         [HttpPut]
         [Route("category")]
+        [Authorize]
         public async Task ChangeCategory(Guid id, [FromBody]Guid categoryId)
         {
             await _petitionAppService.ChangeCategory(id, categoryId); ;
@@ -107,6 +113,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 
         [HttpPut]
         [Route("vote")]
+        [Authorize]
         public async Task Vote(Guid id)
         {
             var user = _userAppService.GetByUserName("user");

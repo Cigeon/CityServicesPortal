@@ -18,6 +18,7 @@ import { RegisterCategoryComponent } from './components/category/register-catego
 
 import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
 import { AuthService } from './components/services/auth.service';
+import { AllPetitionsComponent } from './components/petition/all-petitions/all-petitions.component';
 
 
 
@@ -30,7 +31,8 @@ import { AuthService } from './components/services/auth.service';
         UnauthorizedComponent,
         MenuComponent,
         RegisterPetitionComponent,
-        RegisterCategoryComponent        
+        RegisterCategoryComponent,
+        AllPetitionsComponent        
     ],
     imports: [
         AuthModule.forRoot(),
@@ -42,6 +44,7 @@ import { AuthService } from './components/services/auth.service';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'petitions', component: AllPetitionsComponent },
             { path: 'register-petition', component: RegisterPetitionComponent },
             { path: 'register-category', component: RegisterCategoryComponent },
             { path: 'unauthorized', component: UnauthorizedComponent },

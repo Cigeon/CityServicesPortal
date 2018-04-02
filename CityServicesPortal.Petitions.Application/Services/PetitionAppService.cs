@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
 using CityServicesPortal.Petitions.Application.DTOs;
 using CityServicesPortal.Petitions.Application.Interfaces;
 using CityServicesPortal.Petitions.Domain.Commands;
@@ -7,8 +6,10 @@ using CityServicesPortal.Petitions.Domain.Core.Bus;
 using CityServicesPortal.Petitions.Domain.Interfaces;
 using CityServicesPortal.Petitions.Domain.Models;
 using CityServicesPortal.Petitions.Infra.Data.Repository.EventSourcing;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace CityServicesPortal.Petitions.Application.Services
@@ -17,23 +18,55 @@ namespace CityServicesPortal.Petitions.Application.Services
     {
         private readonly IMapper _mapper;
         private readonly IPetitionRepository _petitionRepository;
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IUserRepository _userRepository;
         private readonly IEventStoreRepository _eventStoreRepository;
         private readonly IMediatorHandler Bus;
 
         public PetitionAppService(IMapper mapper,
                                   IPetitionRepository petitionRepository,
+                                  ICategoryRepository categoryRepository,
+                                  IUserRepository userRepository,
                                   IMediatorHandler bus,
                                   IEventStoreRepository eventStoreRepository)
         {
             _mapper = mapper;
-            _petitionRepository = petitionRepository;
             Bus = bus;
+            _petitionRepository = petitionRepository;
+            _categoryRepository = categoryRepository;
+            _userRepository = userRepository;            
             _eventStoreRepository = eventStoreRepository;
         }
 
         public IEnumerable<PetitionDto> GetAll()
         {
-            return _petitionRepository.GetAll().ProjectTo<PetitionDto>();
+            //return _petitionRepository.GetAll().ProjectTo<PetitionDto>();
+            var petitions = _petitionRepository.GetAll()
+                .Select(p => new PetitionDto
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Description = p.Description,
+                    Created = p.Created,
+                    Modified = p.Modified,
+                    Status = p.Status,
+                    Category = new CategoryShortDto
+                    {
+                        Id = p.Category.Id,
+                        Name = p.Category.Name,
+                        Description = p.Category.Description
+                    },
+                    User = new UserShortDto
+                    {
+                        Id = p.User.Id,
+                        UserName = p.User.UserName,
+                        FirstName = p.User.FirstName,
+                        MiddleName = p.User.MiddleName,
+                        LastName = p.User.LastName
+                    }                               
+                }).ToList();
+
+            return petitions;
         }
 
         public PetitionDto GetById(Guid id)
@@ -46,8 +79,21 @@ namespace CityServicesPortal.Petitions.Application.Services
                 Description = petition.Description,
                 Created = petition.Created,
                 Modified = petition.Modified,
-                CategoryId = petition.CategoryId,
-                Status = petition.Status
+                Status = petition.Status,
+                Category = new CategoryShortDto
+                {
+                    Id = petition.Category.Id,
+                    Name = petition.Category.Name,
+                    Description = petition.Category.Description
+                },
+                User = new UserShortDto
+                {
+                    Id = petition.User.Id,
+                    UserName = petition.User.UserName,
+                    FirstName = petition.User.FirstName,
+                    MiddleName = petition.User.MiddleName,
+                    LastName = petition.User.LastName
+                }
             };
         }
 
