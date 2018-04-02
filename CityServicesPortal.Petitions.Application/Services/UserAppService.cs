@@ -12,12 +12,15 @@ namespace CityServicesPortal.Petitions.Application.Services
 {
     public class UserAppService : IUserAppService
     {
+        private readonly IUnitOfWork _uow;
         private readonly IUserRepository _userRepository;
         private readonly IMediatorHandler Bus;
 
-        public UserAppService(IUserRepository userRepository,
+        public UserAppService(IUnitOfWork uow,
+                              IUserRepository userRepository,
                               IMediatorHandler bus)
         {
+            _uow = uow;
             _userRepository = userRepository;
             Bus = bus;
         }
@@ -95,6 +98,7 @@ namespace CityServicesPortal.Petitions.Application.Services
         public UserDto GetByUserName(string name)
         {
             var user = _userRepository.GetByUserName(name);
+            if (user == null) return null;
             return new UserDto
             {
                 Id = user.Id,
@@ -126,6 +130,7 @@ namespace CityServicesPortal.Petitions.Application.Services
                 LastName = dto.LastName
             };
             _userRepository.Add(user);
+            _uow.Commit();
         }
 
         public void Remove(Guid id)

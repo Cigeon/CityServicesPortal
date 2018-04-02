@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "109e78c1c22ca7f74894"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b71d9c5ee1cd48ae16a2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -5698,7 +5698,7 @@ var RegisterPetitionComponent = (function () {
         this.authService = authService;
         this.apiUrl = apiUrl;
         this.location = location;
-        this.petition = { categoryId: '', name: '', description: '' };
+        this.petition = { categoryId: '', name: '', description: '', userName: '' };
         this.currCategory = 'Оберіть категорію ...';
         this.categories = [];
     }
@@ -5712,7 +5712,7 @@ var RegisterPetitionComponent = (function () {
     };
     RegisterPetitionComponent.prototype.selectCatagory = function (category) {
         this.currCategory = category.name;
-        //this.petition.categoryId = category.id;
+        this.petition.categoryId = category.id;
     };
     RegisterPetitionComponent.prototype.submit = function () {
         this.registerPetition();

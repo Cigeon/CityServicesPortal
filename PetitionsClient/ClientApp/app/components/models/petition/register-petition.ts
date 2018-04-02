@@ -2,4 +2,5 @@
     categoryId: string,
     name: string,
     description: string,
+    userName: string
 }

@@ -36,7 +36,10 @@ namespace IdentityApp.Configs
             var claims = principal.Claims.ToList();
 
             //Add more claims like this
-            claims.Add(new Claim("UserRights", user.UserRights));
+            claims.Add(new Claim("user_rights", user.UserRights));
+            claims.Add(new Claim("first_name", user.FirstName));
+            claims.Add(new Claim("middle_name", user.MiddleName));
+            claims.Add(new Claim("last_name", user.LastName));
 
             context.IssuedClaims = claims;
         }

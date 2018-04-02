@@ -11,7 +11,7 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./register-petition.component.css']
 })
 export class RegisterPetitionComponent implements OnInit {
-    petition: RegisterPetition = { categoryId: '', name: '', description: '' };
+    petition: RegisterPetition = { categoryId: '', name: '', description: '', userName: '' };
     currCategory: string = 'Оберіть категорію ...';
     categories: any = [];
 
@@ -22,16 +22,15 @@ export class RegisterPetitionComponent implements OnInit {
 
     ngOnInit() {
         this.authService.get(this.apiUrl + 'category')
-            .subscribe(
-                result => {
-                    this.categories = result;
-                    console.log(this.categories);
-                });
+            .subscribe(result => {
+                this.categories = result;
+                console.log(this.categories);
+            });
     }
 
     selectCatagory(category: any) {
         this.currCategory = category.name;
-        //this.petition.categoryId = category.id;
+        this.petition.categoryId = category.id;
     }
 
     submit() {
@@ -41,8 +40,10 @@ export class RegisterPetitionComponent implements OnInit {
     private registerPetition() {
         console.log(this.petition);
         this.authService.post(this.apiUrl + 'petition', this.petition)
-            .subscribe(result => { console.log("result"); console.log(result); }, error => console.error(error));
-        this.location.back();
+            .subscribe(result => {
+                console.log(result);
+                this.location.back();
+            }, error => console.error(error));        
     }
 
 }

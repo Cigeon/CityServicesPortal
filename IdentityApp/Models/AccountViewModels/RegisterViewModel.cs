@@ -14,13 +14,31 @@ namespace IdentityApp.Models.AccountViewModels
         public string Email { get; set; }
 
         [Required]
+        [StringLength(100, ErrorMessage = "{0} повинно бути не менше {2} і не більше {1} символів.", MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Ім'я")]
+        public string FistName { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "{0} повинно бути не менше {2} і не більше {1} символів.", MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        [Display(Name = "По батькові")]
+        public string MiddleName { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "{0} повинно бути не менше {2} і не більше {1} символів.", MinimumLength = 2)]
+        [DataType(DataType.Text)]
+        [Display(Name = "Прізвище")]
+        public string LastName { get; set; }
+
+        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Пароль")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
+        [Display(Name = "Підтвердити пароль")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }

@@ -39,7 +39,6 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]PetitionRegisterDto petition)
         {
-            var claims = User.Claims;
             var name = User.Claims.FirstOrDefault(c => c.Type.Equals("name")).Value;
             if (_userAppService.GetByUserName(name) == null)
             {
@@ -53,8 +52,14 @@ namespace CityServicesPortal.Petitions.Api.Controllers
                 _userAppService.Register(user);
             }
 
-            petition.UserName = name;
-            await _petitionAppService.Register(petition);
+            var newPetition = new PetitionRegisterDto
+            {
+                CategoryId = petition.CategoryId,
+                Name = petition.Name,
+                Description = petition.Description,
+                UserName = name
+            };
+            await _petitionAppService.Register(newPetition);
 
             return NoContent();
         }
