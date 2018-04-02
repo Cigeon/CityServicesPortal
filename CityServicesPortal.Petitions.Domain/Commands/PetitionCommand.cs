@@ -14,5 +14,7 @@ namespace CityServicesPortal.Petitions.Domain.Commands
         public DateTime Created { get; protected set; }
 
         public Guid CategoryId { get; set; }
+
+        public string UserName { get; set; }
     }
 }

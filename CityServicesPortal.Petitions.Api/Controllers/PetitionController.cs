@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using CityServicesPortal.Petitions.Application.DTOs;
 using CityServicesPortal.Petitions.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CityServicesPortal.Petitions.Api.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
+    [Authorize]
     public class PetitionController : Controller
     {
         private readonly IPetitionAppService _petitionAppService;
@@ -36,9 +39,26 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]PetitionRegisterDto petition)
         {
+            var claims = User.Claims;
+            var name = User.Claims.FirstOrDefault(c => c.Type.Equals("name")).Value;
+            if (_userAppService.GetByUserName(name) == null)
+            {
+                var user = new UserRegisterDto
+                {
+                    UserName = User.Claims.FirstOrDefault(c => c.Type.Equals("name")).Value,
+                    FirstName = User.Claims.FirstOrDefault(c => c.Type.Equals("first_name")).Value,
+                    MiddleName = User.Claims.FirstOrDefault(c => c.Type.Equals("middle_name")).Value,
+                    LastName = User.Claims.FirstOrDefault(c => c.Type.Equals("last_name")).Value
+                };
+                _userAppService.Register(user);
+            }
+
+            petition.UserName = name;
             await _petitionAppService.Register(petition);
+
             return NoContent();
         }
+
 
         [HttpPut]
         public async Task Put([FromBody]PetitionUpdateDto petition)

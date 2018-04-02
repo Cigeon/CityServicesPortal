@@ -9,10 +9,10 @@ namespace CityServicesPortal.Petitions.Application.AutoMapper
     {
         public ViewModelToDomainMappingProfile()
         {
-            CreateMap<PetitionDto, PetitionRegisterCommand>()
-                .ConstructUsing(p => new PetitionRegisterCommand(p.Name, p.Description, p.Created, p.CategoryId))
-                .ForMember(x => x.Timestamp, opt => opt.Ignore());
-            CreateMap<CategoryDto, Category > ();
+            //CreateMap<PetitionDto, PetitionRegisterCommand>()
+            //    .ConstructUsing(p => new PetitionRegisterCommand(p.Name, p.Description, p.Created, p.CategoryId))
+            //    .ForMember(x => x.Timestamp, opt => opt.Ignore());
+            //CreateMap<CategoryDto, Category > ();
 
         }
     }

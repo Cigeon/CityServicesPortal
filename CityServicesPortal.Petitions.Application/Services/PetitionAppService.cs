@@ -53,7 +53,7 @@ namespace CityServicesPortal.Petitions.Application.Services
 
         public async Task Register(PetitionRegisterDto p)
         {
-            var registerCommand = new PetitionRegisterCommand(p.Name, p.Description, DateTime.Now, p.CategoryId);
+            var registerCommand = new PetitionRegisterCommand(p.Name, p.Description, DateTime.Now, p.CategoryId, p.UserName);
             await Bus.SendCommand(registerCommand);
         }
 

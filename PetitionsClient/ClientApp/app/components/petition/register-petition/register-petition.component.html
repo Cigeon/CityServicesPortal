@@ -8,18 +8,20 @@
                 <div class="column">
                     <label for="category">Категорія</label>
                     <div class="btn-group" dropdown>
-                        <button *ngIf="categories.length" dropdownToggle type="button" class="btn btn-default dropdown-toggle" name="category">
+                        <button dropdownToggle type="button" class="btn btn-default dropdown-toggle" name="category">
                             {{currCategory}}
                         </button>
-                        <ul *dropdownMenu class="dropdown-menu" role="menu">
-                            <li *ngFor="let category of categories" role="menuitem">
-                                <a class="dropdown-item" (click)="selectCatagory(category)">{{category.name}}</a>
-                            </li>
-                            <li class="divider dropdown-divider"></li>
-                            <li class="btn btn-link" *ngIf="!isAuthorized" [routerLink]="['/register-category']">
-                                Нова категорія
-                            </li>
-                        </ul>
+                        <div *ngIf="categories.length">
+                            <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                <li *ngFor="let category of categories" role="menuitem">
+                                    <a class="dropdown-item" (click)="selectCatagory(category)">{{category.name}}</a>
+                                </li>
+                                <li class="divider dropdown-divider"></li>
+                                <li class="btn btn-link" *ngIf="!isAuthorized" [routerLink]="['/register-category']">
+                                    Нова категорія
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>                
             </div>

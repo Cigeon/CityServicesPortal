@@ -24,29 +24,34 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
     {
         private readonly IPetitionRepository _petitionRepository;
         private readonly ICategoryRepository _categoryRepository;
+        private readonly IUserRepository _userRepository;
         private readonly IMediatorHandler Bus;
 
         public PetitionCommandHandler(IPetitionRepository petitionRepository,
                                       ICategoryRepository categoryRepository,
+                                      IUserRepository userRepository,
                                       IUnitOfWork uow,
                                       IMediatorHandler bus,
                                       INotificationHandler<DomainNotification> notifications) : base(uow, bus, notifications)
         {
             _petitionRepository = petitionRepository;
             _categoryRepository = categoryRepository;
+            _userRepository = userRepository;
             Bus = bus;
         }
 
         public async Task Handle(PetitionRegisterCommand message, CancellationToken cancellationToken)
         {
             var category = _categoryRepository.GetById(message.CategoryId);
+            var user = _userRepository.GetByUserName(message.UserName);
             var petition = new Petition
             {
                 Name = message.Name,
                 Description = message.Description,
                 Created = DateTime.Now,
                 Modified = DateTime.Now,
-                Category = category
+                Category = category,
+                User = user
             };
 
             _petitionRepository.Add(petition);
