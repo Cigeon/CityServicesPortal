@@ -6,5 +6,8 @@ namespace IdentityApp.Models
     public class ApplicationUser : IdentityUser
     {
         public string UserRights { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
     }
 }
