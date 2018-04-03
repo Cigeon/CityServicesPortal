@@ -1,8 +1,10 @@
 ﻿import { Component, OnInit, Inject } from '@angular/core';
 import { Location } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../../services/auth.service';
 import { RegisterPetition } from '../../models/petition/register-petition';
 import { CategoryShort } from '../../models/category/category-short';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -15,17 +17,22 @@ export class RegisterPetitionComponent implements OnInit {
     currCategory: string = 'Оберіть категорію ...';
     categories: any = [];
 
-    constructor(private authService: AuthService,
+    constructor(private http: HttpClient,
+        private authService: AuthService,
         @Inject('API_URL') private apiUrl: string,
         private location: Location) {
     }
 
     ngOnInit() {
-        this.authService.get(this.apiUrl + 'category')
+        this.getCategories()
             .subscribe(result => {
                 this.categories = result;
                 console.log(this.categories);
             });
+    }
+
+    private getCategories(): Observable<CategoryShort[]> {
+        return this.http.get<any>(this.apiUrl + 'category');
     }
 
     selectCatagory(category: any) {

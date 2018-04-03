@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { AppComponent } from './components/app/app.component'
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
@@ -39,6 +41,7 @@ import { AllPetitionsComponent } from './components/petition/all-petitions/all-p
         CommonModule,
         HttpClientModule,
         FormsModule,
+        FontAwesomeModule,
         ButtonsModule.forRoot(),
         BsDropdownModule.forRoot(),
         RouterModule.forRoot([

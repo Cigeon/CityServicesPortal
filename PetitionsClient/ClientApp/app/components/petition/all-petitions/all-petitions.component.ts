@@ -2,7 +2,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Petition } from '../../models/petition/petition';
+import { CategoryShort } from '../../models/category/category-short';
 import { Constant } from '../../models/constant';
+import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 
 
 @Component({
@@ -11,8 +13,13 @@ import { Constant } from '../../models/constant';
   styleUrls: ['./all-petitions.component.css']
 })
 export class AllPetitionsComponent implements OnInit {
+    faArrowAltCircleRight = faArrowAltCircleRight;
+    allPetitions: Petition[] = [];
     petitions: Petition[] = [];
+    categories: CategoryShort[] = []
     votesCount: number;
+    sStatus: string = 'Всі';
+    sCategory: string = 'Всі';
 
     constructor(private http: HttpClient,
         @Inject('API_URL') private apiUrl: string) {
@@ -22,13 +29,36 @@ export class AllPetitionsComponent implements OnInit {
     ngOnInit() {
         this.getPetitions()
             .subscribe(result => {
+                this.allPetitions = result;
                 this.petitions = result;
-                console.log(this.petitions);
+                console.log(result);
+            }, error => console.log(error));
+        this.getCategories()
+            .subscribe(result => {
+                this.categories = result;
+                console.log(result);
             }, error => console.log(error));
     }
 
     private getPetitions(): Observable<Petition[]> {
         return this.http.get<any>(this.apiUrl + 'petition');
+    }
+
+    private getCategories(): Observable<CategoryShort[]> {
+        return this.http.get<any>(this.apiUrl + 'category');
+    }
+
+    selectCatagory(category: string) {
+        this.sCategory = category;
+        this.filterPetitions();
+    }
+
+    filterPetitions() {
+        if (this.sCategory === 'Всі') {
+            this.petitions = this.allPetitions;
+        } else {
+            this.petitions = this.allPetitions.filter(p => p.category.name === this.sCategory);
+        }
     }
 
     getColor(status: number) {

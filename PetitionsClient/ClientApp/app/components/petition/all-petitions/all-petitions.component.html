@@ -18,7 +18,7 @@
                 <div class="col-sm-9">
                     <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
                     <div class="filter-group">
-                        <label>Name</label>
+                        <label>Пошук</label>
                         <input type="text" class="form-control">
                     </div>
                     <div class="filter-group">
@@ -34,13 +34,22 @@
                     </div>
                     <div class="filter-group">
                         <label>Категорія</label>
-                        <select class="form-control">
-                            <option>Any</option>
-                            <option>Delivered</option>
-                            <option>Shipped</option>
-                            <option>Pending</option>
-                            <option>Cancelled</option>
-                        </select>
+                        <div class="btn-group" dropdown>
+                            <button dropdownToggle type="button" class="btn btn-default dropdown-toggle" name="category">
+                                {{sCategory}}
+                            </button>
+                            <div *ngIf="categories.length">
+                                <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-item" (click)="selectCatagory('Всі')">Всі</a>
+                                    </li>
+                                    <li class="divider dropdown-divider"></li>
+                                    <li *ngFor="let category of categories" role="menuitem">
+                                        <a class="dropdown-item" (click)="selectCatagory(category.name)">{{category.name}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <!--<span class="filter-icon"><i class="fa fa-filter"></i></span>-->
                 </div>
@@ -49,13 +58,13 @@
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>№</th>
                     <th>Назва петиції</th>
                     <th>Категорія</th>
                     <th>Автор</th>
                     <th>Зареєстрована</th>
                     <th>Статус</th>
-                    <th>Проголосовано</th>
+                    <th>Підтримано</th>
                     <th>Деталі</th>
                 </tr>
             </thead>
@@ -65,10 +74,10 @@
                     <td>{{petition.name}}</td>
                     <td>{{petition.category.name}}</td>
                     <td>{{petition.user.lastName}} {{petition.user.firstName[0]}}.{{petition.user.middleName[0]}}</td>
-                    <td>{{petition.created |  date:'yyyy-MM-dd'}}</td>
+                    <td><span class="font-size-sm">{{petition.created |  date:'yyyy-MM-dd'}}</span></td>
                     <td><span [ngStyle]="{'color':getColor(petition.status)}">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</td>
-                    <td>{{petition.voters.length}}/{{votesCount}}</td>
-                    <td><a href="#" class="view" title="View Details" data-toggle="tooltip"><i>&#xf35a;</i></a></td>
+                    <td><span class="font-size-sm">{{petition.voters.length}}/{{votesCount}}</span></td>
+                    <td><a href="#" class="view" title="View Details" data-toggle="tooltip"><fa-icon [icon]="faArrowAltCircleRight"></fa-icon></a></td>
                 </tr>                
             </tbody>
         </table>

@@ -16,6 +16,11 @@
     height: 282px;
 }
 
+.btn.btn-default.dropdown-toggle {
+    background: white;
+    border-color: lightgray;
+}
+
 .dropdown-item {
     cursor: pointer;
 }

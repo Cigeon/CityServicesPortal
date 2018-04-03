@@ -1,18 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using CityServicesPortal.Petitions.Application.DTOs;
 using CityServicesPortal.Petitions.Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CityServicesPortal.Petitions.Api.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
-    [Authorize]
+    [Route("api/[controller]")]    
     public class CategoryController : Controller
     {
         private readonly ICategoryAppService _categoryAppService;
@@ -25,7 +22,6 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         [HttpGet]
         public IEnumerable<CategoryDto> Get()
         {
-            var claims = new JsonResult(from c in User.Claims select new { c.Type, c.Value });
             return _categoryAppService.GetAll();
         }
 
@@ -36,6 +32,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Post([FromBody]CategoryCreateDto category)
         {
             await _categoryAppService.Create(category);
@@ -43,12 +40,14 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         public async Task Put([FromBody]CategoryUpdateDto category)
         {
             await _categoryAppService.Update(category);
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task Delete(Guid id)
         {
             await _categoryAppService.Remove(id);
@@ -56,6 +55,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 
         [HttpPut]
         [Route("name")]
+        [Authorize]
         public async Task ChangeName(Guid id, [FromBody]string name)
         {
             await _categoryAppService.ChangeName(id, name);
@@ -63,6 +63,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 
         [HttpPut]
         [Route("description")]
+        [Authorize]
         public async Task ChangeDescription(Guid id, [FromBody]string description)
         {
             await _categoryAppService.ChangeDescription(id, description);
