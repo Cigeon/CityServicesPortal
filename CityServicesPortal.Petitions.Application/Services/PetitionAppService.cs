@@ -63,7 +63,16 @@ namespace CityServicesPortal.Petitions.Application.Services
                         FirstName = p.User.FirstName,
                         MiddleName = p.User.MiddleName,
                         LastName = p.User.LastName
-                    }                               
+                    },
+                    Voters = p.PetitionVoters.Select(v => new UserShortDto
+                    {
+                        Id = v.UserId,
+                        UserName = v.User.UserName,
+                        FirstName = v.User.FirstName,
+                        MiddleName = v.User.MiddleName,
+                        LastName = v.User.LastName
+                    }).ToList()
+
                 }).ToList();
 
             return petitions;
@@ -93,7 +102,15 @@ namespace CityServicesPortal.Petitions.Application.Services
                     FirstName = petition.User.FirstName,
                     MiddleName = petition.User.MiddleName,
                     LastName = petition.User.LastName
-                }
+                },
+                Voters = petition.PetitionVoters.Select(v => new UserShortDto
+                {
+                    Id = v.UserId,
+                    UserName = v.User.UserName,
+                    FirstName = v.User.FirstName,
+                    MiddleName = v.User.MiddleName,
+                    LastName = v.User.LastName
+                }).ToList()
             };
         }
 

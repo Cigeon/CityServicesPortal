@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <None Remove="ClientApp\app\components\models\category\category-short.ts" />
-    <None Remove="ClientApp\app\components\models\petition\petition-status.ts" />
+    <None Remove="ClientApp\app\components\models\constant.ts" />
     <None Remove="ClientApp\app\components\models\petition\petition.ts" />
     <None Remove="ClientApp\app\components\models\petition\register-petition.ts" />
     <None Remove="ClientApp\app\components\models\user\user-short.ts" />
@@ -36,7 +36,7 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\components\models\category\category-short.ts" />
-    <TypeScriptCompile Include="ClientApp\app\components\models\petition\petition-status.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\models\constant.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\models\petition\petition.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\models\petition\register-petition.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\models\user\user-short.ts" />

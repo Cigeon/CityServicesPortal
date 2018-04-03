@@ -1,5 +1,6 @@
 ﻿using CityServicesPortal.Petitions.Domain.Models;
 using System;
+using System.Collections.Generic;
 
 namespace CityServicesPortal.Petitions.Application.DTOs
 {
@@ -13,5 +14,11 @@ namespace CityServicesPortal.Petitions.Application.DTOs
         public PetitionStatus Status { get; set; }
         public CategoryShortDto Category { get; set; }
         public UserShortDto User { get; set; }
+        public List<UserShortDto> Voters { get; set; }
+
+        public PetitionDto()
+        {
+            Voters = new List<UserShortDto>();
+        }
     }
 }

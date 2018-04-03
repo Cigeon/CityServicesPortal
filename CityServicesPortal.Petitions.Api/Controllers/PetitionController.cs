@@ -116,21 +116,24 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         [Authorize]
         public async Task Vote(Guid id)
         {
-            var user = _userAppService.GetByUserName("user");
-            if (user == null)
+            var name = User.Claims.FirstOrDefault(c => c.Type.Equals("name")).Value;
+            if (_userAppService.GetByUserName(name) == null)
             {
                 var registerUser = new UserRegisterDto
                 {
-                    FirstName = "Alex"
+                    UserName = User.Claims.FirstOrDefault(c => c.Type.Equals("name")).Value,
+                    FirstName = User.Claims.FirstOrDefault(c => c.Type.Equals("first_name")).Value,
+                    MiddleName = User.Claims.FirstOrDefault(c => c.Type.Equals("middle_name")).Value,
+                    LastName = User.Claims.FirstOrDefault(c => c.Type.Equals("last_name")).Value
                 };
-
                 _userAppService.Register(registerUser);
-
-                user = new UserDto
-                {
-                    FirstName = registerUser.FirstName
-                };
             }
+
+            var user = new UserDto
+            {
+
+            };
+
             await _petitionAppService.Vote(id, user);
         }
     }

@@ -66,13 +66,9 @@
                     <td>{{petition.category.name}}</td>
                     <td>{{petition.user.lastName}} {{petition.user.firstName[0]}}.{{petition.user.middleName[0]}}</td>
                     <td>{{petition.created |  date:'yyyy-MM-dd'}}</td>
-                    <td><span [ngClass]="{
-                                'badge badge-secondary':petition.status === 0,
-                                'badge badge-primary':petition.status === 1,
-                                'badge badge-warning':petition.status === 2,
-                                'badge badge-success':petition.status === 3
-                              }">{{statusName[petition.status]}}</span></td>
-                    <td><a href="#" class="view" title="View Details" data-toggle="tooltip"><i class="material-icons">&#xE5C8;</i></a></td>
+                    <td><span [ngStyle]="{'color':getColor(petition.status)}">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</td>
+                    <td>{{petition.voters.length}}/{{votesCount}}</td>
+                    <td><a href="#" class="view" title="View Details" data-toggle="tooltip"><i>&#xf35a;</i></a></td>
                 </tr>                
             </tbody>
         </table>

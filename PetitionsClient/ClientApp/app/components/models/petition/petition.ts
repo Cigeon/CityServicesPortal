@@ -9,5 +9,6 @@ export interface Petition {
     modified: string,
     status: number,
     category: CategoryShort,
-    user: UserShort
+    user: UserShort,
+    voters: UserShort[]
 }

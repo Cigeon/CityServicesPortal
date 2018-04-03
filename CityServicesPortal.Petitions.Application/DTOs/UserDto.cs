@@ -13,5 +13,11 @@ namespace CityServicesPortal.Petitions.Application.DTOs
         public string LastName { get; set; }
         public List<PetitionDto> Petitions { get; set; }
         public List<PetitionDto> VotedPetitions { get; set; }
+
+        public UserDto()
+        {
+            Petitions = new List<PetitionDto>();
+            VotedPetitions = new List<PetitionDto>();
+        }
     }
 }
