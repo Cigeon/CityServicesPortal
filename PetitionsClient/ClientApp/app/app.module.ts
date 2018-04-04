@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -44,6 +45,7 @@ import { AllPetitionsComponent } from './components/petition/all-petitions/all-p
         FontAwesomeModule,
         ButtonsModule.forRoot(),
         BsDropdownModule.forRoot(),
+        PaginationModule.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },

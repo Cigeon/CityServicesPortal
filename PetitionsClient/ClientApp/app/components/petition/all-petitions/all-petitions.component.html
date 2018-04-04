@@ -6,31 +6,45 @@
                 <div class="col-sm-3">
                     <div class="show-entries">
                         <span>Показати</span>
-                        <select class="form-control">
-                            <option>5</option>
-                            <option>10</option>
-                            <option>15</option>
-                            <option>20</option>
-                        </select>
+                        <div class="btn-group" dropdown>
+                            <button dropdownToggle type="button" class="btn btn-default dropdown-toggle" name="selectItemsPerPage">
+                                {{itemsPerPage}}
+                            </button>
+                            <div>
+                                <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                    <li *ngFor="let value of itemsPerPageList" role="menuitem">
+                                        <a class="dropdown-item" (click)="setItemsPerPage(value)">{{value}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <span>петицій</span>
                     </div>
                 </div>
-                <div class="col-sm-9">
-                    <button type="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                <div class="col-sm-9">                    
                     <div class="filter-group">
                         <label>Пошук</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" [(ngModel)]="searchQuery">
+                        <a class="view" title="Пошук" data-toggle="tooltip" (click)="search()"><fa-icon [icon]="faSearch"></fa-icon></a>
                     </div>
                     <div class="filter-group">
                         <label>Статус</label>
-                        <select class="form-control">
-                            <option>All</option>
-                            <option>Berlin</option>
-                            <option>London</option>
-                            <option>Madrid</option>
-                            <option>New York</option>
-                            <option>Paris</option>
-                        </select>
+                        <div class="btn-group" dropdown>
+                            <button dropdownToggle type="button" class="btn btn-default dropdown-toggle" name="status">
+                                {{sStatus}}
+                            </button>
+                            <div>
+                                <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-item" (click)="selectStatus('Всі')">Всі</a>
+                                    </li>
+                                    <li class="divider dropdown-divider"></li>
+                                    <li *ngFor="let status of statuses" role="menuitem">
+                                        <a class="dropdown-item" (click)="selectStatus(status)">{{status}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="filter-group">
                         <label>Категорія</label>
@@ -51,7 +65,6 @@
                             </div>
                         </div>
                     </div>
-                    <!--<span class="filter-icon"><i class="fa fa-filter"></i></span>-->
                 </div>
             </div>
         </div>
@@ -69,11 +82,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let petition of petitions; index as i">
+                <tr *ngFor="let petition of shownPetitions; index as i">
                     <td>{{i+1}}</td>
                     <td>{{petition.name}}</td>
                     <td>{{petition.category.name}}</td>
-                    <td>{{petition.user.lastName}} {{petition.user.firstName[0]}}.{{petition.user.middleName[0]}}</td>
+                    <td>{{petition.user.lastName}} {{petition.user.firstName[0]}}.{{petition.user.middleName[0]}}.</td>
                     <td><span class="font-size-sm">{{petition.created |  date:'yyyy-MM-dd'}}</span></td>
                     <td><span [ngStyle]="{'color':getColor(petition.status)}">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</td>
                     <td><span class="font-size-sm">{{petition.voters.length}}/{{votesCount}}</span></td>
@@ -82,18 +95,14 @@
             </tbody>
         </table>
         <div class="clearfix">
-            <div class="hint-text">Показано <b>5</b> з <b>25</b> петицій</div>
-            <ul class="pagination">
-                <li class="page-item disabled"><a href="#">Назад</a></li>
-                <li class="page-item"><a href="#" class="page-link">1</a></li>
-                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                <li class="page-item"><a href="#" class="page-link">3</a></li>
-                <li class="page-item active"><a href="#" class="page-link">4</a></li>
-                <li class="page-item"><a href="#" class="page-link">5</a></li>
-                <li class="page-item"><a href="#" class="page-link">6</a></li>
-                <li class="page-item"><a href="#" class="page-link">7</a></li>
-                <li class="page-item"><a href="#" class="page-link">Вперед</a></li>
-            </ul>
+            <div class="hint-text">Показано <b>{{showedItems}}</b> з <b>{{filteredPetitions.length}}</b> петицій</div>
+            <pagination *ngIf="filteredPetitions.length > itemsPerPage" 
+                        [(ngModel)]="currentPage"
+                        [totalItems]="filteredPetitions.length" 
+                        [maxSize]="5" 
+                        [itemsPerPage] ="itemsPerPage" 
+                        (pageChanged)="pageChanged($event)">
+            </pagination>
         </div>
     </div>
 </div> 
