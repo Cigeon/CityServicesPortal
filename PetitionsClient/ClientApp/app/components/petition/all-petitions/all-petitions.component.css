@@ -69,6 +69,16 @@
     margin-left: 15px;
 }
 
+.show-entries label {
+        margin-top: 0;
+        margin-bottom: 4px;
+}
+
+.filter-group label {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
 .table-filter input, .table-filter select {
     height: 34px;
     border-radius: 3px;
@@ -165,23 +175,25 @@ table.table td a.view {
     /*border: 2px solid;
     border-radius: 30px;*/
     text-align: center;
+    cursor: pointer;
+}
+
+label a.view {
+    cursor: pointer;
 }
 
 .font-size-sm {
     font-size: 14px;
 }
 
-fa-icon {
-    font-size: 24px;
+.search-icon {
+    font-size: 18px;
+    color: #03A9F4;
 }
 
-/*.svg-inline--fa.fa-arrow-alt-circle-right.fa-w-16 {
-    font-size: 48px;
-}*/
-/*table.table td a.view i {
+.arrow-icon {
     font-size: 22px;
-    margin: 2px 0 0 1px;
-}*/
+}
 
 table.table .avatar {
     border-radius: 50%;
@@ -218,40 +230,6 @@ table.table .avatar {
     margin: 0 0 5px;
 }
 
-.pagination li a {
-    border: none;
-    font-size: 13px;
-    min-width: 30px;
-    min-height: 30px;
-    color: #999;
-    margin: 0 2px;
-    line-height: 30px;
-    border-radius: 2px !important;
-    text-align: center;
-    padding: 0 6px;
-}
-
-.pagination li a:hover {
-    color: #666;
-}
-
-.pagination li.active a {
-    background: #03A9F4;
-}
-
-.pagination li.active a:hover {
-    background: #0397d6;
-}
-
-.pagination li.disabled i {
-    color: #ccc;
-}
-
-.pagination li i {
-    font-size: 16px;
-    padding-top: 6px
-}
-
 .hint-text {
     float: left;
     margin-top: 10px;
@@ -261,6 +239,11 @@ table.table .avatar {
 .btn.btn-default.dropdown-toggle {
     background: white;
     border-color: lightgray !important;
+}
+
+.filter-group .btn.btn-default.dropdown-toggle {
+    width: 160px;
+    text-align: right;
 }
 
 .dropdown-item {
