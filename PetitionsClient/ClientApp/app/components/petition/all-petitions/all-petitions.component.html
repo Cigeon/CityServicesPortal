@@ -26,7 +26,7 @@
                         <label>Пошук</label>
                         <input type="text" class="form-control" [(ngModel)]="searchQuery">
                         <label>
-                            <a class="view" title="Пошук" data-toggle="tooltip" (click)="search()">
+                            <a class="view" tooltip="Пошук" (click)="search()">
                                 <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
                             </a>
                         </label>
@@ -92,7 +92,7 @@
                     <td><span class="font-size-sm">{{petition.created |  date:'yyyy-MM-dd'}}</span></td>
                     <td><span [ngStyle]="{'color':getColor(petition.status)}">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</td>
                     <td><span class="font-size-sm">{{petition.voters.length}}/{{votesCount}}</span></td>
-                    <td><a class="view" title="View Details" data-toggle="tooltip">
+                    <td><a class="view" tooltip="Переглянути петицію">
                             <fa-icon class="arrow-icon" [icon]="faArrowAltCircleRight"></fa-icon>
                         </a>
                     </td>

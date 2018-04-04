@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -46,6 +47,7 @@ import { AllPetitionsComponent } from './components/petition/all-petitions/all-p
         ButtonsModule.forRoot(),
         BsDropdownModule.forRoot(),
         PaginationModule.forRoot(),
+        TooltipModule.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
