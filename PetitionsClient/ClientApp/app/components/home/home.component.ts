@@ -1,4 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, TemplateRef } from '@angular/core';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -12,9 +14,11 @@ import { AuthService } from '../services/auth.service';
 export class HomeComponent implements OnInit, OnDestroy {
     isAuthorizedSubscription: Subscription;
     isAuthorized: boolean;
+    modalRef: BsModalRef;
 
     constructor(public authService: AuthService,
-                public router: Router) {
+        public router: Router,
+        private modalService: BsModalService) {
     }
 
     ngOnInit() {
@@ -28,12 +32,21 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.isAuthorizedSubscription.unsubscribe();
     }
 
+    openModal(template: TemplateRef<any>) {
+        this.modalRef = this.modalService.show(template, { class: 'modal-md' });
+    }
+
+    confirm(): void {
+        this.authService.login();
+        this.modalRef.hide();
+    }
+
+    cancel(): void {
+        this.modalRef.hide();
+    }
+
     public addPetition() {
-        if (this.isAuthorized) {
-            this.router.navigate(['/register-petition']);
-        } else {
-            this.authService.login();
-        }              
+        this.router.navigate(['/register-petition']);           
     }
 
 }

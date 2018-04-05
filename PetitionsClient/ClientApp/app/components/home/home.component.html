@@ -3,9 +3,12 @@
         <P class="title-text">Сервіс громадських петицій</P>
         <p class="regular-text">Прийми участь у покращенні життя міста</p>
         <!--<button type="button" class="btn btn-primary" *ngIf="!isAuthorized" [routerLink]="['/create-petition']">
+        <span class="bold-text">+ Створити петицію</span>
+    </button>-->
+        <button *ngIf="isAuthorized" type="button" class="btn btn-primary" (click)="addPetition()">
             <span class="bold-text">+ Створити петицію</span>
-        </button>-->
-        <button type="button" class="btn btn-primary" (click)="addPetition()">
+        </button>
+        <button *ngIf="!isAuthorized" type="button" class="btn btn-primary" (click)="openModal(template)">
             <span class="bold-text">+ Створити петицію</span>
         </button>
     </div>
@@ -69,3 +72,14 @@
         </div>
     </div>
 </div>
+
+<ng-template #template>
+    <div class="modal-body text-center">
+        <br />
+        <h6>Увійдіть під своїм логіном, будь-ласка!</h6>
+        <br />
+        <button type="button" class="btn btn-primary" (click)="confirm()">Авторизація</button>
+        <button type="button" class="btn btn-default" (click)="cancel()">Ні, дякую!</button>
+        <br />
+    </div>
+</ng-template>
