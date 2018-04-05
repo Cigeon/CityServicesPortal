@@ -7,6 +7,7 @@ import { CategoryShort } from '../../models/category/category-short';
 import { Constant } from '../../models/constant';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -32,7 +33,8 @@ export class AllPetitionsComponent implements OnInit {
     currentPage: number = 0;
 
     constructor(private http: HttpClient,
-        @Inject('API_URL') private apiUrl: string) {
+        @Inject('API_URL') private apiUrl: string,
+        public router: Router) {
         this.votesCount = Constant.VOTES_COUNT;
         this.statuses = Constant.PETITIONS_STATUS;
     }
@@ -120,6 +122,10 @@ export class AllPetitionsComponent implements OnInit {
                 p.user.lastName.toLowerCase().includes(this.searchQuery) ||
                 this.getName(p.status).toLowerCase().includes(this.searchQuery));
         }
+    }
+
+    showPetitionDetail(id: string) {
+        this.router.navigate(['/detail/' + id]);
     }
 
     getColor(status: number) {

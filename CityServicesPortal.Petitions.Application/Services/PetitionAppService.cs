@@ -40,7 +40,6 @@ namespace CityServicesPortal.Petitions.Application.Services
 
         public IEnumerable<PetitionDto> GetAll()
         {
-            //return _petitionRepository.GetAll().ProjectTo<PetitionDto>();
             var petitions = _petitionRepository.GetAll()
                 .Select(p => new PetitionDto
                 {
@@ -81,7 +80,9 @@ namespace CityServicesPortal.Petitions.Application.Services
         public PetitionDto GetById(Guid id)
         {
             var petition = _petitionRepository.GetById(id);
-            return new PetitionDto
+            var category = _categoryRepository.GetById(petition.CategoryId);
+            var user = _userRepository.GetById(petition.UserId);
+            var petitionDto = new PetitionDto
             {
                 Id = petition.Id,
                 Name = petition.Name,
@@ -91,17 +92,17 @@ namespace CityServicesPortal.Petitions.Application.Services
                 Status = petition.Status,
                 Category = new CategoryShortDto
                 {
-                    Id = petition.Category.Id,
-                    Name = petition.Category.Name,
-                    Description = petition.Category.Description
+                    Id = category.Id,
+                    Name = category.Name,
+                    Description = category.Description
                 },
                 User = new UserShortDto
                 {
-                    Id = petition.User.Id,
-                    UserName = petition.User.UserName,
-                    FirstName = petition.User.FirstName,
-                    MiddleName = petition.User.MiddleName,
-                    LastName = petition.User.LastName
+                    Id = user.Id,
+                    UserName = user.UserName,
+                    FirstName = user.FirstName,
+                    MiddleName = user.MiddleName,
+                    LastName = user.LastName
                 },
                 Voters = petition.PetitionVoters.Select(v => new UserShortDto
                 {
@@ -112,6 +113,7 @@ namespace CityServicesPortal.Petitions.Application.Services
                     LastName = v.User.LastName
                 }).ToList()
             };
+            return petitionDto;
         }
 
         public async Task Register(PetitionRegisterDto p)

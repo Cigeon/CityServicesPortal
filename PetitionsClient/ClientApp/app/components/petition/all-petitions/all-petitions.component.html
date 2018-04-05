@@ -1,4 +1,5 @@
-﻿<div class="container">
+﻿<div *ngIf="allPetitions.length === 0" class="spinner"></div>
+<div *ngIf="allPetitions.length !== 0" class="container">
     <div class="table-wrapper">
         
         <div class="table-filter">
@@ -92,7 +93,7 @@
                     <td><span class="font-size-sm">{{petition.created |  date:'yyyy-MM-dd'}}</span></td>
                     <td><span [ngStyle]="{'color':getColor(petition.status)}">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</td>
                     <td><span class="font-size-sm">{{petition.voters.length}}/{{votesCount}}</span></td>
-                    <td><a class="view" tooltip="Переглянути петицію">
+                    <td><a class="view" tooltip="Переглянути петицію" (click)="showPetitionDetail(petition.id)">
                             <fa-icon class="arrow-icon" [icon]="faArrowAltCircleRight"></fa-icon>
                         </a>
                     </td>

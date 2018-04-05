@@ -9,6 +9,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -24,6 +26,7 @@ import { RegisterCategoryComponent } from './components/category/register-catego
 import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
 import { AuthService } from './components/services/auth.service';
 import { AllPetitionsComponent } from './components/petition/all-petitions/all-petitions.component';
+import { PetitionDetailComponent } from './components/petition/petition-detail/petition-detail.component';
 
 
 
@@ -37,7 +40,8 @@ import { AllPetitionsComponent } from './components/petition/all-petitions/all-p
         MenuComponent,
         RegisterPetitionComponent,
         RegisterCategoryComponent,
-        AllPetitionsComponent        
+        AllPetitionsComponent,
+        PetitionDetailComponent        
     ],
     imports: [
         AuthModule.forRoot(),
@@ -50,11 +54,14 @@ import { AllPetitionsComponent } from './components/petition/all-petitions/all-p
         PaginationModule.forRoot(),
         TooltipModule.forRoot(),
         ModalModule.forRoot(),
+        AccordionModule.forRoot(),
+        ProgressbarModule.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'petitions', component: AllPetitionsComponent },
             { path: 'register-petition', component: RegisterPetitionComponent },
+            { path: 'detail/:id', component: PetitionDetailComponent },
             { path: 'register-category', component: RegisterCategoryComponent },
             { path: 'unauthorized', component: UnauthorizedComponent },
             { path: 'fetch-data', component: FetchDataComponent },

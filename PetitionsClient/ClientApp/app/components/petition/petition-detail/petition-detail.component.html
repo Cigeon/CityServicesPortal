@@ -1,0 +1,77 @@
+﻿<div *ngIf="!petitionLoaded" class="spinner"></div>
+<div *ngIf="petitionLoaded" class="col w-50 p-3 hor-center">
+    <br />
+    <h3 class="heading">{{petition.name}}</h3>
+    <hr class="my-4">
+    <br />
+    <div class="column">
+        <div *ngIf="petition.status > 0" class="row">
+            <div class="col-12">
+                <progressbar [max]="votesCount" [value]="petition.voters.length">
+                    <span class="text-nowrap">{{petition.voters.length}} / {{votesCount}}</span>
+                </progressbar>
+                <br />
+                <br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"><p>Статус</p></div>
+            <div class="col-6"><p><span [ngStyle]="{'color':getColor(petition.status)}">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</p></div>
+            <div class="col-4">
+                <button *ngIf="isAuthorized && petition.status === 1" type="button" class="btn btn-primary" (click)="votePetition()">
+                    <span class="bold-text">
+                        Підтримати петицію <fa-icon [icon]="faCheckCircle"></fa-icon>
+                    </span>
+                </button>
+                <button *ngIf="!isAuthorized && petition.status === 1" type="button" class="btn btn-primary" (click)="openModal(template)">
+                    <span class="bold-text">
+                        Підтримати петицію <fa-icon [icon]="faCheckCircle"></fa-icon>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"><p>Автор</p></div>
+            <div class="col-10">
+                <p>{{petition.user.lastName}} {{petition.user.firstName}} {{petition.user.middleName}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"><p>Категорія</p></div>
+            <div class="col-10">
+                <p>{{petition.category.name}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"><p>Зміст</p></div>
+            <div class="col-10">
+                <p>{{petition.description}}</p>
+            </div>
+        </div>
+    </div>
+    <accordion *ngIf="petition.status > 0">
+        <br />
+        <accordion-group heading="Хто підтримав">
+            <div *ngIf="petition.voters.length === 0" class="column">
+                <p>Петицію ще ніхто не підтримав, будьте першим!</p>
+            </div>
+            <div *ngIf="petition.voters.length" class="column">
+                <div *ngFor="let voter of petition.voters" class="row">
+                    <div class="col-8">voter.lastName voter.firstName voter.middleName</div>
+                    <!--<div class="col-4">date</div>-->
+                </div>
+            </div>
+        </accordion-group>
+    </accordion>
+</div>
+
+<ng-template #template>
+    <div class="modal-body text-center">
+        <br />
+        <h6>Увійдіть під своїм логіном, будь-ласка!</h6>
+        <br />
+        <button type="button" class="btn btn-primary" (click)="confirm()">Авторизація</button>
+        <button type="button" class="btn btn-default" (click)="cancel()">Ні, дякую!</button>
+        <br />
+    </div>
+</ng-template>
