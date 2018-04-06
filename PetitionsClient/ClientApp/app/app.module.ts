@@ -60,6 +60,7 @@ import { PetitionDetailComponent } from './components/petition/petition-detail/p
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'petitions', component: AllPetitionsComponent },
+            { path: 'petitions/:category', component: AllPetitionsComponent },
             { path: 'register-petition', component: RegisterPetitionComponent },
             { path: 'detail/:id', component: PetitionDetailComponent },
             { path: 'register-category', component: RegisterCategoryComponent },

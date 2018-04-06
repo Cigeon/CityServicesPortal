@@ -7,7 +7,7 @@ import { CategoryShort } from '../../models/category/category-short';
 import { Constant } from '../../models/constant';
 import { faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -33,10 +33,15 @@ export class AllPetitionsComponent implements OnInit {
     currentPage: number = 0;
 
     constructor(private http: HttpClient,
-        @Inject('API_URL') private apiUrl: string,
-        public router: Router) {
+                @Inject('API_URL') private apiUrl: string,
+                public router: Router,
+                private route: ActivatedRoute) {
         this.votesCount = Constant.VOTES_COUNT;
         this.statuses = Constant.PETITIONS_STATUS;
+        this.route.params.subscribe(params => {
+            this.sCategory = params['category'];
+            if (this.sCategory == null) { this.sCategory = 'Всі';};
+        });
     }
 
     ngOnInit() {
@@ -48,7 +53,7 @@ export class AllPetitionsComponent implements OnInit {
                     this.showedItems = this.allPetitions.length;
                 } else { this.showedItems = 10; }
                 this.itemsPerPage = 10;
-                this.shownPetitions = this.filteredPetitions.slice(0, this.itemsPerPage);
+                this.filterPetitions();
                 console.log(this.shownPetitions);
             }, error => console.log(error));
         this.getCategories()
@@ -62,8 +67,7 @@ export class AllPetitionsComponent implements OnInit {
 
     setItemsPerPage(value: number) {
         this.itemsPerPage = value;
-        this.filteredPetitions = this.allPetitions;
-        this.shownPetitions = this.filteredPetitions.slice(0, this.itemsPerPage);
+        this.filterPetitions();
     }
 
     pageChanged(event: PageChangedEvent): void {

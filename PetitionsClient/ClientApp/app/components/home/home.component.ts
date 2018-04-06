@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     showPetitions(name: string) {
-        this.router.navigate(['/petitions']);   
+        this.router.navigate(['/petitions/' + name]);   
     }
 
     openModal(template: TemplateRef<any>) {
