@@ -122,6 +122,8 @@ export class AllPetitionsComponent implements OnInit {
                 p.user.lastName.toLowerCase().includes(this.searchQuery) ||
                 this.getName(p.status).toLowerCase().includes(this.searchQuery));
         }
+
+        this.shownPetitions = this.filteredPetitions.slice(0, this.itemsPerPage);
     }
 
     showPetitionDetail(id: string) {

@@ -15,61 +15,22 @@
 </div>
 <div class="container">
     <h3>По категоріям</h3>
-    <div class="categories">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../../../assets/transport.jpg" alt="Transport" />
-            <div class="card-body">
-                <h4 class="card-text">Транспорт та дороги</h4>
-                <button type="button" class="btn btn-light">
-                    петицій <span class="badge badge-primary">9</span>
-                </button>
+    <div *ngIf="categories.length === 0" class="spinner"></div>
+    <div *ngIf="categories.length !== 0" class="categories">
+        <div *ngFor="let category of categories" 
+             class="card border-secondary mb-3" 
+             style="max-width: 18rem;"
+             (click)="showPetitions(category.name)">
+            <div class="card-body text-secondary">
+                <h5 class="card-title">{{category.name}}</h5>
+                <p class="card-text">{{category.description}}</p>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../../../assets/health.jpg" alt="Medicine" />
-            <div class="card-body">
-                <h4 class="card-text">Охорона здоров'я</h4>
-                <button type="button" class="btn btn-light">
-                    петицій <span class="badge badge-primary">11</span>
-                </button>
+            <div class="card-footer">
+                <small class="text-muted">
+                    Зареєстровано петицій - {{category.petitions.length}}
+                </small>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../../../assets/industry.jpg" alt="Industry" />
-            <div class="card-body">
-                <h4 class="card-text">Промисловість</h4>
-                <button type="button" class="btn btn-light">
-                    петицій <span class="badge badge-primary">2</span>
-                </button>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../../../assets/study.jpg" alt="Study" />
-            <div class="card-body">
-                <h4 class="card-text">Освіта</h4>
-                <button type="button" class="btn btn-light">
-                    петицій <span class="badge badge-primary">5</span>
-                </button>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../../../assets/police.jpg" alt="Study" />
-            <div class="card-body">
-                <h4 class="card-text">Правопорядок</h4>
-                <button type="button" class="btn btn-light">
-                    петицій <span class="badge badge-primary">3</span>
-                </button>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="../../../assets/economic.jpg" alt="Study" />
-            <div class="card-body">
-                <h4 class="card-text">Економіка та фінанси</h4>
-                <button type="button" class="btn btn-light">
-                    петицій <span class="badge badge-primary">3</span>
-                </button>
-            </div>
-        </div>
+        </div>        
     </div>
 </div>
 

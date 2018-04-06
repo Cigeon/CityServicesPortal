@@ -108,6 +108,8 @@
                             [totalItems]="filteredPetitions.length"
                             [maxSize]="5"
                             [itemsPerPage]="itemsPerPage"
+                            previousText="Назад"
+                            nextText="Вперед"
                             (pageChanged)="pageChanged($event)">
                 </pagination>
             </div>
