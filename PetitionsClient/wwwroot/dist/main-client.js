@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "101ad0fb9ac6d19932f7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "1f61904378d70ef756c3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -11819,7 +11819,6 @@ var AllPetitionsComponent = (function () {
                 _this.showedItems = 10;
             }
             _this.itemsPerPage = 10;
-            //this.shownPetitions = this.filteredPetitions.slice(0, this.itemsPerPage);
             _this.filterPetitions();
             console.log(_this.shownPetitions);
         }, function (error) { return console.log(error); });
@@ -11831,8 +11830,6 @@ var AllPetitionsComponent = (function () {
     };
     AllPetitionsComponent.prototype.setItemsPerPage = function (value) {
         this.itemsPerPage = value;
-        //this.filteredPetitions = this.allPetitions;
-        //this.shownPetitions = this.filteredPetitions.slice(0, this.itemsPerPage);
         this.filterPetitions();
     };
     AllPetitionsComponent.prototype.pageChanged = function (event) {
