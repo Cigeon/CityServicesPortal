@@ -9,6 +9,9 @@
     </div>
     <div class="col-4 centered">
         <ul class="nav justify-content-end">
+            <li *ngIf="isAuthorized" class="nav-item" [routerLinkActive]="['link-active']">
+                <a class="nav-link menu-btn" [routerLink]="['/admin']">Admin</a>
+            </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
                 <a class="nav-link menu-btn" [routerLink]="['/home']">Головна</a>
             </li>

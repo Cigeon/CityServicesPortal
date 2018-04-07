@@ -1,0 +1,135 @@
+﻿<div class="title-wrapper">
+    <h2>ADMIN панель</h2>
+</div>
+<div *ngIf="allPetitions.length === 0" class="spinner"></div>
+<div *ngIf="allPetitions.length !== 0" class="container">
+    <div class="table-wrapper">
+
+        <div class="table-filter">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="show-entries row align-items-end">
+                        <label>Показати</label>
+                        <div class="btn-group" dropdown>
+                            <button dropdownToggle type="button" class="btn btn-default dropdown-toggle" name="selectItemsPerPage">
+                                {{itemsPerPage}}
+                            </button>
+                            <div>
+                                <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                    <li *ngFor="let value of itemsPerPageList" role="menuitem">
+                                        <a class="dropdown-item" (click)="setItemsPerPage(value)">{{value}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <label>петицій</label>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="filter-group row align-items-end">
+                        <label>Пошук</label>
+                        <input type="text" class="form-control" [(ngModel)]="searchQuery">
+                        <label>
+                            <a class="view" tooltip="Пошук" (click)="search()">
+                                <fa-icon [icon]="faSearch" class="search-icon"></fa-icon>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="filter-group  row align-items-end">
+                        <label>Статус</label>
+                        <div class="btn-group" dropdown>
+                            <button dropdownToggle type="button" class="btn btn-default dropdown-toggle" name="status">
+                                {{sStatus}}
+                            </button>
+                            <div>
+                                <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-item" (click)="selectStatus('Всі')">Всі</a>
+                                    </li>
+                                    <li class="divider dropdown-divider"></li>
+                                    <li *ngFor="let status of statuses" role="menuitem">
+                                        <a class="dropdown-item" (click)="selectStatus(status)">{{status}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-group  row align-items-end">
+                        <label>Категорія</label>
+                        <div class="btn-group" dropdown>
+                            <button dropdownToggle type="button" class="btn btn-default dropdown-toggle" name="category">
+                                {{sCategory}}
+                            </button>
+                            <div *ngIf="categories.length">
+                                <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                    <li role="menuitem">
+                                        <a class="dropdown-item" (click)="selectCatagory('Всі')">Всі</a>
+                                    </li>
+                                    <li class="divider dropdown-divider"></li>
+                                    <li *ngFor="let category of categories" role="menuitem">
+                                        <a class="dropdown-item" (click)="selectCatagory(category.name)">{{category.name}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Назва петиції</th>
+                    <th>Категорія</th>
+                    <th>Автор</th>
+                    <th>Зареєстрована</th>
+                    <th>Статус</th>
+                    <th>Підтримано</th>
+                    <th>Деталі</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let petition of shownPetitions; index as i">
+                    <td>{{petition.name}}</td>
+                    <td>{{petition.category.name}}</td>
+                    <td>{{petition.user.lastName}} {{petition.user.firstName[0]}}.{{petition.user.middleName[0]}}.</td>
+                    <td><span class="font-size-sm">{{petition.created |  date:'yyyy-MM-dd'}}</span></td>
+                    <td><span [ngStyle]="{'color':getStatusColor(petition.status)}">&#11044;&nbsp;&nbsp;</span>{{getStatusName(petition.status)}}</td>
+                    <td><span class="font-size-sm">{{petition.voters.length}}/{{votesCount}}</span></td>
+                    <td>
+                        <div class="btn-group" dropdown tooltip="Доступні дії">
+                            <button dropdownToggle type="button" class="btn btn-secondary dropdown-toggle">
+                                Дія<span class="caret"></span>
+                            </button>
+                            <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                <li role="menuitem">
+                                    <a class="dropdown-item text-sm" (click)="showPetitionDetail(petition.id)">Переглянути петицію</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a class="dropdown-item text-sm" (click)="approvePetition(petition.id)">Затвердити</a>
+                                </li>
+                                <li role="menuitem">
+                                    <a class="dropdown-item text-sm" (click)="deletePetition(petition.id)">Видалити</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="clearfix">
+            <div class="hint-text">Показано <b>{{shownPetitions.length}}</b> з <b>{{filteredPetitions.length}}</b> петицій</div>
+            <div class="pagination">
+                <pagination *ngIf="filteredPetitions.length > itemsPerPage"
+                            [(ngModel)]="currentPage"
+                            [totalItems]="filteredPetitions.length"
+                            [maxSize]="5"
+                            [itemsPerPage]="itemsPerPage"
+                            previousText="Назад"
+                            nextText="Вперед"
+                            (pageChanged)="pageChanged($event)">
+                </pagination>
+            </div>
+        </div>
+    </div>
+</div>

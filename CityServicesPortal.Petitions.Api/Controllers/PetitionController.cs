@@ -74,9 +74,10 @@ namespace CityServicesPortal.Petitions.Api.Controllers
 
         [HttpDelete("{id}")]
         [Authorize]
-        public async Task Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
             await _petitionAppService.Remove(id);
+            return NoContent();
         }
 
         [HttpPut]
@@ -95,46 +96,56 @@ namespace CityServicesPortal.Petitions.Api.Controllers
             await _petitionAppService.ChangeDescription(id, description);
         }
 
-        [HttpPut]
-        [Route("status")]
+        [HttpPut("status/{id}")]
         [Authorize]
-        public async Task ChangeStatus(Guid id, [FromBody]int status)
+        public async Task<IActionResult> ChangeStatus(Guid id, [FromBody]int status)
         {
-            await _petitionAppService.ChangeStatus(id, status); ;
+            await _petitionAppService.ChangeStatus(id, status);
+            return NoContent();
         }
 
-        [HttpPut]
-        [Route("category")]
+        [HttpPut("category/{id}")]
         [Authorize]
         public async Task ChangeCategory(Guid id, [FromBody]Guid categoryId)
         {
             await _petitionAppService.ChangeCategory(id, categoryId); ;
         }
 
-        [HttpPut]
-        [Route("vote")]
+        [HttpPut("vote/{id}")]
         [Authorize]
-        public async Task Vote(Guid id)
+        public async Task<IActionResult> Vote(Guid id)
+        {
+            var name = GetCurrentUserName();
+            var user = _userAppService.GetByUserName(name);
+            var voter = new UserShortDto
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                FirstName = user.FirstName,
+                MiddleName = user.MiddleName,
+                LastName = user.LastName
+            };
+
+            await _petitionAppService.Vote(id, voter);
+
+            return NoContent();
+        }
+
+        private string GetCurrentUserName()
         {
             var name = User.Claims.FirstOrDefault(c => c.Type.Equals("name")).Value;
             if (_userAppService.GetByUserName(name) == null)
             {
-                var registerUser = new UserRegisterDto
+                var user = new UserRegisterDto
                 {
                     UserName = User.Claims.FirstOrDefault(c => c.Type.Equals("name")).Value,
                     FirstName = User.Claims.FirstOrDefault(c => c.Type.Equals("first_name")).Value,
                     MiddleName = User.Claims.FirstOrDefault(c => c.Type.Equals("middle_name")).Value,
                     LastName = User.Claims.FirstOrDefault(c => c.Type.Equals("last_name")).Value
                 };
-                _userAppService.Register(registerUser);
+                _userAppService.Register(user);
             }
-
-            var user = new UserDto
-            {
-
-            };
-
-            await _petitionAppService.Vote(id, user);
+            return name;
         }
     }
 }

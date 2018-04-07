@@ -158,7 +158,7 @@ namespace CityServicesPortal.Petitions.Application.Services
             await Bus.SendCommand(changeCategoryCommand);
         }
 
-        public async Task Vote(Guid petitionId, UserDto user)
+        public async Task Vote(Guid petitionId, UserShortDto user)
         {
             var voteCommand = new PetitionVoteCommand(petitionId, user.Id, user.FirstName, 
                 user.MiddleName, user.LastName);

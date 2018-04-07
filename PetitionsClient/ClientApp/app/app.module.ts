@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
+import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
+import { AuthService } from './components/services/auth.service';
+
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
@@ -22,11 +25,9 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 import { MenuComponent } from './components/menu/menu.component';
 import { RegisterPetitionComponent } from './components/petition/register-petition/register-petition.component';
 import { RegisterCategoryComponent } from './components/category/register-category/register-category.component';
-
-import { AuthModule, OidcSecurityService } from 'angular-auth-oidc-client';
-import { AuthService } from './components/services/auth.service';
 import { AllPetitionsComponent } from './components/petition/all-petitions/all-petitions.component';
 import { PetitionDetailComponent } from './components/petition/petition-detail/petition-detail.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 
 
 
@@ -41,7 +42,8 @@ import { PetitionDetailComponent } from './components/petition/petition-detail/p
         RegisterPetitionComponent,
         RegisterCategoryComponent,
         AllPetitionsComponent,
-        PetitionDetailComponent        
+        PetitionDetailComponent,
+        AdminDashboardComponent        
     ],
     imports: [
         AuthModule.forRoot(),
@@ -64,6 +66,7 @@ import { PetitionDetailComponent } from './components/petition/petition-detail/p
             { path: 'register-petition', component: RegisterPetitionComponent },
             { path: 'detail/:id', component: PetitionDetailComponent },
             { path: 'register-category', component: RegisterCategoryComponent },
+            { path: 'admin', component: AdminDashboardComponent },
             { path: 'unauthorized', component: UnauthorizedComponent },
             { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }

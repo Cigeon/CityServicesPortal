@@ -19,6 +19,7 @@ export class PetitionDetailComponent implements OnInit {
     faCheckCircle = faCheckCircle;
     isAuthorizedSubscription: Subscription;
     isAuthorized: boolean;
+    voteSubscription: Subscription;
     modalRef: BsModalRef;
     petition: Petition;
     petitionLoaded: boolean = false;
@@ -70,11 +71,15 @@ export class PetitionDetailComponent implements OnInit {
     }
 
     public votePetition() {
-        this.router.navigate(['/register-petition']);
+        this.voteSubscription =
+            this.authService.put(this.apiUrl + 'petition/vote/' + this.petition.id, null)
+                .subscribe(result => {
+                    console.log(result);
+                }, error => console.error(error)); 
     }
 
     getName(status: number): string {
-    console.log(status);
+        console.log(status);
         return Constant.STATUS_NAME(status);
     }
 

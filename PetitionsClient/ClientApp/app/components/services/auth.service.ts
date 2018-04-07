@@ -56,6 +56,10 @@ export class AuthService implements OnInit, OnDestroy {
         return this.oidcSecurityService.getIsAuthorized();
     }
 
+    getUserData(): Observable<any> {
+        return this.oidcSecurityService.getUserData();
+    }
+
     login() {
         console.log('start login');
         this.oidcSecurityService.authorize();
