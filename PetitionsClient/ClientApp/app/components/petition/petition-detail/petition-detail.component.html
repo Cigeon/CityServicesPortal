@@ -57,7 +57,7 @@
             </div>
             <div *ngIf="petition.voters.length" class="column">
                 <div *ngFor="let voter of petition.voters" class="row">
-                    <div class="col-8">voter.lastName voter.firstName voter.middleName</div>
+                    <div class="col-8">{{voter.lastName}} {{voter.firstName}} {{voter.middleName}}</div>
                     <!--<div class="col-4">date</div>-->
                 </div>
             </div>

@@ -3,13 +3,13 @@
     ViewData["Title"] = "Реєстрація";
 }
 
-<h2>@ViewData["Title"]</h2>
-
 <div class="row">
+    <br />
+    <br />
     <div class="col-md-4 glass">
-        <br />
         <section>
             <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+                <h2>@ViewData["Title"]</h2>
                 <h4>Створення нового аккаунта. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
                 <hr />
                 <div asp-validation-summary="All" class="text-danger"></div>
@@ -43,6 +43,7 @@
                     <input asp-for="ConfirmPassword" class="form-control" />
                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                 </div>
+                <br />
                 <button type="submit" class="btn btn-default">Зареєструвати</button>
             </form>
         </section>
