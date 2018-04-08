@@ -11,6 +11,10 @@
     justify-content: center;
 }
 
+.logo-wrapper {
+    width: 370px;
+}
+
 .logo {
     height: 60px;
 }

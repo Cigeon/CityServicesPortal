@@ -33,7 +33,7 @@ export class AdminDashboardComponent implements OnInit, OnDestroy {
     sCategory: string = 'Всі';
     itemsPerPage: number = 0;
     showedItems: number = 0;
-    itemsPerPageList: number[] = [1, 2, 5, 10, 15, 20];
+    itemsPerPageList: number[] = [5, 10, 15, 20];
     currentPage: number = 0;
 
     constructor(private http: HttpClient,

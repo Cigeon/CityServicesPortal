@@ -1,19 +1,19 @@
 ﻿<div class="header">
-    <div class="col-8 centered">
-        <h3>
+    <div class="col-6 centered">
+        <h3 class="logo-wrapper">
             <a class="nav-link mrg-top" [routerLink]="['/home']">
                 <img class="logo" src="../../../assets/petitions-logo.png" />
                 Громадські петиції
             </a>
         </h3>
     </div>
-    <div class="col-4 centered">
+    <div class="col-6 centered">
         <ul class="nav justify-content-end">
-            <li *ngIf="isAuthorized" class="nav-item" [routerLinkActive]="['link-active']">
-                <a class="nav-link menu-btn" [routerLink]="['/admin']">Admin</a>
-            </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
                 <a class="nav-link menu-btn" [routerLink]="['/home']">Головна</a>
+            </li>
+            <li *ngIf="isAuthorized && isAdmin" class="nav-item" [routerLinkActive]="['link-active']">
+                <a class="nav-link menu-btn" [routerLink]="['/admin']">Панель адміністратора</a>
             </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
                 <a class="nav-link menu-btn" [routerLink]="['/petitions']">Всі петиції</a>

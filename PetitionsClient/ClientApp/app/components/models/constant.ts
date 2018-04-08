@@ -3,6 +3,7 @@
     public static get PETITIONS_STATUS(): string[] {
         return ['Перевірка', 'Збір голосів', 'Розглядається', 'З відповіддю', 'Не підтримано']
     };
+    public static get ADMIN_RIGHTS(): number { return 200 };
 
     public static STATUS_COLOR(status: number): any {
         switch (status) {
