@@ -18,8 +18,11 @@ import { Constant } from '../../models/constant';
 export class PetitionDetailComponent implements OnInit {
     faCheckCircle = faCheckCircle;
     isAuthorizedSubscription: Subscription;
-    isAuthorized: boolean;
+    isAuthorized: boolean = false;
+    userDataSubscription: Subscription;
     voteSubscription: Subscription;
+    isVoted: boolean = false;
+    isAuthor: boolean = false;
     modalRef: BsModalRef;
     petition: Petition;
     petitionLoaded: boolean = false;
@@ -36,23 +39,35 @@ export class PetitionDetailComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.isAuthorizedSubscription = this.authService.getIsAuthorized().subscribe(
-            (isAuthorized: boolean) => {
-                this.isAuthorized = isAuthorized;
-            });
-        console.log(this.petition);
+        this.isAuthorizedSubscription =
+                this.authService.getIsAuthorized().subscribe(
+                (isAuthorized: boolean) => {
+                    this.isAuthorized = isAuthorized;
+                }, error => console.log(error));
     }
 
     ngOnDestroy(): void {
         this.isAuthorizedSubscription.unsubscribe();
+        this.userDataSubscription.unsubscribe();
     }
 
     getPetition(id: string): void {
         this.http.get<any>(this.apiUrl + 'petition/' + id)
             .subscribe(result => {  
-                console.log(result);
+                console.log('petition: ', result);
                 this.petitionLoaded = true;
                 this.petition = result;
+
+                this.userDataSubscription =
+                    this.authService.getUserData().subscribe(
+                        (userData: any) => {
+                            console.log('user data: ', userData);
+                            this.isVoted = this.petition.voters.filter(v => v.userName === userData.email).length > 0
+                            this.isAuthor = this.petition.user.userName === userData.email;
+                            console.log('voted: ', this.isVoted);
+                            console.log('author: ', this.isAuthor);
+                        }, error => console.log(error));
+
             }, error => console.log(error));
 
     }

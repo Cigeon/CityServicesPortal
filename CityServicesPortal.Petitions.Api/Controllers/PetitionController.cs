@@ -116,6 +116,11 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         public async Task<IActionResult> Vote(Guid id)
         {
             var name = GetCurrentUserName();
+            var petition = _petitionAppService.GetById(id);
+            var isVoted  = !petition.Voters.FirstOrDefault(v => v.UserName.Equals(name)).Equals(null);
+            var isAuthor = petition.User.UserName.Equals(name);
+            if (isVoted || isAuthor) return StatusCode(403);
+
             var user = _userAppService.GetByUserName(name);
             var voter = new UserShortDto
             {

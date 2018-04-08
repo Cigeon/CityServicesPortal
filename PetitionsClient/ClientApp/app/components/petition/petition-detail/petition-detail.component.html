@@ -18,16 +18,21 @@
             <div class="col-2"><p>Статус</p></div>
             <div class="col-6"><p><span [ngStyle]="{'color':getColor(petition.status)}">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</p></div>
             <div class="col-4">
-                <button *ngIf="isAuthorized && petition.status === 1" type="button" class="btn btn-primary" (click)="votePetition()">
+                <button *ngIf="isAuthorized && !isVoted && !isAuthor && petition.status === 1" type="button" class="btn btn-primary" (click)="votePetition()">
                     <span class="bold-text">
                         Підтримати петицію <fa-icon [icon]="faCheckCircle"></fa-icon>
                     </span>
                 </button>
-                <button *ngIf="!isAuthorized && petition.status === 1" type="button" class="btn btn-primary" (click)="openModal(template)">
+                <button *ngIf="!isAuthorized && !isVoted && !isAuthor && petition.status === 1" type="button" class="btn btn-primary" (click)="openModal(template)">
                     <span class="bold-text">
                         Підтримати петицію <fa-icon [icon]="faCheckCircle"></fa-icon>
                     </span>
                 </button>
+                <h3>
+                    <span *ngIf="isAuthorized && isVoted" class="badge badge-success">
+                        <small>Підтримано <fa-icon [icon]="faCheckCircle"></fa-icon></small>
+                    </span>
+                </h3>
             </div>
         </div>
         <div class="row">

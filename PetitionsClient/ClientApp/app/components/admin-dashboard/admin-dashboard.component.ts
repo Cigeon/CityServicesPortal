@@ -75,6 +75,9 @@ export class AdminDashboardComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
         this.getPetitionsSubscription.unsubscribe();
         this.getCategoriesSubscription.unsubscribe();
+        if (this.refreshPetitionsSubscription) {
+            this.refreshPetitionsSubscription.unsubscribe();
+        }
     }
 
     setItemsPerPage(value: number) {
@@ -150,6 +153,21 @@ export class AdminDashboardComponent implements OnInit, OnDestroy {
         this.authService.put(this.apiUrl + 'petition/status/' + id, this.getStatusValue('Збір голосів'))
             .subscribe(result => {
                 console.log(result);
+
+                this.allPetitions = [];
+                this.refreshPetitionsSubscription =
+                    this.http.get<any>(this.apiUrl + 'petition')
+                        .subscribe(result => {
+                            this.allPetitions = result;
+                            this.filteredPetitions = result;
+                            if (this.allPetitions.length < 10) {
+                                this.showedItems = this.allPetitions.length;
+                            } else { this.showedItems = 10; }
+                            this.itemsPerPage = 10;
+                            this.filterPetitions();
+                            console.log(this.shownPetitions);
+                        }, error => console.log(error));
+
             }, error => console.error(error));   
     }
 

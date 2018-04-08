@@ -79,7 +79,9 @@ namespace CityServicesPortal.Petitions.Application.Services
 
         public PetitionDto GetById(Guid id)
         {
-            var petition = _petitionRepository.GetById(id);
+            var petition = _petitionRepository.GetAll()
+                                .Include(p => p.PetitionVoters)
+                                .FirstOrDefault(p => p.Id.Equals(id));
             var category = _categoryRepository.GetById(petition.CategoryId);
             var user = _userRepository.GetById(petition.UserId);
             var petitionDto = new PetitionDto
@@ -106,13 +108,13 @@ namespace CityServicesPortal.Petitions.Application.Services
                 },
                 Voters = petition.PetitionVoters.Select(v => new UserShortDto
                 {
-                    Id = v.UserId,
-                    UserName = v.User.UserName,
-                    FirstName = v.User.FirstName,
-                    MiddleName = v.User.MiddleName,
-                    LastName = v.User.LastName
+                    Id = _userRepository.GetById(v.UserId).Id,
+                    UserName = _userRepository.GetById(v.UserId).UserName,
+                    FirstName = _userRepository.GetById(v.UserId).FirstName,
+                    MiddleName = _userRepository.GetById(v.UserId).MiddleName,
+                    LastName = _userRepository.GetById(v.UserId).LastName
                 }).ToList()
-            };
+        };
             return petitionDto;
         }
 

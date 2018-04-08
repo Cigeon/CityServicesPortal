@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f8ef7c7febdad2189b63"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "980616c99f24ca822ee1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1692,7 +1692,7 @@ var Constant = (function () {
     function Constant() {
     }
     Object.defineProperty(Constant, "VOTES_COUNT", {
-        get: function () { return 360; },
+        get: function () { return 5; },
         enumerable: true,
         configurable: true
     });
@@ -11554,6 +11554,9 @@ var AdminDashboardComponent = (function () {
     AdminDashboardComponent.prototype.ngOnDestroy = function () {
         this.getPetitionsSubscription.unsubscribe();
         this.getCategoriesSubscription.unsubscribe();
+        if (this.refreshPetitionsSubscription) {
+            this.refreshPetitionsSubscription.unsubscribe();
+        }
     };
     AdminDashboardComponent.prototype.setItemsPerPage = function (value) {
         this.itemsPerPage = value;
@@ -11616,9 +11619,26 @@ var AdminDashboardComponent = (function () {
         this.router.navigate(['/detail/' + id]);
     };
     AdminDashboardComponent.prototype.approvePetition = function (id) {
+        var _this = this;
         this.authService.put(this.apiUrl + 'petition/status/' + id, this.getStatusValue('Збір голосів'))
             .subscribe(function (result) {
             console.log(result);
+            _this.allPetitions = [];
+            _this.refreshPetitionsSubscription =
+                _this.http.get(_this.apiUrl + 'petition')
+                    .subscribe(function (result) {
+                    _this.allPetitions = result;
+                    _this.filteredPetitions = result;
+                    if (_this.allPetitions.length < 10) {
+                        _this.showedItems = _this.allPetitions.length;
+                    }
+                    else {
+                        _this.showedItems = 10;
+                    }
+                    _this.itemsPerPage = 10;
+                    _this.filterPetitions();
+                    console.log(_this.shownPetitions);
+                }, function (error) { return console.log(error); });
         }, function (error) { return console.error(error); });
     };
     AdminDashboardComponent.prototype.deletePetition = function (id) {
@@ -12209,27 +12229,39 @@ var PetitionDetailComponent = (function () {
         this.apiUrl = apiUrl;
         this.route = route;
         this.faCheckCircle = __WEBPACK_IMPORTED_MODULE_5__fortawesome_free_regular_svg_icons__["b" /* faCheckCircle */];
+        this.isAuthorized = false;
+        this.isVoted = false;
+        this.isAuthor = false;
         this.petitionLoaded = false;
         this.route.params.subscribe(function (params) { return _this.getPetition(params['id']); });
         this.votesCount = __WEBPACK_IMPORTED_MODULE_6__models_constant__["a" /* Constant */].VOTES_COUNT;
     }
     PetitionDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.isAuthorizedSubscription = this.authService.getIsAuthorized().subscribe(function (isAuthorized) {
-            _this.isAuthorized = isAuthorized;
-        });
-        console.log(this.petition);
+        this.isAuthorizedSubscription =
+            this.authService.getIsAuthorized().subscribe(function (isAuthorized) {
+                _this.isAuthorized = isAuthorized;
+            }, function (error) { return console.log(error); });
     };
     PetitionDetailComponent.prototype.ngOnDestroy = function () {
         this.isAuthorizedSubscription.unsubscribe();
+        this.userDataSubscription.unsubscribe();
     };
     PetitionDetailComponent.prototype.getPetition = function (id) {
         var _this = this;
         this.http.get(this.apiUrl + 'petition/' + id)
             .subscribe(function (result) {
-            console.log(result);
+            console.log('petition: ', result);
             _this.petitionLoaded = true;
             _this.petition = result;
+            _this.userDataSubscription =
+                _this.authService.getUserData().subscribe(function (userData) {
+                    console.log('user data: ', userData);
+                    _this.isVoted = _this.petition.voters.filter(function (v) { return v.userName === userData.email; }).length > 0;
+                    _this.isAuthor = _this.petition.user.userName === userData.email;
+                    console.log('voted: ', _this.isVoted);
+                    console.log('author: ', _this.isAuthor);
+                }, function (error) { return console.log(error); });
         }, function (error) { return console.log(error); });
     };
     PetitionDetailComponent.prototype.openModal = function (template) {
@@ -14425,7 +14457,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, "\r\n.heading {\r\n    color: #808080;\r\n}\r\n\r\n.hor-center {\r\n    margin: 0 auto;\r\n}\r\n\r\n@keyframes spinner {\r\n    to {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n.spinner:before {\r\n    content: '';\r\n    box-sizing: border-box;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    width: 30px;\r\n    height: 30px;\r\n    margin-top: -15px;\r\n    margin-left: -15px;\r\n    border-radius: 50%;\r\n    border: 1px solid #ccc;\r\n    border-top-color: #07d;\r\n    animation: spinner .6s linear infinite;\r\n}\r\n", ""]);
+exports.push([module.i, "\r\n.heading {\r\n    color: #808080;\r\n}\r\n\r\n.hor-center {\r\n    margin: 0 auto;\r\n}\r\n\r\n@keyframes spinner {\r\n    to {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n.spinner:before {\r\n    content: '';\r\n    box-sizing: border-box;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    width: 30px;\r\n    height: 30px;\r\n    margin-top: -15px;\r\n    margin-left: -15px;\r\n    border-radius: 50%;\r\n    border: 1px solid #ccc;\r\n    border-top-color: #07d;\r\n    animation: spinner .6s linear infinite;\r\n}\r\n\r\n.progress {\r\n    height: 25px;\r\n}\r\n\r\n.badge-success {\r\n    height: 37px;\r\n}", ""]);
 
 // exports
 
@@ -14822,7 +14854,7 @@ module.exports = "<div *ngIf=\"allPetitions.length === 0\" class=\"spinner\"></d
 /* 104 */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"!petitionLoaded\" class=\"spinner\"></div>\r\n<div *ngIf=\"petitionLoaded\" class=\"col w-50 p-3 hor-center\">\r\n    <br />\r\n    <h3 class=\"heading\">{{petition.name}}</h3>\r\n    <hr class=\"my-4\">\r\n    <br />\r\n    <div class=\"column\">\r\n        <div *ngIf=\"petition.status > 0\" class=\"row\">\r\n            <div class=\"col-12\">\r\n                <progressbar [max]=\"votesCount\" [value]=\"petition.voters.length\">\r\n                    <span class=\"text-nowrap\">{{petition.voters.length}} / {{votesCount}}</span>\r\n                </progressbar>\r\n                <br />\r\n                <br />\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Статус</p></div>\r\n            <div class=\"col-6\"><p><span [ngStyle]=\"{'color':getColor(petition.status)}\">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</p></div>\r\n            <div class=\"col-4\">\r\n                <button *ngIf=\"isAuthorized && petition.status === 1\" type=\"button\" class=\"btn btn-primary\" (click)=\"votePetition()\">\r\n                    <span class=\"bold-text\">\r\n                        Підтримати петицію <fa-icon [icon]=\"faCheckCircle\"></fa-icon>\r\n                    </span>\r\n                </button>\r\n                <button *ngIf=\"!isAuthorized && petition.status === 1\" type=\"button\" class=\"btn btn-primary\" (click)=\"openModal(template)\">\r\n                    <span class=\"bold-text\">\r\n                        Підтримати петицію <fa-icon [icon]=\"faCheckCircle\"></fa-icon>\r\n                    </span>\r\n                </button>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Автор</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.user.lastName}} {{petition.user.firstName}} {{petition.user.middleName}}</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Категорія</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.category.name}}</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Зміст</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.description}}</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <accordion *ngIf=\"petition.status > 0\">\r\n        <br />\r\n        <accordion-group heading=\"Хто підтримав\">\r\n            <div *ngIf=\"petition.voters.length === 0\" class=\"column\">\r\n                <p>Петицію ще ніхто не підтримав, будьте першим!</p>\r\n            </div>\r\n            <div *ngIf=\"petition.voters.length\" class=\"column\">\r\n                <div *ngFor=\"let voter of petition.voters\" class=\"row\">\r\n                    <div class=\"col-8\">{{voter.lastName}} {{voter.firstName}} {{voter.middleName}}</div>\r\n                    <!--<div class=\"col-4\">date</div>-->\r\n                </div>\r\n            </div>\r\n        </accordion-group>\r\n    </accordion>\r\n</div>\r\n\r\n<ng-template #template>\r\n    <div class=\"modal-body text-center\">\r\n        <br />\r\n        <h6>Увійдіть під своїм логіном, будь-ласка!</h6>\r\n        <br />\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"confirm()\">Авторизація</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"cancel()\">Ні, дякую!</button>\r\n        <br />\r\n    </div>\r\n</ng-template>\r\n";
+module.exports = "<div *ngIf=\"!petitionLoaded\" class=\"spinner\"></div>\r\n<div *ngIf=\"petitionLoaded\" class=\"col w-50 p-3 hor-center\">\r\n    <br />\r\n    <h3 class=\"heading\">{{petition.name}}</h3>\r\n    <hr class=\"my-4\">\r\n    <br />\r\n    <div class=\"column\">\r\n        <div *ngIf=\"petition.status > 0\" class=\"row\">\r\n            <div class=\"col-12\">\r\n                <progressbar [max]=\"votesCount\" [value]=\"petition.voters.length\">\r\n                    <span class=\"text-nowrap\">{{petition.voters.length}} / {{votesCount}}</span>\r\n                </progressbar>\r\n                <br />\r\n                <br />\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Статус</p></div>\r\n            <div class=\"col-6\"><p><span [ngStyle]=\"{'color':getColor(petition.status)}\">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</p></div>\r\n            <div class=\"col-4\">\r\n                <button *ngIf=\"isAuthorized && !isVoted && !isAuthor && petition.status === 1\" type=\"button\" class=\"btn btn-primary\" (click)=\"votePetition()\">\r\n                    <span class=\"bold-text\">\r\n                        Підтримати петицію <fa-icon [icon]=\"faCheckCircle\"></fa-icon>\r\n                    </span>\r\n                </button>\r\n                <button *ngIf=\"!isAuthorized && !isVoted && !isAuthor && petition.status === 1\" type=\"button\" class=\"btn btn-primary\" (click)=\"openModal(template)\">\r\n                    <span class=\"bold-text\">\r\n                        Підтримати петицію <fa-icon [icon]=\"faCheckCircle\"></fa-icon>\r\n                    </span>\r\n                </button>\r\n                <h3>\r\n                    <span *ngIf=\"isAuthorized && isVoted\" class=\"badge badge-success\">\r\n                        <small>Підтримано <fa-icon [icon]=\"faCheckCircle\"></fa-icon></small>\r\n                    </span>\r\n                </h3>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Автор</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.user.lastName}} {{petition.user.firstName}} {{petition.user.middleName}}</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Категорія</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.category.name}}</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Зміст</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.description}}</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <accordion *ngIf=\"petition.status > 0\">\r\n        <br />\r\n        <accordion-group heading=\"Хто підтримав\">\r\n            <div *ngIf=\"petition.voters.length === 0\" class=\"column\">\r\n                <p>Петицію ще ніхто не підтримав, будьте першим!</p>\r\n            </div>\r\n            <div *ngIf=\"petition.voters.length\" class=\"column\">\r\n                <div *ngFor=\"let voter of petition.voters\" class=\"row\">\r\n                    <div class=\"col-8\">{{voter.lastName}} {{voter.firstName}} {{voter.middleName}}</div>\r\n                    <!--<div class=\"col-4\">date</div>-->\r\n                </div>\r\n            </div>\r\n        </accordion-group>\r\n    </accordion>\r\n</div>\r\n\r\n<ng-template #template>\r\n    <div class=\"modal-body text-center\">\r\n        <br />\r\n        <h6>Увійдіть під своїм логіном, будь-ласка!</h6>\r\n        <br />\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"confirm()\">Авторизація</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"cancel()\">Ні, дякую!</button>\r\n        <br />\r\n    </div>\r\n</ng-template>\r\n";
 
 /***/ }),
 /* 105 */
