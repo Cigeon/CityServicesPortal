@@ -46,7 +46,7 @@ namespace CityServicesPortal.Observer
 
                 foreach (var p in petitions)
                 {
-                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine($"Id: {p.Id}");
                     Console.ResetColor();
 

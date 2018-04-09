@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d5268c46f587420705c0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "065efb9269e825f93359"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -12402,7 +12402,8 @@ var PetitionDetailComponent = (function () {
     };
     PetitionDetailComponent.prototype.ngOnDestroy = function () {
         this.isAuthorizedSubscription.unsubscribe();
-        this.userDataSubscription.unsubscribe();
+        if (this.userDataSubscription)
+            this.userDataSubscription.unsubscribe();
         if (this.reviewSubscription) {
             this.reviewSubscription.unsubscribe();
         }
@@ -12422,10 +12423,12 @@ var PetitionDetailComponent = (function () {
                 _this.userDataSubscription =
                     _this.authService.getUserData().subscribe(function (userData) {
                         console.log('user data: ', userData);
-                        _this.isVoted = _this.petition.voters.filter(function (v) { return v.userName === userData.email; }).length > 0;
-                        _this.isAuthor = _this.petition.user.userName === userData.email;
-                        console.log('voted: ', _this.isVoted);
-                        console.log('author: ', _this.isAuthor);
+                        if (userData !== null) {
+                            _this.isVoted = _this.petition.voters.filter(function (v) { return v.userName === userData.email; }).length > 0;
+                            _this.isAuthor = _this.petition.user.userName === userData.email;
+                            console.log('voted: ', _this.isVoted);
+                            console.log('author: ', _this.isAuthor);
+                        }
                     }, function (error) { return console.log(error); });
             }, function (error) { return console.log(error); });
     };
@@ -18808,7 +18811,7 @@ module.exports = function (str) {
 /* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "59861aed4d017bfb7958e6d925976953.jpg";
+module.exports = __webpack_require__.p + "f5f51d223c70dc1dca27735160ce3725.jpg";
 
 /***/ }),
 /* 172 */

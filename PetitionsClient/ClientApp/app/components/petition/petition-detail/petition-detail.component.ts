@@ -53,7 +53,7 @@ export class PetitionDetailComponent implements OnInit {
 
     ngOnDestroy(): void {
         this.isAuthorizedSubscription.unsubscribe();
-        this.userDataSubscription.unsubscribe();
+        if (this.userDataSubscription) this.userDataSubscription.unsubscribe();
         if (this.reviewSubscription) {
             this.reviewSubscription.unsubscribe();
         }
@@ -75,10 +75,12 @@ export class PetitionDetailComponent implements OnInit {
                     this.authService.getUserData().subscribe(
                         (userData: any) => {
                             console.log('user data: ', userData);
-                            this.isVoted = this.petition.voters.filter(v => v.userName === userData.email).length > 0
-                            this.isAuthor = this.petition.user.userName === userData.email;
-                            console.log('voted: ', this.isVoted);
-                            console.log('author: ', this.isAuthor);
+                            if (userData !== null) {
+                                this.isVoted = this.petition.voters.filter(v => v.userName === userData.email).length > 0
+                                this.isAuthor = this.petition.user.userName === userData.email;
+                                console.log('voted: ', this.isVoted);
+                                console.log('author: ', this.isAuthor);
+                            }                            
                         }, error => console.log(error));
 
             }, error => console.log(error));
