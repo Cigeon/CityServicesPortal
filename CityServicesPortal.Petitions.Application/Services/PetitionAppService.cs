@@ -16,7 +16,7 @@ namespace CityServicesPortal.Petitions.Application.Services
 {
     public class PetitionAppService : IPetitionAppService
     {
-        private readonly IMapper _mapper;
+        //private readonly IMapper _mapper;
         private readonly IPetitionRepository _petitionRepository;
         private readonly ICategoryRepository _categoryRepository;
         private readonly IUserRepository _userRepository;
@@ -24,7 +24,7 @@ namespace CityServicesPortal.Petitions.Application.Services
         private readonly IEventStoreRepository _eventStoreRepository;
         private readonly IMediatorHandler Bus;
 
-        public PetitionAppService(IMapper mapper,
+        public PetitionAppService(//IMapper mapper,
                                   IPetitionRepository petitionRepository,
                                   ICategoryRepository categoryRepository,
                                   IUserRepository userRepository,
@@ -32,7 +32,7 @@ namespace CityServicesPortal.Petitions.Application.Services
                                   IMediatorHandler bus,
                                   IEventStoreRepository eventStoreRepository)
         {
-            _mapper = mapper;
+            //_mapper = mapper;
             Bus = bus;
             _petitionRepository = petitionRepository;
             _categoryRepository = categoryRepository;

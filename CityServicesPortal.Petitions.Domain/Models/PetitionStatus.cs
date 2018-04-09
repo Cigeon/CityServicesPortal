@@ -5,6 +5,7 @@
         Verification = 0,
         Voting,
         Consideration,
-        Reviewed
+        Reviewed,
+        Rejected
     }
 }

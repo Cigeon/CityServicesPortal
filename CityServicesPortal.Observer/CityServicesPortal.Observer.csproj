@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.Development.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.Development.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire.Core" Version="1.6.19" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.6.19" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CityServicesPortal.Petitions.Application\CityServicesPortal.Petitions.Application.csproj" />
+  </ItemGroup>
+
+</Project>
