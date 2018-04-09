@@ -19,17 +19,20 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
         INotificationHandler<PetitionChangeDescriptionCommand>,
         INotificationHandler<PetitionChangeStatusCommand>,
         INotificationHandler<PetitionChangeCategoryCommand>,
-        INotificationHandler<PetitionVoteCommand>
+        INotificationHandler<PetitionVoteCommand>,
+        INotificationHandler<PetitionReviewCommand>
 
     {
         private readonly IPetitionRepository _petitionRepository;
         private readonly ICategoryRepository _categoryRepository;
         private readonly IUserRepository _userRepository;
+        private readonly IReviewRepository _reviewRepository;
         private readonly IMediatorHandler Bus;
 
         public PetitionCommandHandler(IPetitionRepository petitionRepository,
                                       ICategoryRepository categoryRepository,
                                       IUserRepository userRepository,
+                                      IReviewRepository reviewRepository,
                                       IUnitOfWork uow,
                                       IMediatorHandler bus,
                                       INotificationHandler<DomainNotification> notifications) : base(uow, bus, notifications)
@@ -37,6 +40,7 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
             _petitionRepository = petitionRepository;
             _categoryRepository = categoryRepository;
             _userRepository = userRepository;
+            _reviewRepository = reviewRepository;
             Bus = bus;
         }
 
@@ -163,6 +167,33 @@ namespace CityServicesPortal.Petitions.Domain.CommandHandlers
             {
                 await Bus.RaiseEvent(new PetitionVotedEvent(message.Id, message.UserId, message.UserFirstName,
                     message.UserMiddleName, message.UserLastName));
+            }
+        }
+
+        public async Task Handle(PetitionReviewCommand message, CancellationToken cancellationToken)
+        {
+            var petition = _petitionRepository.GetById(message.Id);
+            var user = _userRepository.GetById(message.UserId);
+
+            var review = new Review
+            {
+                Petition = petition,
+                User = user,
+                Created = message.Created,
+                Text = message.Text
+            };
+
+            _reviewRepository.Add(review);
+
+            petition.Status = PetitionStatus.Reviewed;
+            petition.Modified = DateTime.Now;
+            _petitionRepository.Update(petition);
+
+            if (Commit())
+            {
+                await Bus.RaiseEvent(new PetitionReviewedEvent(message.Id, message.UserId, message.Created,
+                    message.Text));
+                await Bus.RaiseEvent(new PetitionStatusChangedEvent(petition));
             }
         }
 

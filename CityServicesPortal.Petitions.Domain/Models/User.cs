@@ -1,7 +1,6 @@
 ﻿using CityServicesPortal.Petitions.Domain.Core.Models;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace CityServicesPortal.Petitions.Domain.Models
 {
@@ -13,13 +12,14 @@ namespace CityServicesPortal.Petitions.Domain.Models
         public string MiddleName { get; set; }
         public string LastName { get; set; }
         public List<Petition> Petitions { get; set; }
-
         public List<PetitionVoter> PetitionVoters { get; set; }
+        public List<Review> Reviews { get; set; }
 
         public User()
         {
             Petitions = new List<Petition>();
             PetitionVoters = new List<PetitionVoter>();
+            Reviews = new List<Review>();
         }
     }
 }

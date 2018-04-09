@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "53239c6a398425f55920"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0b422683f6836e27e7f8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -704,7 +704,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(188)(__webpack_require__.s = 188);
+/******/ 	return hotCreateRequire(189)(__webpack_require__.s = 189);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1032,11 +1032,11 @@ module.exports = (__webpack_require__(1))(48);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component_loader_class__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__component_loader_class__ = __webpack_require__(42);
 /* unused harmony reexport ComponentLoader */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_loader_factory__ = __webpack_require__(23);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__component_loader_factory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__content_ref_class__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__content_ref_class__ = __webpack_require__(43);
 /* unused harmony reexport ContentRef */
 
 
@@ -1310,10 +1310,10 @@ var PaginationConfig = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ng_positioning__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ng_positioning__ = __webpack_require__(52);
 /* unused harmony reexport positionElements */
 /* unused harmony reexport Positioning */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__positioning_service__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__positioning_service__ = __webpack_require__(123);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__positioning_service__["a"]; });
 
 
@@ -1351,8 +1351,8 @@ var TooltipConfig = (function () {
 
 "use strict";
 
-var AsyncAction_1 = __webpack_require__(157);
-var AsyncScheduler_1 = __webpack_require__(158);
+var AsyncAction_1 = __webpack_require__(158);
+var AsyncScheduler_1 = __webpack_require__(159);
 /**
  *
  * Async Scheduler
@@ -1920,7 +1920,7 @@ var ButtonRadioGroupDirective = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentLoaderFactory; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_loader_class__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_loader_class__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__positioning_index__ = __webpack_require__(16);
 
 
@@ -2057,9 +2057,9 @@ var BsDropdownConfig = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bs_modal_ref_service__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bs_modal_ref_service__ = __webpack_require__(47);
 /* unused harmony reexport BsModalRef */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modal_backdrop_options__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modal_backdrop_options__ = __webpack_require__(119);
 /* unused harmony reexport ModalBackdropOptions */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_container_component__ = __webpack_require__(27);
 /* unused harmony reexport ModalContainerComponent */
@@ -2067,11 +2067,11 @@ var BsDropdownConfig = (function () {
 /* unused harmony reexport ModalBackdropComponent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modal_options_class__ = __webpack_require__(12);
 /* unused harmony reexport ModalOptions */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modal_directive__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modal_directive__ = __webpack_require__(49);
 /* unused harmony reexport ModalDirective */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modal_module__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modal_module__ = __webpack_require__(120);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_6__modal_module__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__bs_modal_service__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__bs_modal_service__ = __webpack_require__(48);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__bs_modal_service__["a"]; });
 
 
@@ -2197,7 +2197,7 @@ var ModalContainerComponent = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProgressbarComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__progressbar_config__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_index__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_index__ = __webpack_require__(128);
 
 
 
@@ -3922,30 +3922,30 @@ var _iconsCache = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(139);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_timeInterval__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_timeInterval__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_timeInterval___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_timeInterval__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_pluck__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_pluck__ = __webpack_require__(141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_pluck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_pluck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_take__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_take__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_take___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_take__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_interval__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_interval__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_interval___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_interval__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_observable_timer__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_observable_timer__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_add_observable_timer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_add_observable_timer__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_Observable__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_BehaviorSubject__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_BehaviorSubject__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_rxjs_BehaviorSubject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_router__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_jsrsasign__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_jsrsasign__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_jsrsasign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_jsrsasign__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_add_observable_throw__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_add_observable_throw__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_rxjs_add_observable_throw__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_add_observable_empty__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_add_observable_empty__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_add_observable_empty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_rxjs_add_observable_empty__);
 
 
@@ -6014,8 +6014,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app',
-            template: __webpack_require__(97),
-            styles: [__webpack_require__(162)]
+            template: __webpack_require__(99),
+            styles: [__webpack_require__(163)]
         })
     ], AppComponent);
     return AppComponent;
@@ -6546,10 +6546,140 @@ var ButtonRadioDirective = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CollapseDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+// todo: add animations when https://github.com/angular/angular/issues/9947 solved
+
+var CollapseDirective = (function () {
+    function CollapseDirective(_el, _renderer) {
+        this._el = _el;
+        this._renderer = _renderer;
+        /** This event fires as soon as content collapses */
+        this.collapsed = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        /** This event fires as soon as content becomes visible */
+        this.expanded = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        // shown
+        this.isExpanded = true;
+        // hidden
+        this.isCollapsed = false;
+        // stale state
+        this.isCollapse = true;
+        // animation state
+        this.isCollapsing = false;
+    }
+    Object.defineProperty(CollapseDirective.prototype, "collapse", {
+        get: function () {
+            return this.isExpanded;
+        },
+        /** A flag indicating visibility of content (shown or hidden) */
+        set: function (value) {
+            this.isExpanded = value;
+            this.toggle();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /** allows to manually toggle content visibility */
+    CollapseDirective.prototype.toggle = function () {
+        if (this.isExpanded) {
+            this.hide();
+        }
+        else {
+            this.show();
+        }
+    };
+    /** allows to manually hide content */
+    CollapseDirective.prototype.hide = function () {
+        this.isCollapse = false;
+        this.isCollapsing = true;
+        this.isExpanded = false;
+        this.isCollapsed = true;
+        this.isCollapse = true;
+        this.isCollapsing = false;
+        this.display = 'none';
+        this.collapsed.emit(this);
+    };
+    /** allows to manually show collapsed content */
+    CollapseDirective.prototype.show = function () {
+        this.isCollapse = false;
+        this.isCollapsing = true;
+        this.isExpanded = true;
+        this.isCollapsed = false;
+        this.display = 'block';
+        // this.height = 'auto';
+        this.isCollapse = true;
+        this.isCollapsing = false;
+        this._renderer.setStyle(this._el.nativeElement, 'overflow', 'visible');
+        this._renderer.setStyle(this._el.nativeElement, 'height', 'auto');
+        this.expanded.emit(this);
+    };
+    CollapseDirective.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
+                    selector: '[collapse]',
+                    exportAs: 'bs-collapse',
+                    host: {
+                        '[class.collapse]': 'true'
+                    }
+                },] },
+    ];
+    /** @nocollapse */
+    CollapseDirective.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer2"], },
+    ]; };
+    CollapseDirective.propDecorators = {
+        'collapsed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        'expanded': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        'display': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['style.display',] },],
+        'isExpanded': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['class.in',] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['class.show',] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['attr.aria-expanded',] },],
+        'isCollapsed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['attr.aria-hidden',] },],
+        'isCollapse': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['class.collapse',] },],
+        'isCollapsing': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['class.collapsing',] },],
+        'collapse': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+    };
+    return CollapseDirective;
+}());
+
+//# sourceMappingURL=collapse.directive.js.map
+
+/***/ }),
+/* 41 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CollapseModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__collapse_directive__ = __webpack_require__(40);
+
+
+var CollapseModule = (function () {
+    function CollapseModule() {
+    }
+    CollapseModule.forRoot = function () {
+        return { ngModule: CollapseModule, providers: [] };
+    };
+    CollapseModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
+                    declarations: [__WEBPACK_IMPORTED_MODULE_1__collapse_directive__["a" /* CollapseDirective */]],
+                    exports: [__WEBPACK_IMPORTED_MODULE_1__collapse_directive__["a" /* CollapseDirective */]]
+                },] },
+    ];
+    /** @nocollapse */
+    CollapseModule.ctorParameters = function () { return []; };
+    return CollapseModule;
+}());
+
+//# sourceMappingURL=collapse.module.js.map
+
+/***/ }),
+/* 42 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComponentLoader; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_triggers__ = __webpack_require__(55);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__content_ref_class__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_triggers__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__content_ref_class__ = __webpack_require__(43);
 // tslint:disable:max-file-line-count
 // todo: add delay support
 // todo: merge events onShow, onShown, etc...
@@ -6808,7 +6938,7 @@ var ComponentLoader = (function () {
 //# sourceMappingURL=component-loader.class.js.map
 
 /***/ }),
-/* 41 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6829,7 +6959,7 @@ var ContentRef = (function () {
 //# sourceMappingURL=content-ref.class.js.map
 
 /***/ }),
-/* 42 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6863,7 +6993,7 @@ var BsDropdownMenuDirective = (function () {
 //# sourceMappingURL=bs-dropdown-menu.directive.js.map
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6935,13 +7065,13 @@ var BsDropdownToggleDirective = (function () {
 //# sourceMappingURL=bs-dropdown-toggle.directive.js.map
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BsDropdownDirective; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_filter__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_filter__ = __webpack_require__(140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_filter__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_loader_index__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bs_dropdown_config__ = __webpack_require__(25);
@@ -7223,7 +7353,7 @@ var BsDropdownDirective = (function () {
 //# sourceMappingURL=bs-dropdown.directive.js.map
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7248,7 +7378,7 @@ var BsModalRef = (function () {
 //# sourceMappingURL=bs-modal-ref.service.js.map
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7258,7 +7388,7 @@ var BsModalRef = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_backdrop_component__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_container_component__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modal_options_class__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bs_modal_ref_service__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bs_modal_ref_service__ = __webpack_require__(47);
 
 
 
@@ -7424,7 +7554,7 @@ var BsModalService = (function () {
 //# sourceMappingURL=bs-modal.service.js.map
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7783,7 +7913,7 @@ var ModalDirective = (function () {
 //# sourceMappingURL=modal.directive.js.map
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8037,7 +8167,7 @@ var PagerComponent = (function () {
 //# sourceMappingURL=pager.component.js.map
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8291,7 +8421,7 @@ var PaginationComponent = (function () {
 //# sourceMappingURL=pagination.component.js.map
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8508,7 +8638,7 @@ function positionElements(hostElement, targetElement, placement, appendToBody) {
 //# sourceMappingURL=ng-positioning.js.map
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8605,7 +8735,7 @@ var BarComponent = (function () {
 //# sourceMappingURL=bar.component.js.map
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8614,12 +8744,12 @@ var BarComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tooltip_container_component__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tooltip_config__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_loader_index__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_decorators__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warn_once__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_triggers__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_decorators__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_warn_once__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_triggers__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_timer__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_timer__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_timer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_observable_timer__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -8916,7 +9046,7 @@ var TooltipDirective = (function () {
 //# sourceMappingURL=tooltip.directive.js.map
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8944,7 +9074,7 @@ function OnChange(defaultValue) {
 //# sourceMappingURL=decorators.js.map
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8967,7 +9097,7 @@ var Trigger = (function () {
 //# sourceMappingURL=trigger.class.js.map
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8975,7 +9105,7 @@ var Trigger = (function () {
 /* unused harmony export listenToTriggers */
 /* harmony export (immutable) */ __webpack_exports__["a"] = listenToTriggersV2;
 /* harmony export (immutable) */ __webpack_exports__["b"] = registerOutsideClick;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__trigger_class__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__trigger_class__ = __webpack_require__(56);
 
 var DEFAULT_ALIASES = {
     hover: ['mouseover', 'mouseout'],
@@ -9072,34 +9202,34 @@ function registerOutsideClick(renderer, options) {
 //# sourceMappingURL=triggers.js.map
 
 /***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(2);
-var timer_1 = __webpack_require__(149);
-Observable_1.Observable.timer = timer_1.timer;
-//# sourceMappingURL=timer.js.map
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(2);
-var map_1 = __webpack_require__(175);
-Observable_1.Observable.prototype.map = map_1.map;
-//# sourceMappingURL=map.js.map
-
-/***/ }),
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var isArray_1 = __webpack_require__(176);
+var Observable_1 = __webpack_require__(2);
+var timer_1 = __webpack_require__(150);
+Observable_1.Observable.timer = timer_1.timer;
+//# sourceMappingURL=timer.js.map
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(2);
+var map_1 = __webpack_require__(176);
+Observable_1.Observable.prototype.map = map_1.map;
+//# sourceMappingURL=map.js.map
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var isArray_1 = __webpack_require__(177);
 function isNumeric(val) {
     // parseFloat NaNs numeric-cast false positives (null|true|false|"")
     // ...but misinterprets leading-number strings, particularly hex literals ("0x...")
@@ -9112,50 +9242,50 @@ exports.isNumeric = isNumeric;
 //# sourceMappingURL=isNumeric.js.map
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(1);
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(10);
 
 /***/ }),
-/* 61 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(25);
 
 /***/ }),
-/* 62 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(5);
 
 /***/ }),
-/* 63 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(7);
 
 /***/ }),
-/* 64 */
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata__ = __webpack_require__(134);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reflect_metadata___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reflect_metadata__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_zone_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_zone_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap__ = __webpack_require__(182);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_module_browser__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser_dynamic__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_app_module_browser__ = __webpack_require__(72);
 
 
 
@@ -9181,7 +9311,7 @@ var modulePromise = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__angular_p
 
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__resourceQuery, module) {/*eslint-env browser*/
@@ -9197,7 +9327,7 @@ var options = {
   name: ''
 };
 if (true) {
-  var querystring = __webpack_require__(132);
+  var querystring = __webpack_require__(133);
   var overrides = querystring.parse(__resourceQuery.slice(1));
   if (overrides.path) options.path = overrides.path;
   if (overrides.timeout) options.timeout = overrides.timeout;
@@ -9317,11 +9447,11 @@ if (typeof window !== 'undefined') {
 }
 
 function createReporter() {
-  var strip = __webpack_require__(160);
+  var strip = __webpack_require__(161);
 
   var overlay;
   if (typeof document !== 'undefined' && options.overlay) {
-    overlay = __webpack_require__(172);
+    overlay = __webpack_require__(173);
   }
 
   var styles = {
@@ -9374,7 +9504,7 @@ function createReporter() {
   };
 }
 
-var processUpdate = __webpack_require__(173);
+var processUpdate = __webpack_require__(174);
 
 var customHandler;
 var subscribeAllHandler;
@@ -9439,16 +9569,16 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(174)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "?path=__webpack_hmr&dynamicPublicPath=true", __webpack_require__(175)(module)))
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(52);
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9460,7 +9590,7 @@ module.exports = (__webpack_require__(1))(52);
 /* unused harmony export ɵa */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(65);
 
 
 
@@ -11098,10 +11228,10 @@ var FontAwesomeModule = (function () {
 
 //# sourceMappingURL=angular-fontawesome.es5.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(61)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(63)))
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11284,7 +11414,7 @@ ansiHTML.reset()
 
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11295,7 +11425,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 70 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11304,8 +11434,8 @@ module.exports = function () {
 /* unused harmony export apiUrlFactory */
 /* unused harmony export identityUrlFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_app_app_component__ = __webpack_require__(35);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -11350,7 +11480,7 @@ function identityUrlFactory() {
 
 
 /***/ }),
-/* 71 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11362,25 +11492,26 @@ function identityUrlFactory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular_auth_oidc_client__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_services_auth_service__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_buttons__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_dropdown__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_pagination__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_tooltip__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_buttons__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_dropdown__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_pagination__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ngx_bootstrap_tooltip__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_modal__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ngx_bootstrap_accordion__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ngx_bootstrap_progressbar__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__fortawesome_angular_fontawesome__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_app_app_component__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_navmenu_navmenu_component__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_home_home_component__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_fetchdata_fetchdata_component__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_unauthorized_unauthorized_component__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_menu_menu_component__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_petition_register_petition_register_petition_component__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_category_register_category_register_category_component__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_petition_all_petitions_all_petitions_component__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_petition_petition_detail_petition_detail_component__ = __webpack_require__(79);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_admin_dashboard_admin_dashboard_component__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ngx_bootstrap_accordion__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ngx_bootstrap_progressbar__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ngx_bootstrap_collapse__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__fortawesome_angular_fontawesome__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_app_app_component__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_navmenu_navmenu_component__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_home_home_component__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_fetchdata_fetchdata_component__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_unauthorized_unauthorized_component__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_menu_menu_component__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_petition_register_petition_register_petition_component__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_category_register_category_register_category_component__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_petition_all_petitions_all_petitions_component__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_petition_petition_detail_petition_detail_component__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_admin_dashboard_admin_dashboard_component__ = __webpack_require__(74);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -11413,30 +11544,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModuleShared = (function () {
     function AppModuleShared() {
     }
     AppModuleShared = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_15__components_app_app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__components_navmenu_navmenu_component__["a" /* NavMenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__components_fetchdata_fetchdata_component__["a" /* FetchDataComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__components_home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__components_unauthorized_unauthorized_component__["a" /* UnauthorizedComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__components_menu_menu_component__["a" /* MenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__components_petition_register_petition_register_petition_component__["a" /* RegisterPetitionComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__components_category_register_category_register_category_component__["a" /* RegisterCategoryComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__components_petition_all_petitions_all_petitions_component__["a" /* AllPetitionsComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__components_petition_petition_detail_petition_detail_component__["a" /* PetitionDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__components_admin_dashboard_admin_dashboard_component__["a" /* AdminDashboardComponent */]
+                __WEBPACK_IMPORTED_MODULE_16__components_app_app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__components_navmenu_navmenu_component__["a" /* NavMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_fetchdata_fetchdata_component__["a" /* FetchDataComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__components_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_unauthorized_unauthorized_component__["a" /* UnauthorizedComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__components_menu_menu_component__["a" /* MenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__components_petition_register_petition_register_petition_component__["a" /* RegisterPetitionComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__components_category_register_category_register_category_component__["a" /* RegisterCategoryComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__components_petition_all_petitions_all_petitions_component__["a" /* AllPetitionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__components_petition_petition_detail_petition_detail_component__["a" /* PetitionDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__components_admin_dashboard_admin_dashboard_component__["a" /* AdminDashboardComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_5_angular_auth_oidc_client__["a" /* AuthModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["HttpClientModule"],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormsModule"],
-                __WEBPACK_IMPORTED_MODULE_14__fortawesome_angular_fontawesome__["a" /* FontAwesomeModule */],
+                __WEBPACK_IMPORTED_MODULE_15__fortawesome_angular_fontawesome__["a" /* FontAwesomeModule */],
                 __WEBPACK_IMPORTED_MODULE_7_ngx_bootstrap_buttons__["a" /* ButtonsModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_8_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_9_ngx_bootstrap_pagination__["a" /* PaginationModule */].forRoot(),
@@ -11444,17 +11576,18 @@ var AppModuleShared = (function () {
                 __WEBPACK_IMPORTED_MODULE_11_ngx_bootstrap_modal__["a" /* ModalModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_12_ngx_bootstrap_accordion__["a" /* AccordionModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_13_ngx_bootstrap_progressbar__["a" /* ProgressbarModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_14_ngx_bootstrap_collapse__["a" /* CollapseModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["RouterModule"].forRoot([
                     { path: '', redirectTo: 'home', pathMatch: 'full' },
-                    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_17__components_home_home_component__["a" /* HomeComponent */] },
-                    { path: 'petitions', component: __WEBPACK_IMPORTED_MODULE_23__components_petition_all_petitions_all_petitions_component__["a" /* AllPetitionsComponent */] },
-                    { path: 'petitions/:category', component: __WEBPACK_IMPORTED_MODULE_23__components_petition_all_petitions_all_petitions_component__["a" /* AllPetitionsComponent */] },
-                    { path: 'register-petition', component: __WEBPACK_IMPORTED_MODULE_21__components_petition_register_petition_register_petition_component__["a" /* RegisterPetitionComponent */] },
-                    { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_24__components_petition_petition_detail_petition_detail_component__["a" /* PetitionDetailComponent */] },
-                    { path: 'register-category', component: __WEBPACK_IMPORTED_MODULE_22__components_category_register_category_register_category_component__["a" /* RegisterCategoryComponent */] },
-                    { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_25__components_admin_dashboard_admin_dashboard_component__["a" /* AdminDashboardComponent */] },
-                    { path: 'unauthorized', component: __WEBPACK_IMPORTED_MODULE_19__components_unauthorized_unauthorized_component__["a" /* UnauthorizedComponent */] },
-                    { path: 'fetch-data', component: __WEBPACK_IMPORTED_MODULE_18__components_fetchdata_fetchdata_component__["a" /* FetchDataComponent */] },
+                    { path: 'home', component: __WEBPACK_IMPORTED_MODULE_18__components_home_home_component__["a" /* HomeComponent */] },
+                    { path: 'petitions', component: __WEBPACK_IMPORTED_MODULE_24__components_petition_all_petitions_all_petitions_component__["a" /* AllPetitionsComponent */] },
+                    { path: 'petitions/:category', component: __WEBPACK_IMPORTED_MODULE_24__components_petition_all_petitions_all_petitions_component__["a" /* AllPetitionsComponent */] },
+                    { path: 'register-petition', component: __WEBPACK_IMPORTED_MODULE_22__components_petition_register_petition_register_petition_component__["a" /* RegisterPetitionComponent */] },
+                    { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_25__components_petition_petition_detail_petition_detail_component__["a" /* PetitionDetailComponent */] },
+                    { path: 'register-category', component: __WEBPACK_IMPORTED_MODULE_23__components_category_register_category_register_category_component__["a" /* RegisterCategoryComponent */] },
+                    { path: 'admin', component: __WEBPACK_IMPORTED_MODULE_26__components_admin_dashboard_admin_dashboard_component__["a" /* AdminDashboardComponent */] },
+                    { path: 'unauthorized', component: __WEBPACK_IMPORTED_MODULE_20__components_unauthorized_unauthorized_component__["a" /* UnauthorizedComponent */] },
+                    { path: 'fetch-data', component: __WEBPACK_IMPORTED_MODULE_19__components_fetchdata_fetchdata_component__["a" /* FetchDataComponent */] },
                     { path: '**', redirectTo: 'home' }
                 ])
             ],
@@ -11470,7 +11603,7 @@ var AppModuleShared = (function () {
 
 
 /***/ }),
-/* 72 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11682,8 +11815,8 @@ var AdminDashboardComponent = (function () {
     AdminDashboardComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-admin-dashboard',
-            template: __webpack_require__(96),
-            styles: [__webpack_require__(161)]
+            template: __webpack_require__(98),
+            styles: [__webpack_require__(162)]
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('API_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__angular_common_http__["HttpClient"], String, __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["a" /* AuthService */],
@@ -11696,7 +11829,7 @@ var AdminDashboardComponent = (function () {
 
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11740,8 +11873,8 @@ var RegisterCategoryComponent = (function () {
     RegisterCategoryComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-register-category',
-            template: __webpack_require__(98),
-            styles: [__webpack_require__(163)]
+            template: __webpack_require__(100),
+            styles: [__webpack_require__(164)]
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('API_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */], String, __WEBPACK_IMPORTED_MODULE_1__angular_common__["Location"]])
@@ -11752,7 +11885,7 @@ var RegisterCategoryComponent = (function () {
 
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11783,7 +11916,7 @@ var FetchDataComponent = (function () {
     FetchDataComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'fetchdata',
-            template: __webpack_require__(99)
+            template: __webpack_require__(101)
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('API_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */], String])
@@ -11794,7 +11927,7 @@ var FetchDataComponent = (function () {
 
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11868,8 +12001,8 @@ var HomeComponent = (function () {
     HomeComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'home',
-            template: __webpack_require__(100),
-            styles: [__webpack_require__(164)]
+            template: __webpack_require__(102),
+            styles: [__webpack_require__(165)]
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('API_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__angular_common_http__["HttpClient"], String, __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */],
@@ -11882,7 +12015,7 @@ var HomeComponent = (function () {
 
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11940,8 +12073,8 @@ var MenuComponent = (function () {
     MenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-menu',
-            template: __webpack_require__(101),
-            styles: [__webpack_require__(165)]
+            template: __webpack_require__(103),
+            styles: [__webpack_require__(166)]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]])
     ], MenuComponent);
@@ -11951,7 +12084,7 @@ var MenuComponent = (function () {
 
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11994,8 +12127,8 @@ var NavMenuComponent = (function () {
     NavMenuComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'nav-menu',
-            template: __webpack_require__(102),
-            styles: [__webpack_require__(166)]
+            template: __webpack_require__(104),
+            styles: [__webpack_require__(167)]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]])
     ], NavMenuComponent);
@@ -12005,7 +12138,7 @@ var NavMenuComponent = (function () {
 
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12196,8 +12329,8 @@ var AllPetitionsComponent = (function () {
     AllPetitionsComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-all-petitions',
-            template: __webpack_require__(103),
-            styles: [__webpack_require__(167)]
+            template: __webpack_require__(105),
+            styles: [__webpack_require__(168)]
         }),
         __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('API_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpClient"], String, __WEBPACK_IMPORTED_MODULE_5__angular_router__["Router"],
@@ -12209,7 +12342,7 @@ var AllPetitionsComponent = (function () {
 
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12251,9 +12384,12 @@ var PetitionDetailComponent = (function () {
         this.route = route;
         this.faCheckCircle = __WEBPACK_IMPORTED_MODULE_5__fortawesome_free_regular_svg_icons__["b" /* faCheckCircle */];
         this.isAuthorized = false;
+        this.petitionId = '';
         this.isVoted = false;
         this.isAuthor = false;
         this.petitionLoaded = false;
+        this.isCollapsed = true;
+        this.review = '';
         this.route.params.subscribe(function (params) { return _this.getPetition(params['id']); });
         this.votesCount = __WEBPACK_IMPORTED_MODULE_6__models_constant__["a" /* Constant */].VOTES_COUNT;
     }
@@ -12267,23 +12403,31 @@ var PetitionDetailComponent = (function () {
     PetitionDetailComponent.prototype.ngOnDestroy = function () {
         this.isAuthorizedSubscription.unsubscribe();
         this.userDataSubscription.unsubscribe();
+        if (this.reviewSubscription) {
+            this.reviewSubscription.unsubscribe();
+        }
+        if (this.petitionSubscription) {
+            this.petitionSubscription.unsubscribe();
+        }
     };
     PetitionDetailComponent.prototype.getPetition = function (id) {
         var _this = this;
-        this.http.get(this.apiUrl + 'petition/' + id)
-            .subscribe(function (result) {
-            console.log('petition: ', result);
-            _this.petitionLoaded = true;
-            _this.petition = result;
-            _this.userDataSubscription =
-                _this.authService.getUserData().subscribe(function (userData) {
-                    console.log('user data: ', userData);
-                    _this.isVoted = _this.petition.voters.filter(function (v) { return v.userName === userData.email; }).length > 0;
-                    _this.isAuthor = _this.petition.user.userName === userData.email;
-                    console.log('voted: ', _this.isVoted);
-                    console.log('author: ', _this.isAuthor);
-                }, function (error) { return console.log(error); });
-        }, function (error) { return console.log(error); });
+        this.petitionId = id;
+        this.petitionSubscription =
+            this.http.get(this.apiUrl + 'petition/' + id)
+                .subscribe(function (result) {
+                console.log('petition: ', result);
+                _this.petitionLoaded = true;
+                _this.petition = result;
+                _this.userDataSubscription =
+                    _this.authService.getUserData().subscribe(function (userData) {
+                        console.log('user data: ', userData);
+                        _this.isVoted = _this.petition.voters.filter(function (v) { return v.userName === userData.email; }).length > 0;
+                        _this.isAuthor = _this.petition.user.userName === userData.email;
+                        console.log('voted: ', _this.isVoted);
+                        console.log('author: ', _this.isAuthor);
+                    }, function (error) { return console.log(error); });
+            }, function (error) { return console.log(error); });
     };
     PetitionDetailComponent.prototype.openModal = function (template) {
         this.modalRef = this.modalService.show(template, { class: 'modal-md' });
@@ -12296,11 +12440,33 @@ var PetitionDetailComponent = (function () {
         this.modalRef.hide();
     };
     PetitionDetailComponent.prototype.votePetition = function () {
+        var _this = this;
         this.voteSubscription =
             this.authService.put(this.apiUrl + 'petition/vote/' + this.petition.id, null)
                 .subscribe(function (result) {
                 console.log(result);
+                _this.getPetition(_this.petitionId);
             }, function (error) { return console.error(error); });
+    };
+    PetitionDetailComponent.prototype.collapsed = function (event) {
+        console.log(event);
+    };
+    PetitionDetailComponent.prototype.expanded = function (event) {
+        console.log(event);
+    };
+    PetitionDetailComponent.prototype.saveReview = function () {
+        var _this = this;
+        this.isCollapsed = true;
+        this.reviewSubscription =
+            this.authService.post(this.apiUrl + 'petition/review/' + this.petition.id, this.review)
+                .subscribe(function (result) {
+                console.log(result);
+                _this.getPetition(_this.petitionId);
+            }, function (error) { return console.error(error); });
+    };
+    PetitionDetailComponent.prototype.cancelReview = function () {
+        this.isCollapsed = true;
+        this.review = '';
     };
     PetitionDetailComponent.prototype.getName = function (status) {
         console.log(status);
@@ -12315,8 +12481,8 @@ var PetitionDetailComponent = (function () {
     PetitionDetailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-petition-detail',
-            template: __webpack_require__(104),
-            styles: [__webpack_require__(168)]
+            template: __webpack_require__(106),
+            styles: [__webpack_require__(169)]
         }),
         __param(4, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('API_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */],
@@ -12330,7 +12496,7 @@ var PetitionDetailComponent = (function () {
 
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12339,7 +12505,7 @@ var PetitionDetailComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -12398,8 +12564,8 @@ var RegisterPetitionComponent = (function () {
     RegisterPetitionComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-register-petition',
-            template: __webpack_require__(105),
-            styles: [__webpack_require__(169)]
+            template: __webpack_require__(107),
+            styles: [__webpack_require__(170)]
         }),
         __param(2, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])('API_URL')),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["HttpClient"],
@@ -12411,7 +12577,7 @@ var RegisterPetitionComponent = (function () {
 
 
 /***/ }),
-/* 81 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12444,7 +12610,7 @@ var UnauthorizedComponent = (function () {
     UnauthorizedComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-unauthorized',
-            template: __webpack_require__(106)
+            template: __webpack_require__(108)
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common__["Location"]])
     ], UnauthorizedComponent);
@@ -12454,7 +12620,7 @@ var UnauthorizedComponent = (function () {
 
 
 /***/ }),
-/* 82 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12575,7 +12741,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 83 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12589,9 +12755,9 @@ function fromByteArray (uint8) {
 
 
 
-var base64 = __webpack_require__(82)
-var ieee754 = __webpack_require__(107)
-var isArray = __webpack_require__(108)
+var base64 = __webpack_require__(84)
+var ieee754 = __webpack_require__(109)
+var isArray = __webpack_require__(110)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -14369,10 +14535,10 @@ function isnan (val) {
   return val !== val // eslint-disable-line no-self-compare
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(62)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(64)))
 
 /***/ }),
-/* 84 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(6)(undefined);
@@ -14386,7 +14552,7 @@ exports.push([module.i, ".table-wrapper {\r\n    background: #fff;\r\n    paddin
 
 
 /***/ }),
-/* 85 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(6)(undefined);
@@ -14400,7 +14566,7 @@ exports.push([module.i, "@media (max-width: 767px) {\r\n    /* On small screens,
 
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(6)(undefined);
@@ -14414,34 +14580,6 @@ exports.push([module.i, ".heading {\r\n    color: #808080;\r\n}\r\n\r\n.hor-cent
 
 
 /***/ }),
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(6)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "body {\r\n\r\n}\r\n\r\n.background-image {\r\n    background-image: url(" + __webpack_require__(170) + ");\r\n    background-size: cover;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: auto;\r\n    height: 30.0em;\r\n}\r\n\r\n.background-shadow {\r\n    background-color: rgba(0, 0, 0, 0.5);\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-radius: 8px;\r\n    width: 700px;\r\n    height: 300px;\r\n}\r\n\r\n.title-text {\r\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\r\n    font-weight: bold;\r\n    font-size: 36px;\r\n    color: white;\r\n}\r\n\r\n.regular-text {\r\n    margin-bottom: 30px;\r\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\r\n    font-size: 28px;\r\n    color: white;\r\n}\r\n\r\n.bold-text {\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n}\r\n\r\n.container {\r\n    text-align: center;\r\n}\r\n\r\n.container>h3 {\r\n    margin: 40px;\r\n}\r\n.categories {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: space-around;\r\n}\r\n\r\n.card {\r\n    border-color: lightgray;\r\n    margin-bottom: 40px;\r\n}\r\n\r\n.card.border-secondary.mb-3 {\r\n    cursor: pointer;\r\n}\r\n\r\n@keyframes spinner {\r\n    to {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n.spinner:before {\r\n    content: '';\r\n    box-sizing: border-box;\r\n    position: absolute;\r\n    top: 92%;\r\n    left: 50%;\r\n    width: 30px;\r\n    height: 30px;\r\n    margin-top: -15px;\r\n    margin-left: -15px;\r\n    border-radius: 50%;\r\n    border: 1px solid #ccc;\r\n    border-top-color: #07d;\r\n    animation: spinner .6s linear infinite;\r\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 88 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(6)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".header {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    height: 80px;\r\n    box-shadow: 0 3px 3px -3px #333;\r\n}\r\n\r\n.centered {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\n.logo-wrapper {\r\n    width: 370px;\r\n}\r\n\r\n.logo {\r\n    height: 60px;\r\n}\r\n\r\n.mrg-top {\r\n    margin-top: 8px;\r\n}\r\n\r\na.nav-link.menu-btn:hover {\r\n    /*background-color: #FEFEDB;*/\r\n    background-color: #F2F2F2;\r\n    border-radius: 5px;\r\n}\r\n", ""]);
-
-// exports
-
-
-/***/ }),
 /* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14450,7 +14588,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\nli.link-active a,\r\nli.link-active a:hover,\r\nli.link-active a:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    /* On small screens, convert the nav menu to a vertical sidebar */\r\n    .main-nav {\r\n        height: 100%;\r\n        width: calc(25% - 20px);\r\n    }\r\n    .navbar {\r\n        border-radius: 0px;\r\n        border-width: 0px;\r\n        height: 100%;\r\n    }\r\n    .navbar-header {\r\n        float: none;\r\n    }\r\n    .navbar-collapse {\r\n        border-top: 1px solid #444;\r\n        padding: 0px;\r\n    }\r\n    .navbar ul {\r\n        float: none;\r\n    }\r\n    .navbar li {\r\n        float: none;\r\n        font-size: 15px;\r\n        margin: 6px;\r\n    }\r\n    .navbar li a {\r\n        padding: 10px 16px;\r\n        border-radius: 4px;\r\n    }\r\n    .navbar a {\r\n        /* If a menu item's text is too long, truncate it */\r\n        width: 100%;\r\n        white-space: nowrap;\r\n        overflow: hidden;\r\n        text-overflow: ellipsis;\r\n    }\r\n}\r\n", ""]);
+exports.push([module.i, "body {\r\n\r\n}\r\n\r\n.background-image {\r\n    background-image: url(" + __webpack_require__(171) + ");\r\n    background-size: cover;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: auto;\r\n    height: 30.0em;\r\n}\r\n\r\n.background-shadow {\r\n    background-color: rgba(0, 0, 0, 0.5);\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-radius: 8px;\r\n    width: 700px;\r\n    height: 300px;\r\n}\r\n\r\n.title-text {\r\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\r\n    font-weight: bold;\r\n    font-size: 36px;\r\n    color: white;\r\n}\r\n\r\n.regular-text {\r\n    margin-bottom: 30px;\r\n    font-family: Verdana, Geneva, Tahoma, sans-serif;\r\n    font-size: 28px;\r\n    color: white;\r\n}\r\n\r\n.bold-text {\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n}\r\n\r\n.container {\r\n    text-align: center;\r\n}\r\n\r\n.container>h3 {\r\n    margin: 40px;\r\n}\r\n.categories {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: space-around;\r\n}\r\n\r\n.card {\r\n    border-color: lightgray;\r\n    margin-bottom: 40px;\r\n}\r\n\r\n.card.border-secondary.mb-3 {\r\n    cursor: pointer;\r\n}\r\n\r\n@keyframes spinner {\r\n    to {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n.spinner:before {\r\n    content: '';\r\n    box-sizing: border-box;\r\n    position: absolute;\r\n    top: 92%;\r\n    left: 50%;\r\n    width: 30px;\r\n    height: 30px;\r\n    margin-top: -15px;\r\n    margin-left: -15px;\r\n    border-radius: 50%;\r\n    border: 1px solid #ccc;\r\n    border-top-color: #07d;\r\n    animation: spinner .6s linear infinite;\r\n}", ""]);
 
 // exports
 
@@ -14464,7 +14602,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, ".table-wrapper {\r\n    background: #fff;\r\n    padding: 20px 25px;\r\n    margin: 30px auto;\r\n    border-radius: 3px;\r\n    box-shadow: 0 1px 1px rgba(0,0,0,.05);\r\n}\r\n\r\n.table-wrapper .btn {\r\n    float: right;\r\n    color: #333;\r\n    background-color: #fff;\r\n    border-radius: 3px;\r\n    /*border: none;*/\r\n    outline: none !important;\r\n    margin-left: 10px;\r\n}\r\n\r\n.table-wrapper .btn:hover {\r\n    color: #333;\r\n    background: #f2f2f2;\r\n}\r\n\r\n.table-wrapper .btn.btn-primary {\r\n    color: #fff;\r\n    background: #03A9F4;\r\n}\r\n\r\n.table-wrapper .btn.btn-primary:hover {\r\n    background: #03a3e7;\r\n}\r\n\r\n.table-title .btn {\r\n    font-size: 13px;\r\n    border: none;\r\n}\r\n\r\n.table-title .btn i {\r\n    float: left;\r\n    font-size: 21px;\r\n    margin-right: 5px;\r\n}\r\n\r\n.table-title .btn span {\r\n    float: left;\r\n    margin-top: 2px;\r\n}\r\n\r\n.table-title {\r\n    color: #fff;\r\n    background: #4b5366;\r\n    padding: 16px 25px;\r\n    margin: -20px -25px 10px;\r\n    border-radius: 3px 3px 0 0;\r\n}\r\n\r\n.table-title h2 {\r\n    margin: 5px 0 0;\r\n    font-size: 24px;\r\n}\r\n\r\n.show-entries select.form-control {\r\n    width: 60px;\r\n    margin: 0 5px;\r\n}\r\n\r\n.table-filter .filter-group {\r\n    float: right;\r\n    margin-left: 15px;\r\n}\r\n\r\n.show-entries label {\r\n        margin-top: 0;\r\n        margin-bottom: 4px;\r\n}\r\n\r\n.filter-group label {\r\n    margin-top: 0;\r\n    margin-bottom: 4px;\r\n}\r\n\r\n.table-filter input, .table-filter select {\r\n    height: 34px;\r\n    border-radius: 3px;\r\n    border-color: #ddd;\r\n    box-shadow: none;\r\n}\r\n\r\n.table-filter {\r\n    padding: 5px 0 15px;\r\n    border-bottom: 1px solid #e9e9e9;\r\n    /*margin-bottom: 5px;*/\r\n}\r\n\r\n.table-filter .btn {\r\n    height: 34px;\r\n}\r\n\r\n.table-filter label {\r\n    font-weight: normal;\r\n    margin-left: 10px;\r\n}\r\n\r\n.table-filter select, .table-filter input {\r\n    display: inline-block;\r\n    margin-left: 5px;\r\n}\r\n\r\n.table-filter input {\r\n    width: 200px;\r\n    display: inline-block;\r\n}\r\n\r\n.filter-group select.form-control {\r\n    width: 110px;\r\n}\r\n\r\n.filter-icon {\r\n    float: right;\r\n    margin-top: 7px;\r\n}\r\n\r\n.filter-icon i {\r\n    font-size: 18px;\r\n    opacity: 0.7;\r\n}\r\n\r\ntable.table tr th, table.table tr td {\r\n    border-color: #e9e9e9;\r\n    padding: 12px 15px;\r\n    vertical-align: middle;\r\n}\r\n\r\ntable.table tr th:first-child {\r\n    width: 60px;\r\n}\r\n\r\ntable.table tr th:last-child {\r\n    width: 80px;\r\n}\r\n\r\ntable.table-striped tbody tr:nth-of-type(odd) {\r\n    background-color: #fcfcfc;\r\n}\r\n\r\ntable.table-striped.table-hover thead {\r\n    color: dimgrey;\r\n}\r\n\r\ntable.table-striped.table-hover tbody tr:hover {\r\n    background: #f5f5f5;\r\n}\r\n\r\ntable.table th i {\r\n    font-size: 13px;\r\n    margin: 0 5px;\r\n    cursor: pointer;\r\n}\r\n\r\ntable.table td a {\r\n    font-weight: bold;\r\n    color: #566787;\r\n    display: inline-block;\r\n    text-decoration: none;\r\n}\r\n\r\ntable.table td a:hover {\r\n    color: #2196F3;\r\n}\r\n\r\ntable.table td a.view {\r\n    /*width: 30px;\r\n    height: 30px;*/\r\n    color: #2196F3;\r\n    /*border: 2px solid;\r\n    border-radius: 30px;*/\r\n    text-align: center;\r\n    cursor: pointer;\r\n}\r\n\r\nlabel a.view {\r\n    cursor: pointer;\r\n}\r\n\r\n.font-size-sm {\r\n    font-size: 14px;\r\n}\r\n\r\n.search-icon {\r\n    font-size: 18px;\r\n    color: #03A9F4;\r\n}\r\n\r\n.arrow-icon {\r\n    font-size: 22px;\r\n}\r\n\r\ntable.table .avatar {\r\n    border-radius: 50%;\r\n    vertical-align: middle;\r\n    margin-right: 10px;\r\n}\r\n\r\n.status {\r\n    font-size: 30px;\r\n    margin: 2px 2px 0 0;\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    line-height: 10px;\r\n}\r\n\r\n.text-success {\r\n    color: #10c469;\r\n}\r\n\r\n.text-info {\r\n    color: #62c9e8;\r\n}\r\n\r\n.text-warning {\r\n    color: #FFC107;\r\n}\r\n\r\n.text-danger {\r\n    color: #ff5b5b;\r\n}\r\n\r\n.pagination {\r\n    float: right;\r\n    margin: 0 0 5px;\r\n}\r\n\r\n.hint-text {\r\n    float: left;\r\n    margin-top: 10px;\r\n    font-size: 13px;\r\n}\r\n\r\n.btn.btn-default.dropdown-toggle {\r\n    background: white;\r\n    border-color: lightgray !important;\r\n}\r\n\r\n.filter-group .btn.btn-default.dropdown-toggle {\r\n    width: 160px;\r\n    text-align: right;\r\n}\r\n\r\n.dropdown-item {\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n@keyframes spinner {\r\n    to {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n.spinner:before {\r\n    content: '';\r\n    box-sizing: border-box;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    width: 30px;\r\n    height: 30px;\r\n    margin-top: -15px;\r\n    margin-left: -15px;\r\n    border-radius: 50%;\r\n    border: 1px solid #ccc;\r\n    border-top-color: #07d;\r\n    animation: spinner .6s linear infinite;\r\n}", ""]);
+exports.push([module.i, ".header {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    height: 80px;\r\n    box-shadow: 0 3px 3px -3px #333;\r\n}\r\n\r\n.centered {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n}\r\n\r\n.logo-wrapper {\r\n    width: 370px;\r\n}\r\n\r\n.logo {\r\n    height: 60px;\r\n}\r\n\r\n.mrg-top {\r\n    margin-top: 8px;\r\n}\r\n\r\na.nav-link.menu-btn:hover {\r\n    /*background-color: #FEFEDB;*/\r\n    background-color: #F2F2F2;\r\n    border-radius: 5px;\r\n}\r\n", ""]);
 
 // exports
 
@@ -14478,7 +14616,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, "\r\n.heading {\r\n    color: #808080;\r\n}\r\n\r\n.hor-center {\r\n    margin: 0 auto;\r\n}\r\n\r\n@keyframes spinner {\r\n    to {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n.spinner:before {\r\n    content: '';\r\n    box-sizing: border-box;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    width: 30px;\r\n    height: 30px;\r\n    margin-top: -15px;\r\n    margin-left: -15px;\r\n    border-radius: 50%;\r\n    border: 1px solid #ccc;\r\n    border-top-color: #07d;\r\n    animation: spinner .6s linear infinite;\r\n}\r\n\r\n.progress {\r\n    height: 25px;\r\n}\r\n\r\n.badge-success {\r\n    height: 37px;\r\n}", ""]);
+exports.push([module.i, "li .glyphicon {\r\n    margin-right: 10px;\r\n}\r\n\r\n/* Highlighting rules for nav menu items */\r\nli.link-active a,\r\nli.link-active a:hover,\r\nli.link-active a:focus {\r\n    background-color: #4189C7;\r\n    color: white;\r\n}\r\n\r\n/* Keep the nav menu independent of scrolling and on top of other items */\r\n.main-nav {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    /* On small screens, convert the nav menu to a vertical sidebar */\r\n    .main-nav {\r\n        height: 100%;\r\n        width: calc(25% - 20px);\r\n    }\r\n    .navbar {\r\n        border-radius: 0px;\r\n        border-width: 0px;\r\n        height: 100%;\r\n    }\r\n    .navbar-header {\r\n        float: none;\r\n    }\r\n    .navbar-collapse {\r\n        border-top: 1px solid #444;\r\n        padding: 0px;\r\n    }\r\n    .navbar ul {\r\n        float: none;\r\n    }\r\n    .navbar li {\r\n        float: none;\r\n        font-size: 15px;\r\n        margin: 6px;\r\n    }\r\n    .navbar li a {\r\n        padding: 10px 16px;\r\n        border-radius: 4px;\r\n    }\r\n    .navbar a {\r\n        /* If a menu item's text is too long, truncate it */\r\n        width: 100%;\r\n        white-space: nowrap;\r\n        overflow: hidden;\r\n        text-overflow: ellipsis;\r\n    }\r\n}\r\n", ""]);
 
 // exports
 
@@ -14492,7 +14630,7 @@ exports = module.exports = __webpack_require__(6)(undefined);
 
 
 // module
-exports.push([module.i, ".heading {\r\n    color: #808080;\r\n}\r\n\r\n.hor-center {\r\n    margin: 0 auto;\r\n}\r\n\r\n.column {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.dropdown-menu {\r\n    overflow-y: scroll;\r\n    height: 282px;\r\n}\r\n\r\n.btn.btn-default.dropdown-toggle {\r\n    background: white;\r\n    border-color: lightgray;\r\n}\r\n\r\n.dropdown-item {\r\n    cursor: pointer;\r\n}\r\n\r\n.btn.btn-link:hover {\r\n    text-decoration: none;\r\n}\r\n\r\ntextarea {\r\n    height: 150px;\r\n}\r\n", ""]);
+exports.push([module.i, ".table-wrapper {\r\n    background: #fff;\r\n    padding: 20px 25px;\r\n    margin: 30px auto;\r\n    border-radius: 3px;\r\n    box-shadow: 0 1px 1px rgba(0,0,0,.05);\r\n}\r\n\r\n.table-wrapper .btn {\r\n    float: right;\r\n    color: #333;\r\n    background-color: #fff;\r\n    border-radius: 3px;\r\n    /*border: none;*/\r\n    outline: none !important;\r\n    margin-left: 10px;\r\n}\r\n\r\n.table-wrapper .btn:hover {\r\n    color: #333;\r\n    background: #f2f2f2;\r\n}\r\n\r\n.table-wrapper .btn.btn-primary {\r\n    color: #fff;\r\n    background: #03A9F4;\r\n}\r\n\r\n.table-wrapper .btn.btn-primary:hover {\r\n    background: #03a3e7;\r\n}\r\n\r\n.table-title .btn {\r\n    font-size: 13px;\r\n    border: none;\r\n}\r\n\r\n.table-title .btn i {\r\n    float: left;\r\n    font-size: 21px;\r\n    margin-right: 5px;\r\n}\r\n\r\n.table-title .btn span {\r\n    float: left;\r\n    margin-top: 2px;\r\n}\r\n\r\n.table-title {\r\n    color: #fff;\r\n    background: #4b5366;\r\n    padding: 16px 25px;\r\n    margin: -20px -25px 10px;\r\n    border-radius: 3px 3px 0 0;\r\n}\r\n\r\n.table-title h2 {\r\n    margin: 5px 0 0;\r\n    font-size: 24px;\r\n}\r\n\r\n.show-entries select.form-control {\r\n    width: 60px;\r\n    margin: 0 5px;\r\n}\r\n\r\n.table-filter .filter-group {\r\n    float: right;\r\n    margin-left: 15px;\r\n}\r\n\r\n.show-entries label {\r\n        margin-top: 0;\r\n        margin-bottom: 4px;\r\n}\r\n\r\n.filter-group label {\r\n    margin-top: 0;\r\n    margin-bottom: 4px;\r\n}\r\n\r\n.table-filter input, .table-filter select {\r\n    height: 34px;\r\n    border-radius: 3px;\r\n    border-color: #ddd;\r\n    box-shadow: none;\r\n}\r\n\r\n.table-filter {\r\n    padding: 5px 0 15px;\r\n    border-bottom: 1px solid #e9e9e9;\r\n    /*margin-bottom: 5px;*/\r\n}\r\n\r\n.table-filter .btn {\r\n    height: 34px;\r\n}\r\n\r\n.table-filter label {\r\n    font-weight: normal;\r\n    margin-left: 10px;\r\n}\r\n\r\n.table-filter select, .table-filter input {\r\n    display: inline-block;\r\n    margin-left: 5px;\r\n}\r\n\r\n.table-filter input {\r\n    width: 200px;\r\n    display: inline-block;\r\n}\r\n\r\n.filter-group select.form-control {\r\n    width: 110px;\r\n}\r\n\r\n.filter-icon {\r\n    float: right;\r\n    margin-top: 7px;\r\n}\r\n\r\n.filter-icon i {\r\n    font-size: 18px;\r\n    opacity: 0.7;\r\n}\r\n\r\ntable.table tr th, table.table tr td {\r\n    border-color: #e9e9e9;\r\n    padding: 12px 15px;\r\n    vertical-align: middle;\r\n}\r\n\r\ntable.table tr th:first-child {\r\n    width: 60px;\r\n}\r\n\r\ntable.table tr th:last-child {\r\n    width: 80px;\r\n}\r\n\r\ntable.table-striped tbody tr:nth-of-type(odd) {\r\n    background-color: #fcfcfc;\r\n}\r\n\r\ntable.table-striped.table-hover thead {\r\n    color: dimgrey;\r\n}\r\n\r\ntable.table-striped.table-hover tbody tr:hover {\r\n    background: #f5f5f5;\r\n}\r\n\r\ntable.table th i {\r\n    font-size: 13px;\r\n    margin: 0 5px;\r\n    cursor: pointer;\r\n}\r\n\r\ntable.table td a {\r\n    font-weight: bold;\r\n    color: #566787;\r\n    display: inline-block;\r\n    text-decoration: none;\r\n}\r\n\r\ntable.table td a:hover {\r\n    color: #2196F3;\r\n}\r\n\r\ntable.table td a.view {\r\n    /*width: 30px;\r\n    height: 30px;*/\r\n    color: #2196F3;\r\n    /*border: 2px solid;\r\n    border-radius: 30px;*/\r\n    text-align: center;\r\n    cursor: pointer;\r\n}\r\n\r\nlabel a.view {\r\n    cursor: pointer;\r\n}\r\n\r\n.font-size-sm {\r\n    font-size: 14px;\r\n}\r\n\r\n.search-icon {\r\n    font-size: 18px;\r\n    color: #03A9F4;\r\n}\r\n\r\n.arrow-icon {\r\n    font-size: 22px;\r\n}\r\n\r\ntable.table .avatar {\r\n    border-radius: 50%;\r\n    vertical-align: middle;\r\n    margin-right: 10px;\r\n}\r\n\r\n.status {\r\n    font-size: 30px;\r\n    margin: 2px 2px 0 0;\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    line-height: 10px;\r\n}\r\n\r\n.text-success {\r\n    color: #10c469;\r\n}\r\n\r\n.text-info {\r\n    color: #62c9e8;\r\n}\r\n\r\n.text-warning {\r\n    color: #FFC107;\r\n}\r\n\r\n.text-danger {\r\n    color: #ff5b5b;\r\n}\r\n\r\n.pagination {\r\n    float: right;\r\n    margin: 0 0 5px;\r\n}\r\n\r\n.hint-text {\r\n    float: left;\r\n    margin-top: 10px;\r\n    font-size: 13px;\r\n}\r\n\r\n.btn.btn-default.dropdown-toggle {\r\n    background: white;\r\n    border-color: lightgray !important;\r\n}\r\n\r\n.filter-group .btn.btn-default.dropdown-toggle {\r\n    width: 160px;\r\n    text-align: right;\r\n}\r\n\r\n.dropdown-item {\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n@keyframes spinner {\r\n    to {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n.spinner:before {\r\n    content: '';\r\n    box-sizing: border-box;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    width: 30px;\r\n    height: 30px;\r\n    margin-top: -15px;\r\n    margin-left: -15px;\r\n    border-radius: 50%;\r\n    border: 1px solid #ccc;\r\n    border-top-color: #07d;\r\n    animation: spinner .6s linear infinite;\r\n}", ""]);
 
 // exports
 
@@ -14501,16 +14639,44 @@ exports.push([module.i, ".heading {\r\n    color: #808080;\r\n}\r\n\r\n.hor-cent
 /* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
+exports = module.exports = __webpack_require__(6)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n.heading {\r\n    color: #808080;\r\n}\r\n\r\n.hor-center {\r\n    margin: 0 auto;\r\n}\r\n\r\n@keyframes spinner {\r\n    to {\r\n        transform: rotate(360deg);\r\n    }\r\n}\r\n\r\n.spinner:before {\r\n    content: '';\r\n    box-sizing: border-box;\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    width: 30px;\r\n    height: 30px;\r\n    margin-top: -15px;\r\n    margin-left: -15px;\r\n    border-radius: 50%;\r\n    border: 1px solid #ccc;\r\n    border-top-color: #07d;\r\n    animation: spinner .6s linear infinite;\r\n}\r\n\r\n.progress {\r\n    height: 25px;\r\n}\r\n\r\n.badge-success {\r\n    height: 37px;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(6)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".heading {\r\n    color: #808080;\r\n}\r\n\r\n.hor-center {\r\n    margin: 0 auto;\r\n}\r\n\r\n.column {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.dropdown-menu {\r\n    overflow-y: scroll;\r\n    height: 282px;\r\n}\r\n\r\n.btn.btn-default.dropdown-toggle {\r\n    background: white;\r\n    border-color: lightgray;\r\n}\r\n\r\n.dropdown-item {\r\n    cursor: pointer;\r\n}\r\n\r\n.btn.btn-link:hover {\r\n    text-decoration: none;\r\n}\r\n\r\ntextarea {\r\n    height: 150px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 95 */
+/***/ (function(module, exports, __webpack_require__) {
+
 module.exports = {
-  XmlEntities: __webpack_require__(95),
-  Html4Entities: __webpack_require__(94),
+  XmlEntities: __webpack_require__(97),
+  Html4Entities: __webpack_require__(96),
   Html5Entities: __webpack_require__(36),
   AllHtmlEntities: __webpack_require__(36)
 };
 
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports) {
 
 var HTML_ALPHA = ['apos', 'nbsp', 'iexcl', 'cent', 'pound', 'curren', 'yen', 'brvbar', 'sect', 'uml', 'copy', 'ordf', 'laquo', 'not', 'shy', 'reg', 'macr', 'deg', 'plusmn', 'sup2', 'sup3', 'acute', 'micro', 'para', 'middot', 'cedil', 'sup1', 'ordm', 'raquo', 'frac14', 'frac12', 'frac34', 'iquest', 'Agrave', 'Aacute', 'Acirc', 'Atilde', 'Auml', 'Aring', 'Aelig', 'Ccedil', 'Egrave', 'Eacute', 'Ecirc', 'Euml', 'Igrave', 'Iacute', 'Icirc', 'Iuml', 'ETH', 'Ntilde', 'Ograve', 'Oacute', 'Ocirc', 'Otilde', 'Ouml', 'times', 'Oslash', 'Ugrave', 'Uacute', 'Ucirc', 'Uuml', 'Yacute', 'THORN', 'szlig', 'agrave', 'aacute', 'acirc', 'atilde', 'auml', 'aring', 'aelig', 'ccedil', 'egrave', 'eacute', 'ecirc', 'euml', 'igrave', 'iacute', 'icirc', 'iuml', 'eth', 'ntilde', 'ograve', 'oacute', 'ocirc', 'otilde', 'ouml', 'divide', 'oslash', 'ugrave', 'uacute', 'ucirc', 'uuml', 'yacute', 'thorn', 'yuml', 'quot', 'amp', 'lt', 'gt', 'OElig', 'oelig', 'Scaron', 'scaron', 'Yuml', 'circ', 'tilde', 'ensp', 'emsp', 'thinsp', 'zwnj', 'zwj', 'lrm', 'rlm', 'ndash', 'mdash', 'lsquo', 'rsquo', 'sbquo', 'ldquo', 'rdquo', 'bdquo', 'dagger', 'Dagger', 'permil', 'lsaquo', 'rsaquo', 'euro', 'fnof', 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta', 'Iota', 'Kappa', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho', 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega', 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigmaf', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega', 'thetasym', 'upsih', 'piv', 'bull', 'hellip', 'prime', 'Prime', 'oline', 'frasl', 'weierp', 'image', 'real', 'trade', 'alefsym', 'larr', 'uarr', 'rarr', 'darr', 'harr', 'crarr', 'lArr', 'uArr', 'rArr', 'dArr', 'hArr', 'forall', 'part', 'exist', 'empty', 'nabla', 'isin', 'notin', 'ni', 'prod', 'sum', 'minus', 'lowast', 'radic', 'prop', 'infin', 'ang', 'and', 'or', 'cap', 'cup', 'int', 'there4', 'sim', 'cong', 'asymp', 'ne', 'equiv', 'le', 'ge', 'sub', 'sup', 'nsub', 'sube', 'supe', 'oplus', 'otimes', 'perp', 'sdot', 'lceil', 'rceil', 'lfloor', 'rfloor', 'lang', 'rang', 'loz', 'spades', 'clubs', 'hearts', 'diams'];
@@ -14663,7 +14829,7 @@ module.exports = Html4Entities;
 
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports) {
 
 var ALPHA_INDEX = {
@@ -14824,73 +14990,73 @@ module.exports = XmlEntities;
 
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"title-wrapper\">\r\n    <h2>ADMIN панель</h2>\r\n</div>\r\n<div *ngIf=\"allPetitions.length === 0\" class=\"spinner\"></div>\r\n<div *ngIf=\"allPetitions.length !== 0\" class=\"container\">\r\n    <div class=\"table-wrapper\">\r\n\r\n        <div class=\"table-filter\">\r\n            <div class=\"row\">\r\n                <div class=\"col-sm-3\">\r\n                    <div class=\"show-entries row align-items-end\">\r\n                        <label>Показати</label>\r\n                        <div class=\"btn-group\" dropdown>\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"selectItemsPerPage\">\r\n                                {{itemsPerPage}}\r\n                            </button>\r\n                            <div>\r\n                                <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                    <li *ngFor=\"let value of itemsPerPageList\" role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"setItemsPerPage(value)\">{{value}}</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                        <label>петицій</label>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-sm-9\">\r\n                    <div class=\"filter-group row align-items-end\">\r\n                        <label>Пошук</label>\r\n                        <input type=\"text\" class=\"form-control\" [(ngModel)]=\"searchQuery\">\r\n                        <label>\r\n                            <a class=\"view\" tooltip=\"Пошук\" (click)=\"search()\">\r\n                                <fa-icon [icon]=\"faSearch\" class=\"search-icon\"></fa-icon>\r\n                            </a>\r\n                        </label>\r\n                    </div>\r\n                    <div class=\"filter-group  row align-items-end\">\r\n                        <label>Статус</label>\r\n                        <div class=\"btn-group\" dropdown>\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"status\">\r\n                                {{sStatus}}\r\n                            </button>\r\n                            <div>\r\n                                <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                    <li role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectStatus('Всі')\">Всі</a>\r\n                                    </li>\r\n                                    <li class=\"divider dropdown-divider\"></li>\r\n                                    <li *ngFor=\"let status of statuses\" role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectStatus(status)\">{{status}}</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"filter-group  row align-items-end\">\r\n                        <label>Категорія</label>\r\n                        <div class=\"btn-group\" dropdown>\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"category\">\r\n                                {{sCategory}}\r\n                            </button>\r\n                            <div *ngIf=\"categories.length\">\r\n                                <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                    <li role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectCatagory('Всі')\">Всі</a>\r\n                                    </li>\r\n                                    <li class=\"divider dropdown-divider\"></li>\r\n                                    <li *ngFor=\"let category of categories\" role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectCatagory(category.name)\">{{category.name}}</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <table class=\"table table-striped table-hover\">\r\n            <thead>\r\n                <tr>\r\n                    <th>Назва петиції</th>\r\n                    <th>Категорія</th>\r\n                    <th>Автор</th>\r\n                    <th>Зареєстрована</th>\r\n                    <th>Статус</th>\r\n                    <th>Підтримано</th>\r\n                    <th>Деталі</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr *ngFor=\"let petition of shownPetitions; index as i\">\r\n                    <td>{{petition.name}}</td>\r\n                    <td>{{petition.category.name}}</td>\r\n                    <td>{{petition.user.lastName}} {{petition.user.firstName[0]}}.{{petition.user.middleName[0]}}.</td>\r\n                    <td><span class=\"font-size-sm\">{{petition.created |  date:'yyyy-MM-dd'}}</span></td>\r\n                    <td><span [ngStyle]=\"{'color':getStatusColor(petition.status)}\">&#11044;&nbsp;&nbsp;</span>{{getStatusName(petition.status)}}</td>\r\n                    <td><span class=\"font-size-sm\">{{petition.voters.length}}/{{votesCount}}</span></td>\r\n                    <td>\r\n                        <div class=\"btn-group\" dropdown tooltip=\"Доступні дії\">\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-secondary dropdown-toggle\">\r\n                                Дія<span class=\"caret\"></span>\r\n                            </button>\r\n                            <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                <li role=\"menuitem\">\r\n                                    <a class=\"dropdown-item text-sm\" (click)=\"showPetitionDetail(petition.id)\">Переглянути петицію</a>\r\n                                </li>\r\n                                <li role=\"menuitem\">\r\n                                    <a class=\"dropdown-item text-sm\" (click)=\"approvePetition(petition.id)\">Затвердити</a>\r\n                                </li>\r\n                                <li role=\"menuitem\">\r\n                                    <a class=\"dropdown-item text-sm\" (click)=\"deletePetition(petition.id)\">Видалити</a>\r\n                                </li>\r\n                            </ul>\r\n                        </div>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n        <div class=\"clearfix\">\r\n            <div class=\"hint-text\">Показано <b>{{shownPetitions.length}}</b> з <b>{{filteredPetitions.length}}</b> петицій</div>\r\n            <div class=\"pagination\">\r\n                <pagination *ngIf=\"filteredPetitions.length > itemsPerPage\"\r\n                            [(ngModel)]=\"currentPage\"\r\n                            [totalItems]=\"filteredPetitions.length\"\r\n                            [maxSize]=\"5\"\r\n                            [itemsPerPage]=\"itemsPerPage\"\r\n                            previousText=\"Назад\"\r\n                            nextText=\"Вперед\"\r\n                            (pageChanged)=\"pageChanged($event)\">\r\n                </pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports) {
 
 module.exports = "<div>\r\n    <app-menu></app-menu>\r\n    <div class=\"h-calc\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n    <div id=\"footer\">&copy; Громадські петиції - Вінниця 2018</div>\r\n</div>\r\n";
 
 /***/ }),
-/* 98 */
+/* 100 */
 /***/ (function(module, exports) {
 
 module.exports = "<div>\r\n    <div class=\"col w-50 p-3 hor-center\">\r\n        <br />\r\n        <h3 class=\"heading\">Нова категорія</h3>\r\n        <hr class=\"my-4\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <label for=\"name\">Назва</label>\r\n                <input type=\"text\"\r\n                       [(ngModel)]=\"category.name\"\r\n                       class=\"form-control\"\r\n                       id=\"name\"\r\n                       name=\"name\"\r\n                       placeholder='напр. \"Транспорт та дороги\"'>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"description\">Опис</label>\r\n                <textarea type=\"text\"\r\n                          [(ngModel)]=\"category.description\"\r\n                          class=\"form-control\"\r\n                          id=\"description\"\r\n                          name=\"description\"\r\n                          rows=\"3\"\r\n                          placeholder='напр. \"Звернення щодо змін, реконструкції, ввровадження транспортних мереж та шляхів сполучення, а також транспортних вузлів або терміналів, де здійснюється перевантаження вантажу чи пересадка пасажирів з одного виду транспорту на інший\"'>\r\n            </textarea>\r\n\r\n            </div>\r\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"submit()\">Зберегти</button>\r\n        </form>        \r\n    </div>\r\n</div>";
 
 /***/ }),
-/* 99 */
+/* 101 */
 /***/ (function(module, exports) {
 
 module.exports = "<h1>Weather forecast</h1>\r\n\r\n<p>This component demonstrates fetching data from the server.</p>\r\n\r\n<p *ngIf=\"!forecasts\"><em>Loading...</em></p>\r\n\r\n<table class='table' *ngIf=\"forecasts\">\r\n    <thead>\r\n        <tr>\r\n            <th>Date</th>\r\n            <th>Temp. (C)</th>\r\n            <th>Temp. (F)</th>\r\n            <th>Summary</th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n        <tr *ngFor=\"let forecast of forecasts\">\r\n            <td>{{ forecast.dateFormatted }}</td>\r\n            <td>{{ forecast.temperatureC }}</td>\r\n            <td>{{ forecast.temperatureF }}</td>\r\n            <td>{{ forecast.summary }}</td>\r\n        </tr>\r\n    </tbody>\r\n</table>\r\n";
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"background-image\">\r\n    <div class=\"background-shadow\">\r\n        <P class=\"title-text\">Сервіс громадських петицій</P>\r\n        <p class=\"regular-text\">Прийми участь у покращенні життя міста</p>\r\n        <!--<button type=\"button\" class=\"btn btn-primary\" *ngIf=\"!isAuthorized\" [routerLink]=\"['/create-petition']\">\r\n        <span class=\"bold-text\">+ Створити петицію</span>\r\n    </button>-->\r\n        <button *ngIf=\"isAuthorized\" type=\"button\" class=\"btn btn-primary\" (click)=\"addPetition()\">\r\n            <span class=\"bold-text\">+ Створити петицію</span>\r\n        </button>\r\n        <button *ngIf=\"!isAuthorized\" type=\"button\" class=\"btn btn-primary\" (click)=\"openModal(template)\">\r\n            <span class=\"bold-text\">+ Створити петицію</span>\r\n        </button>\r\n    </div>\r\n</div>\r\n<div class=\"container\">\r\n    <h3>По категоріям</h3>\r\n    <div *ngIf=\"categories.length === 0\" class=\"spinner\"></div>\r\n    <div *ngIf=\"categories.length !== 0\" class=\"categories\">\r\n        <div *ngFor=\"let category of categories\" \r\n             class=\"card border-secondary mb-3\" \r\n             style=\"max-width: 18rem;\"\r\n             (click)=\"showPetitions(category.name)\">\r\n            <div class=\"card-body text-secondary\">\r\n                <h5 class=\"card-title\">{{category.name}}</h5>\r\n                <p class=\"card-text\">{{category.description}}</p>\r\n            </div>\r\n            <div class=\"card-footer\">\r\n                <small class=\"text-muted\">\r\n                    Зареєстровано петицій - {{category.petitions.length}}\r\n                </small>\r\n            </div>\r\n        </div>        \r\n    </div>\r\n</div>\r\n\r\n<ng-template #template>\r\n    <div class=\"modal-body text-center\">\r\n        <br />\r\n        <h6>Увійдіть під своїм логіном, будь-ласка!</h6>\r\n        <br />\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"confirm()\">Авторизація</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"cancel()\">Ні, дякую!</button>\r\n        <br />\r\n    </div>\r\n</ng-template>";
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"header\">\r\n    <div class=\"col-6 centered\">\r\n        <h3 class=\"logo-wrapper\">\r\n            <a class=\"nav-link mrg-top\" [routerLink]=\"['/home']\">\r\n                <img class=\"logo\" src=\"" + __webpack_require__(171) + "\" />\r\n                Громадські петиції\r\n            </a>\r\n        </h3>\r\n    </div>\r\n    <div class=\"col-6 centered\">\r\n        <ul class=\"nav justify-content-end\">\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" [routerLink]=\"['/home']\">Головна</a>\r\n            </li>\r\n            <li *ngIf=\"isAuthorized && isAdmin\" class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" [routerLink]=\"['/admin']\">Панель адміністратора</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" [routerLink]=\"['/petitions']\">Всі петиції</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" *ngIf=\"!isAuthorized\" (click)=\"login()\" [routerLink]=\"['/login']\">Вхід</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" *ngIf=\"isAuthorized\" (click)=\"logout()\" [routerLink]=\"['#']\">Вийти</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</div>";
-
-/***/ }),
-/* 102 */
-/***/ (function(module, exports) {
-
-module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-inverse'>\r\n        <div class='navbar-header'>\r\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\r\n                <span class='sr-only'>Toggle navigation</span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n            </button>\r\n            <a class='navbar-brand' [routerLink]=\"['/home']\">WebApplicationBasic</a>\r\n        </div>\r\n        <div class='clearfix'></div>\r\n        <div class='navbar-collapse collapse'>\r\n            <ul class='nav navbar-nav'>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/home']\"><span class='glyphicon glyphicon-home'></span> Home</a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/counter']\"><span class='glyphicon glyphicon-education'></span> Counter</a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a *ngIf=\"isAuthorized\" [routerLink]=\"['/fetch-data']\"><span class='glyphicon glyphicon-th-list'></span> Fetch data</a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a *ngIf=\"!isAuthorized\" (click)=\"login()\" [routerLink]=\"['/login']\"><span class=\"glyphicon glyphicon-user\"></span> Login</a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a *ngIf=\"isAuthorized\" (click)=\"logout()\"><span class='glyphicon glyphicon-log-out'></span> Logout</a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
-
-/***/ }),
-/* 103 */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"allPetitions.length === 0\" class=\"spinner\"></div>\r\n<div *ngIf=\"allPetitions.length !== 0\" class=\"container\">\r\n    <div class=\"table-wrapper\">\r\n        \r\n        <div class=\"table-filter\">\r\n            <div class=\"row\">\r\n                <div class=\"col-sm-3\">\r\n                    <div class=\"show-entries row align-items-end\">\r\n                        <label>Показати</label>\r\n                        <div class=\"btn-group\" dropdown>\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"selectItemsPerPage\">\r\n                                {{itemsPerPage}}\r\n                            </button>\r\n                            <div>\r\n                                <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                    <li *ngFor=\"let value of itemsPerPageList\" role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"setItemsPerPage(value)\">{{value}}</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                        <label>петицій</label>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-sm-9\">                    \r\n                    <div class=\"filter-group row align-items-end\">\r\n                        <label>Пошук</label>\r\n                        <input type=\"text\" class=\"form-control\" [(ngModel)]=\"searchQuery\">\r\n                        <label>\r\n                            <a class=\"view\" tooltip=\"Пошук\" (click)=\"search()\">\r\n                                <fa-icon [icon]=\"faSearch\" class=\"search-icon\"></fa-icon>\r\n                            </a>\r\n                        </label>\r\n                    </div>\r\n                    <div class=\"filter-group  row align-items-end\">\r\n                        <label>Статус</label>\r\n                        <div class=\"btn-group\" dropdown>\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"status\">\r\n                                {{sStatus}}\r\n                            </button>\r\n                            <div>\r\n                                <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                    <li role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectStatus('Всі')\">Всі</a>\r\n                                    </li>\r\n                                    <li class=\"divider dropdown-divider\"></li>\r\n                                    <li *ngFor=\"let status of statuses\" role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectStatus(status)\">{{status}}</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"filter-group  row align-items-end\">\r\n                        <label>Категорія</label>\r\n                        <div class=\"btn-group\" dropdown>\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"category\">\r\n                                {{sCategory}}\r\n                            </button>\r\n                            <div *ngIf=\"categories.length\">\r\n                                <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                    <li role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectCatagory('Всі')\">Всі</a>\r\n                                    </li>\r\n                                    <li class=\"divider dropdown-divider\"></li>\r\n                                    <li *ngFor=\"let category of categories\" role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectCatagory(category.name)\">{{category.name}}</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <table class=\"table table-striped table-hover\">\r\n            <thead>\r\n                <tr>                   \r\n                    <th>Назва петиції</th>\r\n                    <th>Категорія</th>\r\n                    <th>Автор</th>\r\n                    <th>Зареєстрована</th>\r\n                    <th>Статус</th>\r\n                    <th>Підтримано</th>\r\n                    <th>Деталі</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr *ngFor=\"let petition of shownPetitions; index as i\">                    \r\n                    <td>{{petition.name}}</td>\r\n                    <td>{{petition.category.name}}</td>\r\n                    <td>{{petition.user.lastName}} {{petition.user.firstName[0]}}.{{petition.user.middleName[0]}}.</td>\r\n                    <td><span class=\"font-size-sm\">{{petition.created |  date:'yyyy-MM-dd'}}</span></td>\r\n                    <td><span [ngStyle]=\"{'color':getColor(petition.status)}\">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</td>\r\n                    <td><span class=\"font-size-sm\">{{petition.voters.length}}/{{votesCount}}</span></td>\r\n                    <td><a class=\"view\" tooltip=\"Переглянути петицію\" (click)=\"showPetitionDetail(petition.id)\">\r\n                            <fa-icon class=\"arrow-icon\" [icon]=\"faArrowAltCircleRight\"></fa-icon>\r\n                        </a>\r\n                    </td>\r\n                </tr>                \r\n            </tbody>\r\n        </table>\r\n        <div class=\"clearfix\">\r\n            <div class=\"hint-text\">Показано <b>{{shownPetitions.length}}</b> з <b>{{filteredPetitions.length}}</b> петицій</div>\r\n            <div class=\"pagination\">\r\n                <pagination *ngIf=\"filteredPetitions.length > itemsPerPage\"\r\n                            [(ngModel)]=\"currentPage\"\r\n                            [totalItems]=\"filteredPetitions.length\"\r\n                            [maxSize]=\"5\"\r\n                            [itemsPerPage]=\"itemsPerPage\"\r\n                            previousText=\"Назад\"\r\n                            nextText=\"Вперед\"\r\n                            (pageChanged)=\"pageChanged($event)\">\r\n                </pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div> ";
+module.exports = "<div class=\"header\">\r\n    <div class=\"col-6 centered\">\r\n        <h3 class=\"logo-wrapper\">\r\n            <a class=\"nav-link mrg-top\" [routerLink]=\"['/home']\">\r\n                <img class=\"logo\" src=\"" + __webpack_require__(172) + "\" />\r\n                Громадські петиції\r\n            </a>\r\n        </h3>\r\n    </div>\r\n    <div class=\"col-6 centered\">\r\n        <ul class=\"nav justify-content-end\">\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" [routerLink]=\"['/home']\">Головна</a>\r\n            </li>\r\n            <li *ngIf=\"isAuthorized && isAdmin\" class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" [routerLink]=\"['/admin']\">Панель адміністратора</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" [routerLink]=\"['/petitions']\">Всі петиції</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" *ngIf=\"!isAuthorized\" (click)=\"login()\" [routerLink]=\"['/login']\">Вхід</a>\r\n            </li>\r\n            <li class=\"nav-item\" [routerLinkActive]=\"['link-active']\">\r\n                <a class=\"nav-link menu-btn\" *ngIf=\"isAuthorized\" (click)=\"logout()\" [routerLink]=\"['#']\">Вийти</a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</div>";
 
 /***/ }),
 /* 104 */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"!petitionLoaded\" class=\"spinner\"></div>\r\n<div *ngIf=\"petitionLoaded\" class=\"col w-50 p-3 hor-center\">\r\n    <br />\r\n    <h3 class=\"heading\">{{petition.name}}</h3>\r\n    <hr class=\"my-4\">\r\n    <br />\r\n    <div class=\"column\">\r\n        <div *ngIf=\"petition.status > 0\" class=\"row\">\r\n            <div class=\"col-12\">\r\n                <progressbar [max]=\"votesCount\" [value]=\"petition.voters.length\">\r\n                    <span class=\"text-nowrap\">{{petition.voters.length}} / {{votesCount}}</span>\r\n                </progressbar>\r\n                <br />\r\n                <br />\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Статус</p></div>\r\n            <div class=\"col-6\"><p><span [ngStyle]=\"{'color':getColor(petition.status)}\">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</p></div>\r\n            <div class=\"col-4\">\r\n                <button *ngIf=\"isAuthorized && !isVoted && !isAuthor && petition.status === 1\" type=\"button\" class=\"btn btn-primary\" (click)=\"votePetition()\">\r\n                    <span class=\"bold-text\">\r\n                        Підтримати петицію <fa-icon [icon]=\"faCheckCircle\"></fa-icon>\r\n                    </span>\r\n                </button>\r\n                <button *ngIf=\"!isAuthorized && !isVoted && !isAuthor && petition.status === 1\" type=\"button\" class=\"btn btn-primary\" (click)=\"openModal(template)\">\r\n                    <span class=\"bold-text\">\r\n                        Підтримати петицію <fa-icon [icon]=\"faCheckCircle\"></fa-icon>\r\n                    </span>\r\n                </button>\r\n                <h3>\r\n                    <span *ngIf=\"isAuthorized && isVoted\" class=\"badge badge-success\">\r\n                        <small>Підтримано <fa-icon [icon]=\"faCheckCircle\"></fa-icon></small>\r\n                    </span>\r\n                </h3>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Автор</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.user.lastName}} {{petition.user.firstName}} {{petition.user.middleName}}</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Категорія</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.category.name}}</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Зміст</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.description}}</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <accordion *ngIf=\"petition.status > 0\">\r\n        <br />\r\n        <accordion-group heading=\"Хто підтримав\">\r\n            <div *ngIf=\"petition.voters.length === 0\" class=\"column\">\r\n                <p>Петицію ще ніхто не підтримав, будьте першим!</p>\r\n            </div>\r\n            <div *ngIf=\"petition.voters.length\" class=\"column\">\r\n                <div *ngFor=\"let voter of petition.voters\" class=\"row\">\r\n                    <div class=\"col-8\">{{voter.lastName}} {{voter.firstName}} {{voter.middleName}}</div>\r\n                    <!--<div class=\"col-4\">date</div>-->\r\n                </div>\r\n            </div>\r\n        </accordion-group>\r\n    </accordion>\r\n</div>\r\n\r\n<ng-template #template>\r\n    <div class=\"modal-body text-center\">\r\n        <br />\r\n        <h6>Увійдіть під своїм логіном, будь-ласка!</h6>\r\n        <br />\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"confirm()\">Авторизація</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"cancel()\">Ні, дякую!</button>\r\n        <br />\r\n    </div>\r\n</ng-template>\r\n";
+module.exports = "<div class='main-nav'>\r\n    <div class='navbar navbar-inverse'>\r\n        <div class='navbar-header'>\r\n            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>\r\n                <span class='sr-only'>Toggle navigation</span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n                <span class='icon-bar'></span>\r\n            </button>\r\n            <a class='navbar-brand' [routerLink]=\"['/home']\">WebApplicationBasic</a>\r\n        </div>\r\n        <div class='clearfix'></div>\r\n        <div class='navbar-collapse collapse'>\r\n            <ul class='nav navbar-nav'>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/home']\"><span class='glyphicon glyphicon-home'></span> Home</a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a [routerLink]=\"['/counter']\"><span class='glyphicon glyphicon-education'></span> Counter</a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a *ngIf=\"isAuthorized\" [routerLink]=\"['/fetch-data']\"><span class='glyphicon glyphicon-th-list'></span> Fetch data</a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a *ngIf=\"!isAuthorized\" (click)=\"login()\" [routerLink]=\"['/login']\"><span class=\"glyphicon glyphicon-user\"></span> Login</a>\r\n                </li>\r\n                <li [routerLinkActive]=\"['link-active']\">\r\n                    <a *ngIf=\"isAuthorized\" (click)=\"logout()\"><span class='glyphicon glyphicon-log-out'></span> Logout</a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }),
 /* 105 */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <div class=\"col w-50 p-3 hor-center\">\r\n        <br />\r\n        <h3 class=\"heading\">Реєстрація нової петиції</h3>\r\n        <hr class=\"my-4\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <div class=\"column\">\r\n                    <label for=\"category\">Категорія</label>\r\n                    <div class=\"btn-group\" dropdown>\r\n                        <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"category\">\r\n                            {{currCategory}}\r\n                        </button>\r\n                        <div *ngIf=\"categories.length\">\r\n                            <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                <li *ngFor=\"let category of categories\" role=\"menuitem\">\r\n                                    <a class=\"dropdown-item\" (click)=\"selectCatagory(category)\">{{category.name}}</a>\r\n                                </li>\r\n                                <li class=\"divider dropdown-divider\"></li>\r\n                                <li class=\"btn btn-link\" *ngIf=\"!isAuthorized\" [routerLink]=\"['/register-category']\">\r\n                                    Нова категорія\r\n                                </li>\r\n                            </ul>\r\n                        </div>\r\n                    </div>\r\n                </div>                \r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"name\">Коротка назва</label>\r\n                <input type=\"text\"\r\n                       [(ngModel)]=\"petition.name\"\r\n                       class=\"form-control\"\r\n                       id=\"name\"\r\n                       name=\"name\"\r\n                       placeholder='напр. \"Встановлення світловору на перетині вул. Порика та вул. Квятека\"'>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"description\">Зміст петиції</label>\r\n                <textarea type=\"text\"\r\n                          [(ngModel)]=\"petition.description\"\r\n                          class=\"form-control\"\r\n                          id=\"description\"\r\n                          name=\"description\"\r\n                          rows=\"3\"\r\n                          placeholder='напр. \"Внаслідок інтенсивного руху вантажного транспорту по вул. Липовецькій на дорозі утворилось багато вибоїн та ям. Пропоную заасвальтувати данну ділянку дороги\"'>\r\n            </textarea>\r\n\r\n            </div>\r\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"submit()\">Зареєструвати</button>\r\n        </form>\r\n    </div>\r\n</div>\r\n";
+module.exports = "<div *ngIf=\"allPetitions.length === 0\" class=\"spinner\"></div>\r\n<div *ngIf=\"allPetitions.length !== 0\" class=\"container\">\r\n    <div class=\"table-wrapper\">\r\n        \r\n        <div class=\"table-filter\">\r\n            <div class=\"row\">\r\n                <div class=\"col-sm-3\">\r\n                    <div class=\"show-entries row align-items-end\">\r\n                        <label>Показати</label>\r\n                        <div class=\"btn-group\" dropdown>\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"selectItemsPerPage\">\r\n                                {{itemsPerPage}}\r\n                            </button>\r\n                            <div>\r\n                                <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                    <li *ngFor=\"let value of itemsPerPageList\" role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"setItemsPerPage(value)\">{{value}}</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                        <label>петицій</label>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-sm-9\">                    \r\n                    <div class=\"filter-group row align-items-end\">\r\n                        <label>Пошук</label>\r\n                        <input type=\"text\" class=\"form-control\" [(ngModel)]=\"searchQuery\">\r\n                        <label>\r\n                            <a class=\"view\" tooltip=\"Пошук\" (click)=\"search()\">\r\n                                <fa-icon [icon]=\"faSearch\" class=\"search-icon\"></fa-icon>\r\n                            </a>\r\n                        </label>\r\n                    </div>\r\n                    <div class=\"filter-group  row align-items-end\">\r\n                        <label>Статус</label>\r\n                        <div class=\"btn-group\" dropdown>\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"status\">\r\n                                {{sStatus}}\r\n                            </button>\r\n                            <div>\r\n                                <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                    <li role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectStatus('Всі')\">Всі</a>\r\n                                    </li>\r\n                                    <li class=\"divider dropdown-divider\"></li>\r\n                                    <li *ngFor=\"let status of statuses\" role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectStatus(status)\">{{status}}</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"filter-group  row align-items-end\">\r\n                        <label>Категорія</label>\r\n                        <div class=\"btn-group\" dropdown>\r\n                            <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"category\">\r\n                                {{sCategory}}\r\n                            </button>\r\n                            <div *ngIf=\"categories.length\">\r\n                                <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                    <li role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectCatagory('Всі')\">Всі</a>\r\n                                    </li>\r\n                                    <li class=\"divider dropdown-divider\"></li>\r\n                                    <li *ngFor=\"let category of categories\" role=\"menuitem\">\r\n                                        <a class=\"dropdown-item\" (click)=\"selectCatagory(category.name)\">{{category.name}}</a>\r\n                                    </li>\r\n                                </ul>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <table class=\"table table-striped table-hover\">\r\n            <thead>\r\n                <tr>                   \r\n                    <th>Назва петиції</th>\r\n                    <th>Категорія</th>\r\n                    <th>Автор</th>\r\n                    <th>Зареєстрована</th>\r\n                    <th>Статус</th>\r\n                    <th>Підтримано</th>\r\n                    <th>Деталі</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody>\r\n                <tr *ngFor=\"let petition of shownPetitions; index as i\">                    \r\n                    <td>{{petition.name}}</td>\r\n                    <td>{{petition.category.name}}</td>\r\n                    <td>{{petition.user.lastName}} {{petition.user.firstName[0]}}.{{petition.user.middleName[0]}}.</td>\r\n                    <td><span class=\"font-size-sm\">{{petition.created |  date:'yyyy-MM-dd'}}</span></td>\r\n                    <td><span [ngStyle]=\"{'color':getColor(petition.status)}\">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</td>\r\n                    <td><span class=\"font-size-sm\">{{petition.voters.length}}/{{votesCount}}</span></td>\r\n                    <td><a class=\"view\" tooltip=\"Переглянути петицію\" (click)=\"showPetitionDetail(petition.id)\">\r\n                            <fa-icon class=\"arrow-icon\" [icon]=\"faArrowAltCircleRight\"></fa-icon>\r\n                        </a>\r\n                    </td>\r\n                </tr>                \r\n            </tbody>\r\n        </table>\r\n        <div class=\"clearfix\">\r\n            <div class=\"hint-text\">Показано <b>{{shownPetitions.length}}</b> з <b>{{filteredPetitions.length}}</b> петицій</div>\r\n            <div class=\"pagination\">\r\n                <pagination *ngIf=\"filteredPetitions.length > itemsPerPage\"\r\n                            [(ngModel)]=\"currentPage\"\r\n                            [totalItems]=\"filteredPetitions.length\"\r\n                            [maxSize]=\"5\"\r\n                            [itemsPerPage]=\"itemsPerPage\"\r\n                            previousText=\"Назад\"\r\n                            nextText=\"Вперед\"\r\n                            (pageChanged)=\"pageChanged($event)\">\r\n                </pagination>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div> ";
 
 /***/ }),
 /* 106 */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>\r\n    Login is required to access this area\r\n</h2>\r\n<div>\r\n    <button type=\"button\" class=\"btn btn-primary\" (click)=\"login()\">Login</button>\r\n    <button type=\"button\" class=\"btn btn-default\" (click)=\"goback()\">Back</button>\r\n</div>";
+module.exports = "<div *ngIf=\"!petitionLoaded\" class=\"spinner\"></div>\r\n<div *ngIf=\"petitionLoaded\" class=\"col w-50 p-3 hor-center\">\r\n    <br />\r\n    <h3 class=\"heading\">{{petition.name}}</h3>\r\n    <hr class=\"my-4\">\r\n    <br />\r\n    <div class=\"column\">\r\n        <div *ngIf=\"petition.status > 0\" class=\"row\">\r\n            <div class=\"col-12\">\r\n                <progressbar [max]=\"votesCount\" [value]=\"petition.voters.length\">\r\n                    <span class=\"text-nowrap\">{{petition.voters.length}} / {{votesCount}}</span>\r\n                </progressbar>\r\n                <br />\r\n                <br />\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Статус</p></div>\r\n            <div class=\"col-6\"><p><span [ngStyle]=\"{'color':getColor(petition.status)}\">&#11044;&nbsp;&nbsp;</span>{{getName(petition.status)}}</p></div>\r\n            <div class=\"col-4\">\r\n                <button *ngIf=\"isAuthorized && !isVoted && !isAuthor && petition.status === 1\" type=\"button\" class=\"btn btn-primary\" (click)=\"votePetition()\">\r\n                    <span class=\"bold-text\">\r\n                        Підтримати петицію <fa-icon [icon]=\"faCheckCircle\"></fa-icon>\r\n                    </span>\r\n                </button>\r\n                <button *ngIf=\"!isAuthorized && !isVoted && !isAuthor && petition.status === 1\" type=\"button\" class=\"btn btn-primary\" (click)=\"openModal(template)\">\r\n                    <span class=\"bold-text\">\r\n                        Підтримати петицію <fa-icon [icon]=\"faCheckCircle\"></fa-icon>\r\n                    </span>\r\n                </button>\r\n                <h3>\r\n                    <span *ngIf=\"isAuthorized && isVoted\" class=\"badge badge-success\">\r\n                        <small>Підтримано <fa-icon [icon]=\"faCheckCircle\"></fa-icon></small>\r\n                    </span>\r\n                </h3>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Подано</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.created |  date:'yyyy-MM-dd'}}</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Автор</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.user.lastName}} {{petition.user.firstName}} {{petition.user.middleName}}</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Категорія</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.category.name}}</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-2\"><p>Зміст</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.description}}</p>\r\n            </div>\r\n        </div>\r\n        <hr *ngIf=\"petition.review !== null\" />\r\n        <div *ngIf=\"petition.review !== null\" class=\"row\">\r\n            <div class=\"col-2\"><p>Розглянуто</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.review.created |  date:'yyyy-MM-dd'}}</p>\r\n            </div>\r\n        </div>\r\n        <div *ngIf=\"petition.review !== null\" class=\"row\">\r\n            <div class=\"col-2\"><p>Відповідає</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.review.user.lastName}} {{petition.review.user.firstName}} {{petition.review.user.middleName}}</p>\r\n            </div>\r\n        </div>\r\n        <div *ngIf=\"petition.review !== null\" class=\"row\">\r\n            <div class=\"col-2\"><p>Відповідь</p></div>\r\n            <div class=\"col-10\">\r\n                <p>{{petition.review.text}}</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div *ngIf=\"petition.review === null\">\r\n        <button type=\"button\" class=\"btn btn-outline-primary\"\r\n                (click)=\"isCollapsed = !isCollapsed\">\r\n            Дати відповідь\r\n        </button>\r\n        <div (collapsed)=\"collapsed($event)\"\r\n             (expanded)=\"expanded($event)\"\r\n             [collapse]=\"isCollapsed\"\r\n             class=\"card card-block card-header\">\r\n            <div class=\"well well-lg\">\r\n                <form>\r\n                    <div class=\"form-group\">\r\n                        <label for=\"description\">Зміст відповіді</label>\r\n                        <textarea type=\"text\"\r\n                                  [(ngModel)]=\"review\"\r\n                                  class=\"form-control\"\r\n                                  id=\"description\"\r\n                                  name=\"description\"\r\n                                  rows=\"3\"\r\n                                  placeholder='напр. \"Ваша відповідь на петицію\"'>\r\n                    </textarea>\r\n                    </div>\r\n                </form>\r\n                <button type=\"button\" class=\"btn btn-primary\" (click)=\"saveReview()\">\r\n                    Зберегти\r\n                </button>\r\n                <button type=\"button\" class=\"btn btn-default\" (click)=\"cancelReview()\">\r\n                    Скасувати\r\n                </button>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <accordion *ngIf=\"petition.status > 0\">\r\n        <br />\r\n        <accordion-group heading=\"Хто підтримав\">\r\n            <div *ngIf=\"petition.voters.length === 0\" class=\"column\">\r\n                <p>Петицію ще ніхто не підтримав, будьте першим!</p>\r\n            </div>\r\n            <div *ngIf=\"petition.voters.length\" class=\"column\">\r\n                <div *ngFor=\"let voter of petition.voters\" class=\"row\">\r\n                    <div class=\"col-8\">{{voter.lastName}} {{voter.firstName}} {{voter.middleName}}</div>\r\n                    <!--<div class=\"col-4\">date</div>-->\r\n                </div>\r\n            </div>\r\n        </accordion-group>\r\n    </accordion>\r\n</div>\r\n\r\n<ng-template #template>\r\n    <div class=\"modal-body text-center\">\r\n        <br />\r\n        <h6>Увійдіть під своїм логіном, будь-ласка!</h6>\r\n        <br />\r\n        <button type=\"button\" class=\"btn btn-primary\" (click)=\"confirm()\">Авторизація</button>\r\n        <button type=\"button\" class=\"btn btn-default\" (click)=\"cancel()\">Ні, дякую!</button>\r\n        <br />\r\n    </div>\r\n</ng-template>\r\n";
 
 /***/ }),
 /* 107 */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n    <div class=\"col w-50 p-3 hor-center\">\r\n        <br />\r\n        <h3 class=\"heading\">Реєстрація нової петиції</h3>\r\n        <hr class=\"my-4\">\r\n        <form>\r\n            <div class=\"form-group\">\r\n                <div class=\"column\">\r\n                    <label for=\"category\">Категорія</label>\r\n                    <div class=\"btn-group\" dropdown>\r\n                        <button dropdownToggle type=\"button\" class=\"btn btn-default dropdown-toggle\" name=\"category\">\r\n                            {{currCategory}}\r\n                        </button>\r\n                        <div *ngIf=\"categories.length\">\r\n                            <ul *dropdownMenu class=\"dropdown-menu\" role=\"menu\">\r\n                                <li *ngFor=\"let category of categories\" role=\"menuitem\">\r\n                                    <a class=\"dropdown-item\" (click)=\"selectCatagory(category)\">{{category.name}}</a>\r\n                                </li>\r\n                                <li class=\"divider dropdown-divider\"></li>\r\n                                <li class=\"btn btn-link\" *ngIf=\"!isAuthorized\" [routerLink]=\"['/register-category']\">\r\n                                    Нова категорія\r\n                                </li>\r\n                            </ul>\r\n                        </div>\r\n                    </div>\r\n                </div>                \r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"name\">Коротка назва</label>\r\n                <input type=\"text\"\r\n                       [(ngModel)]=\"petition.name\"\r\n                       class=\"form-control\"\r\n                       id=\"name\"\r\n                       name=\"name\"\r\n                       placeholder='напр. \"Встановлення світловору на перетині вул. Порика та вул. Квятека\"'>\r\n            </div>\r\n            <div class=\"form-group\">\r\n                <label for=\"description\">Зміст петиції</label>\r\n                <textarea type=\"text\"\r\n                          [(ngModel)]=\"petition.description\"\r\n                          class=\"form-control\"\r\n                          id=\"description\"\r\n                          name=\"description\"\r\n                          rows=\"3\"\r\n                          placeholder='напр. \"Внаслідок інтенсивного руху вантажного транспорту по вул. Липовецькій на дорозі утворилось багато вибоїн та ям. Пропоную заасвальтувати данну ділянку дороги\"'>\r\n            </textarea>\r\n\r\n            </div>\r\n            <button type=\"button\" class=\"btn btn-primary\" (click)=\"submit()\">Зареєструвати</button>\r\n        </form>\r\n    </div>\r\n</div>\r\n";
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports) {
+
+module.exports = "<h2>\r\n    Login is required to access this area\r\n</h2>\r\n<div>\r\n    <button type=\"button\" class=\"btn btn-primary\" (click)=\"login()\">Login</button>\r\n    <button type=\"button\" class=\"btn btn-default\" (click)=\"goback()\">Back</button>\r\n</div>";
+
+/***/ }),
+/* 109 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -14980,7 +15146,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -14991,7 +15157,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 109 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {
@@ -15315,17 +15481,17 @@ exports.lang = KJUR.lang;
 
 
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(83).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(85).Buffer))
 
 /***/ }),
-/* 110 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccordionModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__collapse_collapse_module__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__collapse_collapse_module__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__accordion_group_component__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__accordion_component__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__accordion_config__ = __webpack_require__(21);
@@ -15356,7 +15522,7 @@ var AccordionModule = (function () {
 //# sourceMappingURL=accordion.module.js.map
 
 /***/ }),
-/* 111 */
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15364,7 +15530,7 @@ var AccordionModule = (function () {
 /* unused harmony reexport AccordionPanelComponent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__accordion_component__ = __webpack_require__(20);
 /* unused harmony reexport AccordionComponent */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__accordion_module__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__accordion_module__ = __webpack_require__(112);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__accordion_module__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__accordion_config__ = __webpack_require__(21);
 /* unused harmony reexport AccordionConfig */
@@ -15375,7 +15541,7 @@ var AccordionModule = (function () {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15408,7 +15574,7 @@ var ButtonsModule = (function () {
 //# sourceMappingURL=buttons.module.js.map
 
 /***/ }),
-/* 113 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15418,7 +15584,7 @@ var ButtonsModule = (function () {
 /* unused harmony reexport ButtonRadioGroupDirective */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__button_radio_directive__ = __webpack_require__(39);
 /* unused harmony reexport ButtonRadioDirective */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__buttons_module__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__buttons_module__ = __webpack_require__(114);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_3__buttons_module__["a"]; });
 
 
@@ -15427,137 +15593,20 @@ var ButtonsModule = (function () {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 114 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CollapseDirective; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-// todo: add animations when https://github.com/angular/angular/issues/9947 solved
-
-var CollapseDirective = (function () {
-    function CollapseDirective(_el, _renderer) {
-        this._el = _el;
-        this._renderer = _renderer;
-        /** This event fires as soon as content collapses */
-        this.collapsed = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        /** This event fires as soon as content becomes visible */
-        this.expanded = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        // shown
-        this.isExpanded = true;
-        // hidden
-        this.isCollapsed = false;
-        // stale state
-        this.isCollapse = true;
-        // animation state
-        this.isCollapsing = false;
-    }
-    Object.defineProperty(CollapseDirective.prototype, "collapse", {
-        get: function () {
-            return this.isExpanded;
-        },
-        /** A flag indicating visibility of content (shown or hidden) */
-        set: function (value) {
-            this.isExpanded = value;
-            this.toggle();
-        },
-        enumerable: true,
-        configurable: true
-    });
-    /** allows to manually toggle content visibility */
-    CollapseDirective.prototype.toggle = function () {
-        if (this.isExpanded) {
-            this.hide();
-        }
-        else {
-            this.show();
-        }
-    };
-    /** allows to manually hide content */
-    CollapseDirective.prototype.hide = function () {
-        this.isCollapse = false;
-        this.isCollapsing = true;
-        this.isExpanded = false;
-        this.isCollapsed = true;
-        this.isCollapse = true;
-        this.isCollapsing = false;
-        this.display = 'none';
-        this.collapsed.emit(this);
-    };
-    /** allows to manually show collapsed content */
-    CollapseDirective.prototype.show = function () {
-        this.isCollapse = false;
-        this.isCollapsing = true;
-        this.isExpanded = true;
-        this.isCollapsed = false;
-        this.display = 'block';
-        // this.height = 'auto';
-        this.isCollapse = true;
-        this.isCollapsing = false;
-        this._renderer.setStyle(this._el.nativeElement, 'overflow', 'visible');
-        this._renderer.setStyle(this._el.nativeElement, 'height', 'auto');
-        this.expanded.emit(this);
-    };
-    CollapseDirective.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
-                    selector: '[collapse]',
-                    exportAs: 'bs-collapse',
-                    host: {
-                        '[class.collapse]': 'true'
-                    }
-                },] },
-    ];
-    /** @nocollapse */
-    CollapseDirective.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer2"], },
-    ]; };
-    CollapseDirective.propDecorators = {
-        'collapsed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
-        'expanded': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
-        'display': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['style.display',] },],
-        'isExpanded': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['class.in',] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['class.show',] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['attr.aria-expanded',] },],
-        'isCollapsed': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['attr.aria-hidden',] },],
-        'isCollapse': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['class.collapse',] },],
-        'isCollapsing': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["HostBinding"], args: ['class.collapsing',] },],
-        'collapse': [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
-    };
-    return CollapseDirective;
-}());
-
-//# sourceMappingURL=collapse.directive.js.map
-
-/***/ }),
-/* 115 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CollapseModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__collapse_directive__ = __webpack_require__(114);
-
-
-var CollapseModule = (function () {
-    function CollapseModule() {
-    }
-    CollapseModule.forRoot = function () {
-        return { ngModule: CollapseModule, providers: [] };
-    };
-    CollapseModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
-                    declarations: [__WEBPACK_IMPORTED_MODULE_1__collapse_directive__["a" /* CollapseDirective */]],
-                    exports: [__WEBPACK_IMPORTED_MODULE_1__collapse_directive__["a" /* CollapseDirective */]]
-                },] },
-    ];
-    /** @nocollapse */
-    CollapseModule.ctorParameters = function () { return []; };
-    return CollapseModule;
-}());
-
-//# sourceMappingURL=collapse.module.js.map
-
-/***/ }),
 /* 116 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__collapse_directive__ = __webpack_require__(40);
+/* unused harmony reexport CollapseDirective */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__collapse_module__ = __webpack_require__(41);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__collapse_module__["a"]; });
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 117 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15566,10 +15615,10 @@ var CollapseModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__component_loader_index__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__positioning_index__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bs_dropdown_container_component__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bs_dropdown_menu_directive__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bs_dropdown_toggle_directive__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bs_dropdown_menu_directive__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bs_dropdown_toggle_directive__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__bs_dropdown_config__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__bs_dropdown_directive__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__bs_dropdown_directive__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__bs_dropdown_state__ = __webpack_require__(8);
 
 
@@ -15621,15 +15670,15 @@ var BsDropdownModule = (function () {
 //# sourceMappingURL=bs-dropdown.module.js.map
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bs_dropdown_directive__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bs_dropdown_directive__ = __webpack_require__(46);
 /* unused harmony reexport BsDropdownDirective */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bs_dropdown_menu_directive__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bs_dropdown_menu_directive__ = __webpack_require__(44);
 /* unused harmony reexport BsDropdownMenuDirective */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bs_dropdown_toggle_directive__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bs_dropdown_toggle_directive__ = __webpack_require__(45);
 /* unused harmony reexport BsDropdownToggleDirective */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bs_dropdown_container_component__ = __webpack_require__(24);
 /* unused harmony reexport BsDropdownContainerComponent */
@@ -15637,7 +15686,7 @@ var BsDropdownModule = (function () {
 /* unused harmony reexport BsDropdownState */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__bs_dropdown_config__ = __webpack_require__(25);
 /* unused harmony reexport BsDropdownConfig */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__bs_dropdown_module__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__bs_dropdown_module__ = __webpack_require__(117);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_6__bs_dropdown_module__["a"]; });
 
 
@@ -15649,7 +15698,7 @@ var BsDropdownModule = (function () {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15665,18 +15714,18 @@ var ModalBackdropOptions = (function () {
 //# sourceMappingURL=modal-backdrop.options.js.map
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modal_backdrop_component__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_directive__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modal_directive__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__positioning_index__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__component_loader_index__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modal_container_component__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__bs_modal_service__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__bs_modal_service__ = __webpack_require__(48);
 
 
 
@@ -15712,15 +15761,15 @@ var ModalModule = (function () {
 //# sourceMappingURL=modal.module.js.map
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pager_component__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pager_component__ = __webpack_require__(50);
 /* unused harmony reexport PagerComponent */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pagination_component__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pagination_component__ = __webpack_require__(51);
 /* unused harmony reexport PaginationComponent */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pagination_module__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pagination_module__ = __webpack_require__(122);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__pagination_module__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pagination_config__ = __webpack_require__(15);
 /* unused harmony reexport PaginationConfig */
@@ -15731,7 +15780,7 @@ var ModalModule = (function () {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15739,8 +15788,8 @@ var ModalModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pagination_config__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pager_component__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagination_component__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pager_component__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pagination_component__ = __webpack_require__(51);
 
 
 
@@ -15767,13 +15816,13 @@ var PaginationModule = (function () {
 //# sourceMappingURL=pagination.module.js.map
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PositioningService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ng_positioning__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ng_positioning__ = __webpack_require__(52);
 
 
 var PositioningService = (function () {
@@ -15804,15 +15853,15 @@ function _getHtmlElement(element) {
 //# sourceMappingURL=positioning.service.js.map
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bar_component__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__bar_component__ = __webpack_require__(53);
 /* unused harmony reexport BarComponent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__progressbar_component__ = __webpack_require__(28);
 /* unused harmony reexport ProgressbarComponent */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__progressbar_module__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__progressbar_module__ = __webpack_require__(125);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__progressbar_module__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__progressbar_config__ = __webpack_require__(29);
 /* unused harmony reexport ProgressbarConfig */
@@ -15823,14 +15872,14 @@ function _getHtmlElement(element) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProgressbarModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bar_component__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bar_component__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__progressbar_component__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__progressbar_config__ = __webpack_require__(29);
 
@@ -15859,15 +15908,15 @@ var ProgressbarModule = (function () {
 //# sourceMappingURL=progressbar.module.js.map
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tooltip_container_component__ = __webpack_require__(30);
 /* unused harmony reexport TooltipContainerComponent */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tooltip_directive__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tooltip_directive__ = __webpack_require__(54);
 /* unused harmony reexport TooltipDirective */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tooltip_module__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tooltip_module__ = __webpack_require__(127);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__tooltip_module__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tooltip_config__ = __webpack_require__(17);
 /* unused harmony reexport TooltipConfig */
@@ -15878,7 +15927,7 @@ var ProgressbarModule = (function () {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15886,7 +15935,7 @@ var ProgressbarModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tooltip_container_component__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tooltip_directive__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tooltip_directive__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tooltip_config__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__component_loader_index__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__positioning_index__ = __webpack_require__(16);
@@ -15922,17 +15971,17 @@ var TooltipModule = (function () {
 //# sourceMappingURL=tooltip.module.js.map
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__decorators__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__decorators__ = __webpack_require__(55);
 /* unused harmony reexport OnChange */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__linked_list_class__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__linked_list_class__ = __webpack_require__(129);
 /* unused harmony reexport LinkedList */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__theme_provider__ = __webpack_require__(3);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__theme_provider__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__trigger_class__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__trigger_class__ = __webpack_require__(56);
 /* unused harmony reexport Trigger */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_class__ = __webpack_require__(32);
 /* unused harmony reexport Utils */
@@ -15946,7 +15995,7 @@ var TooltipModule = (function () {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16195,7 +16244,7 @@ var LinkedList = (function () {
 //# sourceMappingURL=linked-list.class.js.map
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16215,7 +16264,7 @@ function warnOnce(msg) {
 //# sourceMappingURL=warn-once.js.map
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16306,7 +16355,7 @@ var isArray = Array.isArray || function (xs) {
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16398,18 +16447,18 @@ var objectKeys = Object.keys || function (obj) {
 
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.decode = exports.parse = __webpack_require__(130);
-exports.encode = exports.stringify = __webpack_require__(131);
+exports.decode = exports.parse = __webpack_require__(131);
+exports.encode = exports.stringify = __webpack_require__(132);
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {/*! *****************************************************************************
@@ -17537,10 +17586,10 @@ var Reflect;
             Function("return this;")());
 })(Reflect || (Reflect = {}));
 //# sourceMappingURL=Reflect.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(61), __webpack_require__(62)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(63), __webpack_require__(64)))
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17595,26 +17644,15 @@ exports.Scheduler = Scheduler;
 //# sourceMappingURL=Scheduler.js.map
 
 /***/ }),
-/* 135 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(2);
-var empty_1 = __webpack_require__(146);
-Observable_1.Observable.empty = empty_1.empty;
-//# sourceMappingURL=empty.js.map
-
-/***/ }),
 /* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var interval_1 = __webpack_require__(147);
-Observable_1.Observable.interval = interval_1.interval;
-//# sourceMappingURL=interval.js.map
+var empty_1 = __webpack_require__(147);
+Observable_1.Observable.empty = empty_1.empty;
+//# sourceMappingURL=empty.js.map
 
 /***/ }),
 /* 137 */
@@ -17623,9 +17661,9 @@ Observable_1.Observable.interval = interval_1.interval;
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var throw_1 = __webpack_require__(148);
-Observable_1.Observable.throw = throw_1._throw;
-//# sourceMappingURL=throw.js.map
+var interval_1 = __webpack_require__(148);
+Observable_1.Observable.interval = interval_1.interval;
+//# sourceMappingURL=interval.js.map
 
 /***/ }),
 /* 138 */
@@ -17634,10 +17672,9 @@ Observable_1.Observable.throw = throw_1._throw;
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var catch_1 = __webpack_require__(184);
-Observable_1.Observable.prototype.catch = catch_1._catch;
-Observable_1.Observable.prototype._catch = catch_1._catch;
-//# sourceMappingURL=catch.js.map
+var throw_1 = __webpack_require__(149);
+Observable_1.Observable.throw = throw_1._throw;
+//# sourceMappingURL=throw.js.map
 
 /***/ }),
 /* 139 */
@@ -17646,9 +17683,10 @@ Observable_1.Observable.prototype._catch = catch_1._catch;
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var filter_1 = __webpack_require__(177);
-Observable_1.Observable.prototype.filter = filter_1.filter;
-//# sourceMappingURL=filter.js.map
+var catch_1 = __webpack_require__(185);
+Observable_1.Observable.prototype.catch = catch_1._catch;
+Observable_1.Observable.prototype._catch = catch_1._catch;
+//# sourceMappingURL=catch.js.map
 
 /***/ }),
 /* 140 */
@@ -17657,9 +17695,9 @@ Observable_1.Observable.prototype.filter = filter_1.filter;
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var pluck_1 = __webpack_require__(150);
-Observable_1.Observable.prototype.pluck = pluck_1.pluck;
-//# sourceMappingURL=pluck.js.map
+var filter_1 = __webpack_require__(178);
+Observable_1.Observable.prototype.filter = filter_1.filter;
+//# sourceMappingURL=filter.js.map
 
 /***/ }),
 /* 141 */
@@ -17668,9 +17706,9 @@ Observable_1.Observable.prototype.pluck = pluck_1.pluck;
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var take_1 = __webpack_require__(151);
-Observable_1.Observable.prototype.take = take_1.take;
-//# sourceMappingURL=take.js.map
+var pluck_1 = __webpack_require__(151);
+Observable_1.Observable.prototype.pluck = pluck_1.pluck;
+//# sourceMappingURL=pluck.js.map
 
 /***/ }),
 /* 142 */
@@ -17679,12 +17717,23 @@ Observable_1.Observable.prototype.take = take_1.take;
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var timeInterval_1 = __webpack_require__(152);
+var take_1 = __webpack_require__(152);
+Observable_1.Observable.prototype.take = take_1.take;
+//# sourceMappingURL=take.js.map
+
+/***/ }),
+/* 143 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(2);
+var timeInterval_1 = __webpack_require__(153);
 Observable_1.Observable.prototype.timeInterval = timeInterval_1.timeInterval;
 //# sourceMappingURL=timeInterval.js.map
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17773,7 +17822,7 @@ exports.ErrorObservable = ErrorObservable;
 //# sourceMappingURL=ErrorObservable.js.map
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17783,7 +17832,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var isNumeric_1 = __webpack_require__(58);
+var isNumeric_1 = __webpack_require__(60);
 var Observable_1 = __webpack_require__(2);
 var async_1 = __webpack_require__(18);
 /**
@@ -17867,7 +17916,7 @@ exports.IntervalObservable = IntervalObservable;
 //# sourceMappingURL=IntervalObservable.js.map
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17877,11 +17926,11 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var isNumeric_1 = __webpack_require__(58);
+var isNumeric_1 = __webpack_require__(60);
 var Observable_1 = __webpack_require__(2);
 var async_1 = __webpack_require__(18);
-var isScheduler_1 = __webpack_require__(179);
-var isDate_1 = __webpack_require__(159);
+var isScheduler_1 = __webpack_require__(180);
+var isDate_1 = __webpack_require__(160);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -17980,24 +18029,14 @@ exports.TimerObservable = TimerObservable;
 //# sourceMappingURL=TimerObservable.js.map
 
 /***/ }),
-/* 146 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var EmptyObservable_1 = __webpack_require__(60);
-exports.empty = EmptyObservable_1.EmptyObservable.create;
-//# sourceMappingURL=empty.js.map
-
-/***/ }),
 /* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var IntervalObservable_1 = __webpack_require__(144);
-exports.interval = IntervalObservable_1.IntervalObservable.create;
-//# sourceMappingURL=interval.js.map
+var EmptyObservable_1 = __webpack_require__(62);
+exports.empty = EmptyObservable_1.EmptyObservable.create;
+//# sourceMappingURL=empty.js.map
 
 /***/ }),
 /* 148 */
@@ -18005,9 +18044,9 @@ exports.interval = IntervalObservable_1.IntervalObservable.create;
 
 "use strict";
 
-var ErrorObservable_1 = __webpack_require__(143);
-exports._throw = ErrorObservable_1.ErrorObservable.create;
-//# sourceMappingURL=throw.js.map
+var IntervalObservable_1 = __webpack_require__(145);
+exports.interval = IntervalObservable_1.IntervalObservable.create;
+//# sourceMappingURL=interval.js.map
 
 /***/ }),
 /* 149 */
@@ -18015,9 +18054,9 @@ exports._throw = ErrorObservable_1.ErrorObservable.create;
 
 "use strict";
 
-var TimerObservable_1 = __webpack_require__(145);
-exports.timer = TimerObservable_1.TimerObservable.create;
-//# sourceMappingURL=timer.js.map
+var ErrorObservable_1 = __webpack_require__(144);
+exports._throw = ErrorObservable_1.ErrorObservable.create;
+//# sourceMappingURL=throw.js.map
 
 /***/ }),
 /* 150 */
@@ -18025,7 +18064,17 @@ exports.timer = TimerObservable_1.TimerObservable.create;
 
 "use strict";
 
-var pluck_1 = __webpack_require__(153);
+var TimerObservable_1 = __webpack_require__(146);
+exports.timer = TimerObservable_1.TimerObservable.create;
+//# sourceMappingURL=timer.js.map
+
+/***/ }),
+/* 151 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var pluck_1 = __webpack_require__(154);
 /**
  * Maps each source value (an object) to its specified nested property.
  *
@@ -18063,12 +18112,12 @@ exports.pluck = pluck;
 //# sourceMappingURL=pluck.js.map
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var take_1 = __webpack_require__(154);
+var take_1 = __webpack_require__(155);
 /**
  * Emits only the first `count` values emitted by the source Observable.
  *
@@ -18109,13 +18158,13 @@ exports.take = take;
 //# sourceMappingURL=take.js.map
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var async_1 = __webpack_require__(18);
-var timeInterval_1 = __webpack_require__(155);
+var timeInterval_1 = __webpack_require__(156);
 exports.TimeInterval = timeInterval_1.TimeInterval;
 /**
  * @param scheduler
@@ -18131,12 +18180,12 @@ exports.timeInterval = timeInterval;
 //# sourceMappingURL=timeInterval.js.map
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var map_1 = __webpack_require__(185);
+var map_1 = __webpack_require__(186);
 /**
  * Maps each source value (an object) to its specified nested property.
  *
@@ -18194,7 +18243,7 @@ function plucker(props, length) {
 //# sourceMappingURL=pluck.js.map
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18204,9 +18253,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(59);
-var ArgumentOutOfRangeError_1 = __webpack_require__(187);
-var EmptyObservable_1 = __webpack_require__(60);
+var Subscriber_1 = __webpack_require__(61);
+var ArgumentOutOfRangeError_1 = __webpack_require__(188);
+var EmptyObservable_1 = __webpack_require__(62);
 /**
  * Emits only the first `count` values emitted by the source Observable.
  *
@@ -18291,7 +18340,7 @@ var TakeSubscriber = (function (_super) {
 //# sourceMappingURL=take.js.map
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18301,7 +18350,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscriber_1 = __webpack_require__(59);
+var Subscriber_1 = __webpack_require__(61);
 var async_1 = __webpack_require__(18);
 function timeInterval(scheduler) {
     if (scheduler === void 0) { scheduler = async_1.async; }
@@ -18350,7 +18399,7 @@ var TimeIntervalSubscriber = (function (_super) {
 //# sourceMappingURL=timeInterval.js.map
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18360,7 +18409,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(186);
+var Subscription_1 = __webpack_require__(187);
 /**
  * A unit of work to be executed in a {@link Scheduler}. An action is typically
  * created from within a Scheduler and an RxJS user does not need to concern
@@ -18400,7 +18449,7 @@ exports.Action = Action;
 //# sourceMappingURL=Action.js.map
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18410,8 +18459,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var root_1 = __webpack_require__(178);
-var Action_1 = __webpack_require__(156);
+var root_1 = __webpack_require__(179);
+var Action_1 = __webpack_require__(157);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -18548,7 +18597,7 @@ exports.AsyncAction = AsyncAction;
 //# sourceMappingURL=AsyncAction.js.map
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18558,7 +18607,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Scheduler_1 = __webpack_require__(134);
+var Scheduler_1 = __webpack_require__(135);
 var AsyncScheduler = (function (_super) {
     __extends(AsyncScheduler, _super);
     function AsyncScheduler() {
@@ -18605,7 +18654,7 @@ exports.AsyncScheduler = AsyncScheduler;
 //# sourceMappingURL=AsyncScheduler.js.map
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18617,12 +18666,12 @@ exports.isDate = isDate;
 //# sourceMappingURL=isDate.js.map
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ansiRegex = __webpack_require__(69)();
+var ansiRegex = __webpack_require__(71)();
 
 module.exports = function (str) {
 	return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
@@ -18630,35 +18679,7 @@ module.exports = function (str) {
 
 
 /***/ }),
-/* 161 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(84);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
 /* 162 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-        var result = __webpack_require__(85);
-
-        if (typeof result === "string") {
-            module.exports = result;
-        } else {
-            module.exports = result.toString();
-        }
-    
-
-/***/ }),
-/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -18672,7 +18693,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -18686,7 +18707,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -18700,7 +18721,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -18714,7 +18735,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -18728,7 +18749,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -18742,7 +18763,7 @@ module.exports = function (str) {
     
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -18756,19 +18777,47 @@ module.exports = function (str) {
     
 
 /***/ }),
+/* 169 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(93);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
 /* 170 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(94);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "59861aed4d017bfb7958e6d925976953.jpg";
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACACAIAAAADAfVMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMjHxIGmVAAAHDElEQVR4Xu2dzW9UVRTAp3+ACW5d4cY1xsStuHeBO5e4cC9/gMEYEtREGxKCURO7IEYWksYQIzEGFsRABamBfmSktLUlYGv6BQNMO23xV+9zUm6nM29m3rv3vPPOL2fZmblzfnPOPffNRyvPDNWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOWYYOU8J3h7Y6V+/sDTcxVp0bj5frJEo0v8Ct6cHvKSKyS2Fi4nSzS6oUWLXr902EuuhKhfOEiDSZZopKaF4O3ajMxGvTFyNFmikZrWQ1ajOuglV0iwgyRLNNLRWjAIbdTnD2ytjCZLNFKwr2CxE/X6xUO2GadnX8HA4OolV0hsXDmSLNHoRDvB0Lh93EuukLCTcUo6CAaZmzFhA1caOgve2YwvHPSSKyQ27w0nqzT2obNgYHCVOXDZUN2RVIKBWvGSKyRiOV5YXPz16jWBMXL9er1eT1aZXjCIvUwd3rFYu0St9jhZ5X90IRiYXb3kComQjiXbZW3JKv+nO8GwMXLUS66QwHGAmatYdqFrwSDWMZHr2enO1F0vp3KipV3oRTBIdpzHNZBGY7OIdqFHwSDZ8caVIxler2Yo/ePWLS+ncqKNXehdMEh2vH7xUCZj19LSMgcPL6dyor1d6EswSHbM2NWoDiYL7Ynp2VkvoaKio13oVzCI/XSAi97aNadJyW2ZppLGLmQgGMReA3HR7Qlqbn7eS6iowK53NaMN2QgGNjzy6GVWVKxfOrxdm0mWuw+ra2uSC5dgeentQmaCgfQx2nhplRaN28dbdmxGZckHIReT1SoHtmTF6chSMJA7yWOXi52Ovet6CCkT3pNdsMhkxd2QsWAH6RPeron6hYObU0NkTfIpyAUrZO9IktsluQgGtmTJ7frJ2cqj0wMrHw0sfPzSn2ffu3blFy+ncmJsfKLbtrybvAQD7Vrgu0+Pv6msfT6wfPy5+OfECzNfvfX7z2e95EaP3trybnIU7NhauCzhEz87JXumsnLCV+vF/c9emTx3TEJBdzst70fugiFiKTuvqyd9kR3jrzNvjH3/wW+Xhr28h4n+C7dJCMEOSjnMrvzk20rt68rDUwMd6zVNUNNTQ+/c+uHTMGXNjrv7Azf9E06wo1EdzGPAZmelUtlceyjW9OFkU9mjP57xxPQfN26OLi0tJ2nKjtCCgY795PKHmFj9ZIBRlkCPC0+bF/Rb92e1L3dmYGqUe8ikTHsLJvB7p15DOXM4JY51omOhuz/j77kVwT38ffp1EtLPqNyGCIIdWyszteF3vZSVMFC7/TTHr1pFE+wos2aeOE8/SURuRBbsKJXmlZMv5l21uxEh2MFz3tmbB1/2MqImeGr1q4PB1DoECW6yPjr0cOhNLzuFjkffvd2YifMjMhIFO+jbRS/otS9eDV+yHnIFN9l8MPr4p2MFMu28Bhig0lAAwU0wTeLEdm/6sByvTYokuAlNb2NymLKOLpsF7FyjiLS/pqGQgj3IL6XDQSuAbx6CFxZjIO0keXjZaBDsQZN0yqkt2iZK2BQ9Tx2DWxG8aLgT7oo7jDsr9YxCwe3BE7ZaRvIXuiid4LJhgpVjgltTr9dX19ZaRiafpAlG2QVja2lpeW5+/s7U3bHxiRs3R723b9sHNyG4+f37D3Cf03u6/VA6wZTmwuLi9OxsTl9R4SUyWa2iHN/JQ0alFIIpLMqUGu22QPsPZFPc2X7Mqis0C8YrxUqKvaRHCRoGbSO8aZ2CaY9iv0mGaWo62G6tSjBZI3fh+3BvwUswwECuRDCtjwYo/2tke4MhPNdxrPCCUSv/e70dI6cPRUOBBdOQhf9ICuEOyu7gtDfc4Ztw20oe1VxUwey10hoy68EQ2qjF3jzRjUywrJ/RQCrVyWEs4km3PUUSLKcn45XumtOumS2FEUzhSjj/UK+F8NqkGIKjFy4lG+U6VP9IF0xO4+64qGVuCnbhKXNEC6Ytk18v4yGDqi2uWodcwRyEvHSHDA48RWzIexEqOOLFKXpGscao9ogTTEuM+AYfhVv0nuwhSzDJjThSsSkk61CEIMER7dKWi/VRuvRIERzRLo+rrC3vRoTgiHbZ7xXbBRGCY9llVk9WoJf4gmOdiMpgFyILnov0S9wlsQsxBS9E+j+A5bEL0QRzLIlynVn3zLyXOIJJcZQ3d8tmF+IIjnIxUvHVjDZEEBxr69X0FkJ6Qguu1+tRtt7p2dlkBSUjtOCx8Qkv9QGCrTd5+PIRVHCs9/BLuPU2CSeY8TVKc57L7h9cFJEIQ5YREhOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsHBOsmmfP/gX5ZloWbwKmZAAAAABJRU5ErkJggg=="
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*eslint-env browser*/
@@ -18797,7 +18846,7 @@ for (var key in styles) {
   clientOverlay.style[key] = styles[key];
 }
 
-var ansiHTML = __webpack_require__(68);
+var ansiHTML = __webpack_require__(70);
 var colors = {
   reset: ['transparent', 'transparent'],
   black: '181818',
@@ -18812,7 +18861,7 @@ var colors = {
 };
 ansiHTML.setColors(colors);
 
-var Entities = __webpack_require__(93).AllHtmlEntities;
+var Entities = __webpack_require__(95).AllHtmlEntities;
 var entities = new Entities();
 
 exports.showProblems =
@@ -18853,7 +18902,7 @@ function problemType (type) {
 
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -18991,7 +19040,7 @@ module.exports = function(hash, moduleMap, options) {
 
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -19019,90 +19068,90 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(13);
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(20);
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(32);
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(4);
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(41);
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(47);
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(49);
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(54);
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(56);
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(68);
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(86);
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(9);
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(1))(93);
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(66);
-__webpack_require__(65);
-module.exports = __webpack_require__(64);
+__webpack_require__(68);
+__webpack_require__(67);
+module.exports = __webpack_require__(66);
 
 
 /***/ })

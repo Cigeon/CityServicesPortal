@@ -3,7 +3,5 @@
 namespace CityServicesPortal.Petitions.Domain.Interfaces
 {
     public interface IPetitionRepository : IRepository<Petition>
-    {
-        
-    }
+    { }
 }

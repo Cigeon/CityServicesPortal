@@ -36,6 +36,12 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-2"><p>Подано</p></div>
+            <div class="col-10">
+                <p>{{petition.created |  date:'yyyy-MM-dd'}}</p>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-2"><p>Автор</p></div>
             <div class="col-10">
                 <p>{{petition.user.lastName}} {{petition.user.firstName}} {{petition.user.middleName}}</p>
@@ -51,6 +57,58 @@
             <div class="col-2"><p>Зміст</p></div>
             <div class="col-10">
                 <p>{{petition.description}}</p>
+            </div>
+        </div>
+        <hr *ngIf="petition.review !== null" />
+        <div *ngIf="petition.review !== null" class="row">
+            <div class="col-2"><p>Розглянуто</p></div>
+            <div class="col-10">
+                <p>{{petition.review.created |  date:'yyyy-MM-dd'}}</p>
+            </div>
+        </div>
+        <div *ngIf="petition.review !== null" class="row">
+            <div class="col-2"><p>Відповідає</p></div>
+            <div class="col-10">
+                <p>{{petition.review.user.lastName}} {{petition.review.user.firstName}} {{petition.review.user.middleName}}</p>
+            </div>
+        </div>
+        <div *ngIf="petition.review !== null" class="row">
+            <div class="col-2"><p>Відповідь</p></div>
+            <div class="col-10">
+                <p>{{petition.review.text}}</p>
+            </div>
+        </div>
+    </div>
+    <!--<div *ngIf="petition.review === null && getName(petition.status) === 'Розглядається'">-->
+    <div *ngIf="petition.review === null">
+        <button type="button" class="btn btn-outline-primary"
+                (click)="isCollapsed = !isCollapsed">
+            Дати відповідь
+        </button>
+        <div (collapsed)="collapsed($event)"
+             (expanded)="expanded($event)"
+             [collapse]="isCollapsed"
+             class="card card-block card-header">
+            <div class="well well-lg">
+                <form>
+                    <div class="form-group">
+                        <label for="description">Зміст відповіді</label>
+                        <textarea type="text"
+                                  [(ngModel)]="review"
+                                  class="form-control"
+                                  id="description"
+                                  name="description"
+                                  rows="3"
+                                  placeholder='напр. "Ваша відповідь на петицію"'>
+                    </textarea>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-primary" (click)="saveReview()">
+                    Зберегти
+                </button>
+                <button type="button" class="btn btn-default" (click)="cancelReview()">
+                    Скасувати
+                </button>
             </div>
         </div>
     </div>

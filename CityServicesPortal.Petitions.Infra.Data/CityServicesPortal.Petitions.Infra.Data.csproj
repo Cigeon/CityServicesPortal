@@ -5,6 +5,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20180408181328_ReviewAdded.cs" />
+    <Compile Remove="Migrations\20180408182014_ReviewModelUpdated.cs" />
+    <Compile Remove="Migrations\20180408182820_PetitionModelUpdated.cs" />
+    <Compile Remove="Migrations\20180408183245_ReviewModelUpdatedAgain.cs" />
+    <Compile Remove="Migrations\20180408185120_ReviewModelUpdated3.cs" />
+    <Compile Remove="Migrations\20180408185505_ReviewModelUpdated4.cs" />
+    <Compile Remove="Migrations\20180408191129_ReviewModelUpdated5.cs" />
+    <Compile Remove="Migrations\20180408192510_ReviewModelUpdated6.cs" />
+    <Compile Remove="Migrations\20180408193916_ReviewAndPetitionAndUserModelUpdated3.cs" />
+    <Compile Remove="Migrations\20180408194505_ReviewAndPetitionAndUserModelUpdated4.cs" />
+    <Compile Remove="Migrations\20180408194659_ReviewAndPetitionAndUserModelUpdated5.cs" />
+    <Compile Remove="Migrations\20180408194822_ReviewAndPetitionAndUserModelUpdated6.cs" />
+    <Compile Remove="Migrations\20180408195655_ReviewAndPetitionAndUserModelUpdated7.cs" />
+    <Compile Remove="Migrations\20180408204648_ReviewAndPetitionAndUserModelUpdated8.cs" />
+    <Compile Remove="Migrations\20180408211341_ReviewAddedToUser.cs" />
+    <Compile Remove="Migrations\20180408211838_ReviewAddedToUser.cs" />
+    <Compile Remove="Migrations\20180408212018_ReviewAddedToUser.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.1" />

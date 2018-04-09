@@ -15,6 +15,7 @@ namespace CityServicesPortal.Petitions.Application.DTOs
         public CategoryShortDto Category { get; set; }
         public UserShortDto User { get; set; }
         public List<UserShortDto> Voters { get; set; }
+        public ReviewDto Review { get; set; }
 
         public PetitionDto()
         {

@@ -80,6 +80,29 @@ namespace CityServicesPortal.Petitions.Infra.Data.Migrations
                     b.ToTable("PetitionVoter");
                 });
 
+            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.Review", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("Created");
+
+                    b.Property<Guid>("PetitionId");
+
+                    b.Property<string>("Text");
+
+                    b.Property<Guid?>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PetitionId")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reviews");
+                });
+
             modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -124,6 +147,18 @@ namespace CityServicesPortal.Petitions.Infra.Data.Migrations
                         .WithMany("PetitionVoters")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("CityServicesPortal.Petitions.Domain.Models.Review", b =>
+                {
+                    b.HasOne("CityServicesPortal.Petitions.Domain.Models.Petition", "Petition")
+                        .WithOne("Review")
+                        .HasForeignKey("CityServicesPortal.Petitions.Domain.Models.Review", "PetitionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CityServicesPortal.Petitions.Domain.Models.User", "User")
+                        .WithMany("Reviews")
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

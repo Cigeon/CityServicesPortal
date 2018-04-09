@@ -19,14 +19,19 @@ export class PetitionDetailComponent implements OnInit {
     faCheckCircle = faCheckCircle;
     isAuthorizedSubscription: Subscription;
     isAuthorized: boolean = false;
+    petitionId: string = '';
+    petitionSubscription: Subscription;
     userDataSubscription: Subscription;
     voteSubscription: Subscription;
+    reviewSubscription: Subscription;
     isVoted: boolean = false;
     isAuthor: boolean = false;
     modalRef: BsModalRef;
     petition: Petition;
     petitionLoaded: boolean = false;
     votesCount: number;
+    isCollapsed: boolean = true;
+    review: string = '';
 
     constructor(public authService: AuthService,
                 public router: Router,
@@ -49,10 +54,18 @@ export class PetitionDetailComponent implements OnInit {
     ngOnDestroy(): void {
         this.isAuthorizedSubscription.unsubscribe();
         this.userDataSubscription.unsubscribe();
+        if (this.reviewSubscription) {
+            this.reviewSubscription.unsubscribe();
+        }
+        if (this.petitionSubscription) {
+            this.petitionSubscription.unsubscribe();
+        }
     }
 
     getPetition(id: string): void {
-        this.http.get<any>(this.apiUrl + 'petition/' + id)
+        this.petitionId = id;
+        this.petitionSubscription =
+            this.http.get<any>(this.apiUrl + 'petition/' + id)
             .subscribe(result => {  
                 console.log('petition: ', result);
                 this.petitionLoaded = true;
@@ -90,7 +103,31 @@ export class PetitionDetailComponent implements OnInit {
             this.authService.put(this.apiUrl + 'petition/vote/' + this.petition.id, null)
                 .subscribe(result => {
                     console.log(result);
+                    this.getPetition(this.petitionId);
                 }, error => console.error(error)); 
+    }
+
+    collapsed(event: any): void {
+        console.log(event);
+    }
+
+    expanded(event: any): void {
+        console.log(event);
+    }
+
+    saveReview(): void {
+        this.isCollapsed = true;
+        this.reviewSubscription =
+            this.authService.post(this.apiUrl + 'petition/review/' + this.petition.id, this.review)
+                .subscribe(result => {
+                    console.log(result);
+                    this.getPetition(this.petitionId);
+                }, error => console.error(error));
+    }
+
+    cancelReview(): void {
+        this.isCollapsed = true;
+        this.review = '';
     }
 
     getName(status: number): string {

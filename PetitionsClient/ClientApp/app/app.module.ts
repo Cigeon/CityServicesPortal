@@ -14,6 +14,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -58,6 +59,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
         ModalModule.forRoot(),
         AccordionModule.forRoot(),
         ProgressbarModule.forRoot(),
+        CollapseModule.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },

@@ -1,7 +1,6 @@
 ﻿using CityServicesPortal.Petitions.Domain.Core.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CityServicesPortal.Petitions.Domain.Models
 {
@@ -16,8 +15,8 @@ namespace CityServicesPortal.Petitions.Domain.Models
         public Category Category { get; set; }
         public Guid UserId { get; set; }
         public User User { get; set; } 
-        public List<PetitionVoter> PetitionVoters { get; set; }        
-        //public int VotesCount { get => PetitionVoters.Count; }
+        public List<PetitionVoter> PetitionVoters { get; set; }
+        public Review Review { get; set; }
 
         public Petition()
         {

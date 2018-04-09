@@ -20,6 +20,7 @@ namespace CityServicesPortal.Petitions.Application.Services
         private readonly IPetitionRepository _petitionRepository;
         private readonly ICategoryRepository _categoryRepository;
         private readonly IUserRepository _userRepository;
+        private readonly IReviewRepository _reviewRepository;
         private readonly IEventStoreRepository _eventStoreRepository;
         private readonly IMediatorHandler Bus;
 
@@ -27,6 +28,7 @@ namespace CityServicesPortal.Petitions.Application.Services
                                   IPetitionRepository petitionRepository,
                                   ICategoryRepository categoryRepository,
                                   IUserRepository userRepository,
+                                  IReviewRepository reviewRepository,
                                   IMediatorHandler bus,
                                   IEventStoreRepository eventStoreRepository)
         {
@@ -34,7 +36,8 @@ namespace CityServicesPortal.Petitions.Application.Services
             Bus = bus;
             _petitionRepository = petitionRepository;
             _categoryRepository = categoryRepository;
-            _userRepository = userRepository;            
+            _userRepository = userRepository;
+            _reviewRepository = reviewRepository;            
             _eventStoreRepository = eventStoreRepository;
         }
 
@@ -70,8 +73,7 @@ namespace CityServicesPortal.Petitions.Application.Services
                         FirstName = v.User.FirstName,
                         MiddleName = v.User.MiddleName,
                         LastName = v.User.LastName
-                    }).ToList()
-
+                    }).ToList(),
                 }).ToList();
 
             return petitions;
@@ -81,9 +83,31 @@ namespace CityServicesPortal.Petitions.Application.Services
         {
             var petition = _petitionRepository.GetAll()
                                 .Include(p => p.PetitionVoters)
+                                .Include(p => p.Review)
+                                .Include(p => p.Review.User)
                                 .FirstOrDefault(p => p.Id.Equals(id));
             var category = _categoryRepository.GetById(petition.CategoryId);
             var user = _userRepository.GetById(petition.UserId);
+
+            ReviewDto review = null;
+            if (petition.Review != null)
+            {
+                review = new ReviewDto
+                {
+                    Id = petition.Review.Id,
+                    Text = petition.Review.Text,
+                    Created = petition.Review.Created,
+                    User = new UserShortDto
+                    {
+                        Id = petition.Review.User.Id,
+                        UserName = petition.Review.User.UserName,
+                        FirstName = petition.Review.User.FirstName,
+                        MiddleName = petition.Review.User.MiddleName,
+                        LastName = petition.Review.User.LastName
+                    }
+                };
+            }
+
             var petitionDto = new PetitionDto
             {
                 Id = petition.Id,
@@ -113,8 +137,9 @@ namespace CityServicesPortal.Petitions.Application.Services
                     FirstName = _userRepository.GetById(v.UserId).FirstName,
                     MiddleName = _userRepository.GetById(v.UserId).MiddleName,
                     LastName = _userRepository.GetById(v.UserId).LastName
-                }).ToList()
-        };
+                }).ToList(),
+                Review = review
+            };
             return petitionDto;
         }
 
@@ -167,6 +192,12 @@ namespace CityServicesPortal.Petitions.Application.Services
             await Bus.SendCommand(voteCommand);
         }
 
+        public async Task Review(Guid petitionId, Guid userId, string review)
+        {
+            var reviewCommand = new PetitionReviewCommand(petitionId, userId, DateTime.Now, review);
+            await Bus.SendCommand(reviewCommand);
+        }
+
         //public IList<CustomerHistoryData> GetAllHistory(Guid id)
         //{
         //    return CustomerHistory.ToJavaScriptCustomerHistory(_eventStoreRepository.All(id));
@@ -175,6 +206,7 @@ namespace CityServicesPortal.Petitions.Application.Services
         public void Dispose()
         {
             GC.SuppressFinalize(this);
-        }        
+        }
+        
     }
 }

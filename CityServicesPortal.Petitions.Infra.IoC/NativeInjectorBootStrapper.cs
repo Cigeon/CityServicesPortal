@@ -51,6 +51,7 @@ namespace CityServicesPortal.Petitions.Infra.IoC
             services.AddScoped<INotificationHandler<PetitionStatusChangedEvent>, PetitionEventHandler>();
             services.AddScoped<INotificationHandler<PetitionCategoryChangedEvent>, PetitionEventHandler>();
             services.AddScoped<INotificationHandler<PetitionVotedEvent>, PetitionEventHandler>();
+            services.AddScoped<INotificationHandler<PetitionReviewedEvent>, PetitionEventHandler>();
             services.AddScoped<INotificationHandler<CategoryCreatedEvent>, CategoryEventHandler>();
             services.AddScoped<INotificationHandler<CategoryUpdatedEvent>, CategoryEventHandler>();
             services.AddScoped<INotificationHandler<CategoryRemovedEvent>, CategoryEventHandler>();
@@ -66,6 +67,7 @@ namespace CityServicesPortal.Petitions.Infra.IoC
             services.AddScoped<INotificationHandler<PetitionChangeStatusCommand>, PetitionCommandHandler>();
             services.AddScoped<INotificationHandler<PetitionChangeCategoryCommand>, PetitionCommandHandler>();
             services.AddScoped<INotificationHandler<PetitionVoteCommand>, PetitionCommandHandler>();
+            services.AddScoped<INotificationHandler<PetitionReviewCommand>, PetitionCommandHandler>();
             services.AddScoped<INotificationHandler<CategoryCreateCommand>, CategoryCommandHandler>();
             services.AddScoped<INotificationHandler<CategoryUpdateCommand>, CategoryCommandHandler>();
             services.AddScoped<INotificationHandler<CategoryRemoveCommand>, CategoryCommandHandler>();
@@ -76,6 +78,7 @@ namespace CityServicesPortal.Petitions.Infra.IoC
             services.AddScoped<IPetitionRepository, PetitionRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IReviewRepository, ReviewRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<PetitionContext>();
 

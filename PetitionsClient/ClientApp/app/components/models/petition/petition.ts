@@ -1,5 +1,6 @@
 ﻿import { CategoryShort } from "../category/category-short";
 import { UserShort } from "../user/user-short";
+import { Review } from "../review/review";
 
 export interface Petition {
     id: string,
@@ -10,5 +11,6 @@ export interface Petition {
     status: number,
     category: CategoryShort,
     user: UserShort,
-    voters: UserShort[]
+    voters: UserShort[],
+    review: Review
 }

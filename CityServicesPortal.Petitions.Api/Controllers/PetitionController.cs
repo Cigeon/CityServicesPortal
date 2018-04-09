@@ -136,6 +136,21 @@ namespace CityServicesPortal.Petitions.Api.Controllers
             return NoContent();
         }
 
+        [HttpPost("review/{id}")]
+        [Authorize]
+        public async Task<IActionResult> Review(Guid id, [FromBody]string review)
+        {
+            var name = GetCurrentUserName();
+            var userRights = User.Claims.FirstOrDefault(c => c.Type.Equals("user_rights")).Value;
+            if (Convert.ToInt32(userRights) < 200) return StatusCode(403);
+
+            var user = _userAppService.GetByUserName(name);
+
+            await _petitionAppService.Review(id, user.Id, review);
+            
+            return NoContent();
+        }
+
         private string GetCurrentUserName()
         {
             var name = User.Claims.FirstOrDefault(c => c.Type.Equals("name")).Value;
