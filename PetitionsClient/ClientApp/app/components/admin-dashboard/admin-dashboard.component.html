@@ -61,13 +61,17 @@
                                 {{sCategory}}
                             </button>
                             <div *ngIf="categories.length">
-                                <ul *dropdownMenu class="dropdown-menu" role="menu">
+                                <ul *dropdownMenu class="dropdown-menu overflow" role="menu">
                                     <li role="menuitem">
                                         <a class="dropdown-item" (click)="selectCatagory('Всі')">Всі</a>
                                     </li>
                                     <li class="divider dropdown-divider"></li>
                                     <li *ngFor="let category of categories" role="menuitem">
                                         <a class="dropdown-item" (click)="selectCatagory(category.name)">{{category.name}}</a>
+                                    </li>
+                                    <li class="divider dropdown-divider"></li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-item" [routerLink]="['/register-category']">Нова категорія</a>
                                     </li>
                                 </ul>
                             </div>
