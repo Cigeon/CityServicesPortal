@@ -242,7 +242,7 @@ table.table .avatar {
 }
 
 .filter-group .btn.btn-default.dropdown-toggle {
-    width: 160px;
+    /*width: 160px;*/
     text-align: right;
 }
 
@@ -291,3 +291,14 @@ table.table .avatar {
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
     color: dimgray;
 }
+
+.filter-group .btn.btn-default.dropdown-toggle.category {
+    width: 200px;
+}
+
+.filter-group .btn.btn-default.dropdown-toggle.status-filter {
+    width: 160px;
+}
+
+
+

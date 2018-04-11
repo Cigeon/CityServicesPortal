@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Location } from '@angular/common';
 import { AuthService } from '../../services/auth.service';
 import { CreateCategory } from '../../models/category/create-category';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-category',
@@ -13,7 +14,8 @@ export class RegisterCategoryComponent implements OnInit {
 
     constructor(private authService: AuthService,
         @Inject('API_URL') private apiUrl: string,
-        private location: Location) {
+        private location: Location,
+        public router: Router) {
     }
 
     ngOnInit() {
@@ -27,7 +29,8 @@ export class RegisterCategoryComponent implements OnInit {
         console.log(this.category);
         this.authService.post(this.apiUrl + 'Category', this.category)
             .subscribe(result => { console.log("result"); console.log(result); }, error => console.error(error));
-        this.location.back();
+        //this.location.back();
+        this.router.navigate(['/admin']);
     }
 
 }

@@ -73,8 +73,8 @@ export class AdminDashboardComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        this.getPetitionsSubscription.unsubscribe();
-        this.getCategoriesSubscription.unsubscribe();
+        if (this.getPetitionsSubscription) this.getPetitionsSubscription.unsubscribe();
+        if (this.getCategoriesSubscription) this.getCategoriesSubscription.unsubscribe();
         if (this.refreshPetitionsSubscription) {
             this.refreshPetitionsSubscription.unsubscribe();
         }

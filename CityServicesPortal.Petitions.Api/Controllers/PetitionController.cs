@@ -117,7 +117,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         {
             var name = GetCurrentUserName();
             var petition = _petitionAppService.GetById(id);
-            var isVoted  = !petition.Voters.FirstOrDefault(v => v.UserName.Equals(name)).Equals(null);
+            var isVoted  = (petition.Voters.FirstOrDefault(v => v.UserName.Equals(name)) != null) ? true : false;
             var isAuthor = petition.User.UserName.Equals(name);
             if (isVoted || isAuthor) return StatusCode(403);
 

@@ -47,7 +47,7 @@ namespace CityServicesPortal.Petitions.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task Delete(Guid id)
         {
             await _categoryAppService.Remove(id);

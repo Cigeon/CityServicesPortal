@@ -26,6 +26,7 @@ export class PetitionDetailComponent implements OnInit {
     reviewSubscription: Subscription;
     isVoted: boolean = false;
     isAuthor: boolean = false;
+    isAdmin: boolean = false;
     modalRef: BsModalRef;
     petition: Petition;
     petitionLoaded: boolean = false;
@@ -78,6 +79,7 @@ export class PetitionDetailComponent implements OnInit {
                             if (userData !== null) {
                                 this.isVoted = this.petition.voters.filter(v => v.userName === userData.email).length > 0
                                 this.isAuthor = this.petition.user.userName === userData.email;
+                                this.isAdmin = userData.user_rights >= Constant.ADMIN_RIGHTS;
                                 console.log('voted: ', this.isVoted);
                                 console.log('author: ', this.isAuthor);
                             }                            

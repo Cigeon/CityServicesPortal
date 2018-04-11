@@ -15,6 +15,7 @@ import { CategoryShort } from '../models/category/category-short';
 })
 export class HomeComponent implements OnInit, OnDestroy {
     isAuthorizedSubscription: Subscription;
+    categorySubscription: Subscription;
     userDataSubscription: Subscription;
     isAuthorized: boolean;
     modalRef: BsModalRef;
@@ -37,15 +38,17 @@ export class HomeComponent implements OnInit, OnDestroy {
         //        console.log('user data:');    
         //        console.log(userData);    
         //    });
-        this.http.get<any>(this.apiUrl + 'category')
-            .subscribe(result => {
-                this.categories = result;
-                console.log(this.categories);
-            }, error => console.log(error));
+        //this.categorySubscription = this.http.get<any>(this.apiUrl + 'category')
+        //    .subscribe(result => {
+        //        this.categories = result;
+        //        console.log(this.categories);
+        //    }, error => console.log(error));
+
     }
 
     ngOnDestroy(): void {
-        this.isAuthorizedSubscription.unsubscribe();
+        if (this.isAuthorizedSubscription) this.isAuthorizedSubscription.unsubscribe();
+        if (this.categorySubscription) this.categorySubscription.unsubscribe();
         //if (this.userDataSubscription) this.userDataSubscription.unsubscribe();
     }
 

@@ -80,7 +80,7 @@
         </div>
     </div>
     <!--<div *ngIf="petition.review === null && getName(petition.status) === 'Розглядається'">-->
-    <div *ngIf="petition.review === null">
+    <div *ngIf="petition.review === null && isAdmin && petition.voters.length >= 5">
         <button type="button" class="btn btn-outline-primary"
                 (click)="isCollapsed = !isCollapsed">
             Дати відповідь

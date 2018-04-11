@@ -50,7 +50,7 @@ namespace CityServicesPortal.Observer
                     Console.WriteLine($"Id: {p.Id}");
                     Console.ResetColor();
 
-                    Console.WriteLine($"Name: {p.Name}");
+                    //Console.WriteLine($"Name: {p.Name}");
                     Console.WriteLine($"Status: {p.Status}");
                     Console.WriteLine($"Voted: {p.PetitionVoters.Count}");
                     Console.WriteLine($"Created: {p.Created}");
