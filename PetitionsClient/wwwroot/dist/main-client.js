@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "71ccb97cb84400913e72"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "cee0dcb900e3e1ccae54"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -11963,18 +11963,25 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 var HomeComponent = (function () {
     function HomeComponent(http, apiUrl, authService, router, modalService) {
+        var _this = this;
         this.http = http;
         this.apiUrl = apiUrl;
         this.authService = authService;
         this.router = router;
         this.modalService = modalService;
         this.categories = [];
+        this.categorySubscription = this.http.get(this.apiUrl + 'category')
+            .subscribe(function (result) {
+            _this.categories = result;
+            console.log(_this.categories);
+        }, function (error) { return console.log(error); });
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.isAuthorizedSubscription = this.authService.getIsAuthorized().subscribe(function (isAuthorized) {
             _this.isAuthorized = isAuthorized;
         });
+        this.getCategories();
         //this.userDataSubscription = this.authService.getUserData().subscribe(
         //    (userData: any) => {
         //        console.log('user data:');    
@@ -11985,6 +11992,14 @@ var HomeComponent = (function () {
         //        this.categories = result;
         //        console.log(this.categories);
         //    }, error => console.log(error));
+    };
+    HomeComponent.prototype.getCategories = function () {
+        var _this = this;
+        this.http.get(this.apiUrl + 'category')
+            .subscribe(function (result) {
+            _this.categories = result;
+            console.log(_this.categories);
+        }, function (error) { return console.log(error); });
     };
     HomeComponent.prototype.ngOnDestroy = function () {
         if (this.isAuthorizedSubscription)

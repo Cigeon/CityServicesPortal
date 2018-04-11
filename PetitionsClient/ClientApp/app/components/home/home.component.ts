@@ -26,6 +26,11 @@ export class HomeComponent implements OnInit, OnDestroy {
         public authService: AuthService,
         public router: Router,
         private modalService: BsModalService) {
+        this.categorySubscription = this.http.get<any>(this.apiUrl + 'category')
+            .subscribe(result => {
+                this.categories = result;
+                console.log(this.categories);
+            }, error => console.log(error));
     }
 
     ngOnInit() {
@@ -33,23 +38,16 @@ export class HomeComponent implements OnInit, OnDestroy {
             (isAuthorized: boolean) => {
                 this.isAuthorized = isAuthorized;
             });
-        //this.userDataSubscription = this.authService.getUserData().subscribe(
-        //    (userData: any) => {
-        //        console.log('user data:');    
-        //        console.log(userData);    
-        //    });
-        //this.categorySubscription = this.http.get<any>(this.apiUrl + 'category')
-        //    .subscribe(result => {
-        //        this.categories = result;
-        //        console.log(this.categories);
-        //    }, error => console.log(error));
-
+        this.categorySubscription = this.http.get<any>(this.apiUrl + 'category')
+            .subscribe(result => {
+                this.categories = result;
+                console.log(this.categories);
+            }, error => console.log(error));
     }
 
     ngOnDestroy(): void {
         if (this.isAuthorizedSubscription) this.isAuthorizedSubscription.unsubscribe();
         if (this.categorySubscription) this.categorySubscription.unsubscribe();
-        //if (this.userDataSubscription) this.userDataSubscription.unsubscribe();
     }
 
     showPetitions(name: string) {
